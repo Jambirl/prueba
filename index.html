@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5, user-scalable=yes">-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="author" content="Jambitec">
+	<meta name="description" content="La mejor manera de aplicar el Big Data a los deporte de sala">
+	<meta name="theme-color" content="#a557d8">
+
+	<script src="js/main.js"></script>
+	<script src="js/jquery.js"></script>
+	<script src="js/world.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="manifest" href="manifest.json">
+	<link rel="apple-touch-icon" href="img/Menu/apple-touch-icon.png">
+
+	<title>BigDT&#169; - Login</title>
+</head>
+<body>
+	<div id="bodyIndex" class="spaceAroundXY">
+		<div id="cuadroIdiomas" class="centradoInlineXY movimientoCuadroIdiomas">
+			<div id="idiomaActual" class="centradoXY">
+			</div>
+			<div id="cajaIdiomas" class="spaceAroundXY invisible">
+				<img class="logoIdioma" src="img/Idiomas/es.png" onclick="elegirIdioma('index','es-ES')" alt="Español">
+				<img class="logoIdioma" src="img/Idiomas/en.png" onclick="elegirIdioma('index','en')" alt="English">
+				<img class="logoIdioma" src="img/Idiomas/fr.png" onclick="elegirIdioma('index','fr')" alt="Français">
+				<img class="logoIdioma" src="img/Idiomas/de.png" onclick="elegirIdioma('index','de')" alt="Deutsch">
+			</div>
+		</div>
+
+		<picture id="imagenIzq" class="imagenPortada movimientoImagenIzq movimientoImagenPortada">
+			<source media="(min-height:900px)" srcset="img/Menu/Futsal.avif" type="image/avif">
+			<img src="img/Menu/Futsal.png" alt="Icono Futsal" class="h100 w100">
+		</picture>
+		<picture>
+			<!-- Falta source con avif  -->
+			<img id="imagenCentro" class="imagenPortada movimientoImagenCentro movimientoImagenPortada" src="img/Menu/Balonmano.png" alt="Icono Balonmano">
+		</picture>
+		<picture>
+			<!-- Falta source con avif  -->
+			<img id="imagenDer" class="imagenPortada movimientoImagenDer movimientoImagenPortada" src="img/Menu/Baloncesto.png" alt="Icono Baloncesto">
+		</picture>
+
+		<img id="imagenLogo" class="movimientoImagenLogo" src="img/Menu/Logo BigDT.png" alt="BigDT&#169;">
+		<div id="recuadroLogin" class="centradoXY animacionRecuadroLogin">
+			<div id="cuadroLogin" class="h100 w100"></div>
+			<div id="cuadroRegistro" class="h100 w100 centradoXY flexWrap invisible">
+				
+			</div>
+		</div>
+
+		<div id="recuadroCookies">
+			<img src="img/Menu/boton salir.png" onclick="aceptarCookies()" alt="Aceptar Cookies">
+			<div id="textoCookies" class="centradoXY flexWrap"></div>
+		</div>
+		<footer id="pieIndex">
+			<img class="h100" src="img/Publicidad/BannerPubliIndex.png" alt="Banner Publicidad">
+		</footer>
+	</div>
+</body>
+
+<script type="text/javascript">
+	$(function(){
+		idiomaActual("index");
+	});
+
+	function comprobarPermisoCookies(idioma) {
+		if (localStorage.getItem("Permiso Cookies")) {
+			$("#recuadroCookies").addClass("invisible");
+		}else {
+			$("#recuadroCookies").removeClass("invisible");
+
+			var textoIdioma = textoIndex();
+
+			var textoCookies = "<h1>"+textoIdioma[6]+"</h1>";
+			textoCookies += "<p id='parrafo1'>"+textoIdioma[7]+"</p>";
+			textoCookies += "<p id='parrafo2'>"+textoIdioma[8]+"</p>";
+
+			$("#textoCookies").html(textoCookies);
+			$("#textoCookies").show();
+		}
+	};
+
+	function aceptarCookies() {
+		// Guardar datos en Local Storage
+		localStorage.setItem("Permiso Cookies", "Aceptado");
+
+		$("#recuadroCookies").addClass("invisible");
+	};
+
+	function mostrarCuadroLogin(idioma) {
+		var textoIdioma = textoIndex();
+
+		var texto = "	<form action='php/usuario.php' method='post' class='h100 w100 spaceAroundXY flexWrap'>";
+		texto += "			<div class='w80 h20 boxLogin spaceBetweenXY'>"; //usuario
+		texto += "					<img class='w15 h90' src='img/Menu/logoUsuario.png' alt='Icono Usuario'>";
+		texto += "					<input id='usuario' name='usuario' class='w85 h55' type='text' pattern='[a-zA-Z0-9]+' placeholder='"+textoIdioma[0]+"' autocomplete='on'>";
+		texto += "			</div>";
+		texto += "			<div class='w80 h20 boxLogin spaceBetweenXY'>"; //contraseña
+		texto += "					<img class='h90 w15' src='img/Menu/logoPass.png' alt='Contraseña'>";
+		texto += "					<input id='pass' name='pass' class='w70 h55' type='password' placeholder='"+textoIdioma[1]+"' autocomplete='on'>";
+		texto += "					<div id='ojo' class='w10'>";
+		texto += "						<img id='ojoSi' class='w100' src='img/Menu/invisible.png' alt='Ocultar'>";
+		texto += "						<img id='ojoNo' class='w100 invisible' src='img/Menu/visible.png' alt='Mostrar'>";
+		texto += "					</div>";
+		texto += "			<input type='hidden' name='idioma' id='idioma' value="+leerCookie('idioma')+">";
+		texto += "			</div>";
+		texto += "			<button class='w80 h20'>"+textoIdioma[2]+"</button>"; //Botón acceder
+		//texto += "			<div id='botonRecordar' class='w50 h10 flexWrap spaceAroundXY' onclick='menuRegistro()'>"+textoIdioma[3]+"</div>"; //Olvidó contraseña
+		texto += "			<div id='botonRegistro' class='w80 h10 flexWrap spaceAroundXY' onclick='menuRegistro()'>"+textoIdioma[3]+"</div>"; //Botón registrarse
+		<?php
+			if (isset($_GET['error'])){
+			  if ($_GET['error'] == 'si') {
+			    ?>
+		//texto += "	    <label class='mensajeError'><br><br><b style='color: red;'>Usuario y/o contraseña incorrectos. Por favor, intentalo de nuevo</b></label>";
+			    <?
+			  }elseif ($_GET['error'] == 'fuera') {
+			  	?>
+			  	$("#recuadroLogin").removeClass("animacionRecuadroLogin");
+			  	$("#imagenIzq").removeClass("movimientoImagenIzq");
+			  	$("#imagenDer").removeClass("movimientoImagenDer");
+			  	$("#imagenCentro").removeClass("movimientoImagenCentro");
+			  	$("#imagenLogo").removeClass("movimientoImagenLogo");
+			  	$("#cuadroIdiomas").removeClass("movimientoCuadroIdiomas");
+			  	$("#imagenIzq").addClass("imagenIzq");
+			  	$("#imagenCentro").addClass("imagenCentro");
+			  	$("#imagenDer").addClass("imagenDer");
+
+			  	$("#cuadroLogin").addClass("shake");
+			  	<?
+		/*	    ?>
+		//texto += "	    <label class='mensajeError'><br><br><b style='color: red;'>Para poder visualizar esta página debe iniciar sesión</b></label>";
+			    <?*/
+			  }elseif ($_GET['error'] == 'usuario') {
+			    ?>
+			    $("#recuadroLogin").removeClass("animacionRecuadroLogin");
+			  	$("#imagenIzq").removeClass("movimientoImagenIzq");
+			  	$("#imagenDer").removeClass("movimientoImagenDer");
+			  	$("#imagenCentro").removeClass("movimientoImagenCentro");
+			  	$("#imagenLogo").removeClass("movimientoImagenLogo");
+			  	$("#cuadroIdiomas").removeClass("movimientoCuadroIdiomas");
+			  	$("#imagenIzq").addClass("imagenIzq");
+			  	$("#imagenCentro").addClass("imagenCentro");
+			  	$("#imagenDer").addClass("imagenDer");
+
+			  	$("#cuadroLogin").addClass("shake");
+				texto += "	    <label class='mensajeError'><br><br><b style='color: red;'>Debe introducir un nombre de usuario correcto</b></label>";
+			    <?
+			  }elseif ($_GET['error'] == 'pass') {
+			    ?>
+			    $("#recuadroLogin").removeClass("animacionRecuadroLogin");
+			  	$("#imagenIzq").removeClass("movimientoImagenIzq");
+			  	$("#imagenDer").removeClass("movimientoImagenDer");
+			  	$("#imagenCentro").removeClass("movimientoImagenCentro");
+			  	$("#imagenLogo").removeClass("movimientoImagenLogo");
+			  	$("#cuadroIdiomas").removeClass("movimientoCuadroIdiomas");
+			  	$("#imagenIzq").addClass("imagenIzq");
+			  	$("#imagenCentro").addClass("imagenCentro");
+			  	$("#imagenDer").addClass("imagenDer");
+
+			  	$("#cuadroLogin").addClass("shake");
+				texto += "	    <label class='mensajeError'><br><br><b style='color: red;'>Debe introducir una contraseña correcta</b></label>";
+			    <?
+			  }elseif ($_GET['error'] == 'time') {
+			    ?>
+				texto += "	    <label class='mensajeError'><br><br><b style='color: red;'>Sesión finalizada por inactividad</b></label>";
+			    <?
+			  }elseif ($_GET['error'] == 'cerrar') {
+			    ?>
+				texto += "	    <label style='color: green;' class='mensajeError'><br><br><b>La sesión se ha cerrado correctamente</b></label>";
+			    <?
+			  }
+			}
+		?>
+		texto += "		</form>";
+
+		$("#cuadroLogin").html(texto);
+		$("#cuadroLogin").show();
+
+		// Ver/Ocultar contraseña
+		const ojo = document.querySelector("#ojo");
+		const input = document.querySelector("#pass");
+
+		ojo.addEventListener("click", () => {
+			// Si la contraseña está oculta
+			if (input.type === "password") {
+				input.type = "text";
+				$("#ojoSi").addClass("invisible");
+				$("#ojoNo").removeClass("invisible");
+			}else {
+				// La contraseña es visible
+				input.type = "password";
+				$("#ojoNo").addClass("invisible");
+				$("#ojoSi").removeClass("invisible");
+			}
+		}, 500);
+	};
+
+	function menuRegistro() {
+		var idioma = leerCookie("idioma");
+		if (typeof idioma == 'undefined') {
+			idioma = navigator.language;
+		}
+		var textoIdioma = textoIndex(idioma);
+
+		var texto = "	<div class='w100 h20 flexWrap spaceAroundXY'>";
+		texto += "				<label id='tituloLogin'>"+textoIdioma[4]+"</label>";
+		texto += "		</div>";
+		texto += "		<div id='formularioNuevoUsuario' class='h80 centradoXY flexWrap' method='POST'>";
+		texto += "			<div class='w90 h50 centradoXY flexWrap cajaRegistro'>";
+		texto += "				<div class='w100 h50 spaceBetweenXY boxRegistro'>"; //usuario
+		texto += "					<img class='w10' src='img/Menu/logoUsuario.png' alt='Usuario'>";
+		texto += "					<input id='nuevoUsuario' class='w80' name='nuevoUsuario' type='text' placeholder='"+textoIdioma[0]+"' pattern='[a-zA-Z0-9]+' required>";
+		texto += "				</div>";
+		texto += "				<div class='w100 h50 spaceBetweenXY boxRegistro'>"; //contraseña
+		texto += "					<img class='w10' src='img/Menu/logoPass.png' alt='Contraseña'>";
+		texto += "					<input id='nuevoPass' class='w80' name='nuevoPass' type='text' placeholder='"+textoIdioma[1]+"' required>";
+		texto += "				</div>";
+		texto += "			</div>";
+		texto += "			<div class='w90 h25 spaceBetweenXY boxRegistro'>"; //email
+		texto += "				<img class='w10' src='img/Menu/email.png' alt='Email'>";
+		texto += "				<input id='nuevoEmail' class='w80' name='nuevoEmail' type='email' placeholder='Email' required pattern='[^@]+@[^@]+\\.[a-zA-z]{2,6}'>";
+		texto += "			</div>";
+		texto += "			<div class='w100 h20 flexWrap spaceAroundXY'>"; //botones
+		texto += "				<button class='w40 h100 error' type='button' onclick=\"cancelarRegistro()\">"+textoIdioma[5]+"</button>"; //Botón cancelar
+		texto += "				<button class='w40 h100 acierto' type='submit' onclick=\"guardarRegistro()\">"+textoIdioma[3]+"</button>"; //Botón registrarse
+		texto += "			</div>";
+		texto += "		</div> ";
+
+
+		$("#cuadroLogin").fadeOut();
+		$("#cuadroRegistro").html(texto);
+		$("#cuadroRegistro").removeClass("invisible");
+		$("#cuadroIdiomas").addClass("invisible");
+	};
+
+	function guardarRegistro() {
+		var usuario = document.getElementById("nuevoUsuario").value;
+		var pass = document.getElementById("nuevoPass").value;
+		var email = document.getElementById("nuevoEmail").value;
+		$.ajax({
+			type: 'POST',
+			url: 'php/nuevoUsuario.php',
+			//data: $("#formularioNuevoUsuario").serialize(),
+			data: {
+				usuario: usuario,
+				pass: pass,
+				email: email
+			},
+
+			success: function(res){
+				if(res == 1){
+			    	// vaciar inputs
+			    	$("#cuadroRegistro").addClass("invisible");
+					$("#cuadroIdiomas").removeClass("invisible");
+			    	$("#cuadroLogin").fadeIn();
+			    }else {
+			    	$("#cuadroRegistro").addClass("shake");
+			    }	
+			}
+		});
+	};
+
+	function cancelarRegistro() {
+		$("#cuadroRegistro").addClass("invisible");
+		$("#cuadroLogin").removeClass("invisible");
+		$("#cuadroLogin").fadeIn();
+		$("#cuadroIdiomas").removeClass("invisible");
+	};
+</script>
+</html>

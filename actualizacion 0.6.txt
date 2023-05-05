@@ -1,0 +1,201 @@
+Funciones nuevas:
+
+· Menú login:
+	· [Añadido] Contrato de Términos y Condiciones
+	· [Añadido] Guardar aceptación de contrato de Términos y Condiciones en BD al registrar nuevo usuario
+	· [En proceso] Botón Olvidé contraseña
+
+· Menú principal:
+	· [Añadido] Límite a uso de funciones según la suscripción del usuario
+	· [Mejoras] Optimizado sistema de idiomas
+	· [Añadido] Pantalla de ayuda inicial al ser recién registrado
+	· [Corregido] Mostrar siempre deporte actual en volver de otro menú
+	· [Realizado] Mostrar enlaces correctos por deporte en los botones
+	· [Realizado] Optimización de código en avatares y botones por deporte
+	· [Añadido] Muestra puesto y puntuación real del equipo favorito y del siguiente rival
+	
+
+
+· Configuración:
+	· [Añadido] Tutorial de primer uso
+	· [Añadido] Botón para Ayuda en Navegación
+	· [Añadido] Botón para ver contrato de Términos y Condiciones de Uso de BigDT
+	· [Añadido] Icono con indicador de tipo de usuario
+	· [Añadido] Icono notificación si no se ha configurado la cuenta
+	· Sistema de suscripción Pro
+		· [Detectado][Error] Al volver atrás, en la pantalla de facturación no muestra en pantalla la provincia y la localidad señalada anteriormente
+		· [Añadido] Envío de emails a los entrenadores autorizados
+		· [Añadido] Proceso de suscripción según el uso de la cuenta
+			· [Añadido] Cuenta Básica
+			· [Añadido] Cuenta de Club
+				· [Añadido] Solicitud de Beca Pro
+			· [Añadido] Cuenta Técnico
+			· [Añadido] Cuenta Jugador
+	· [Añadido] Menú configuración para Entrenador
+	· [Añadido] Menú configuración para Jugador
+	· [Añadido] Menú configuración para Versión Gratuita
+	· [Añadido] Adaptación de búsqueda por nombre a iOS
+	· [Bug] [Corregido] El archivo datosPersonales.php no proporciona datos
+	· [Añadido] Adaptación de nuevos menús a smartphones
+	· [En proceso] Apartado Tutorial/Tour BigDT, donde se proporcionan instrucciones y se muestran vídeos de ayuda
+
+
+· Jugar Amistoso:
+	· [Añadido] Acceso sólo para Balonmano
+
+
+
+· Competiciones:
+	Primera pantalla:
+		· [Añadido] Búsqueda correcta de competiciones por deporte
+		· [Añadido] Botón para Competiciones no federadas
+		· [En proceso] Proceso de suscripción a Torneos Personalizados (Torneo BigDT)
+			· [Añadido] Buscador de Torneos BigDT
+
+
+	Segunda pantalla:
+		· [En proceso] Adaptado a distintas pantallas
+		· [Añadido] Directo para TV
+			· [Añadido] Pantalla de Marcador
+			· [Añadido] Pantalla de Estadísticas Generales
+
+
+· Clasificaciones:
+	· [Añadido] Enlace correcto por deporte
+
+· Entrenador Pro:
+	//· [En proceso] Diario de entrenamientos
+	//	· Resumen:
+	//		· [Añadido] Resumen general de las plantillas
+	//		· [Añadido] Resumen general de los entrenamientos
+	//	· Chat:
+	//		· [Añadido] Chat para mantener conversaciones entre entrenador y jugadores de cada equipo/sección
+	//		· [Añadido] Envío de mensajes sin necesidad de hacer clic en el botón enviar
+	//	· Agenda de entrenamientos:
+	//		· [Realizado] Seguimiento de asistencia a entrenamientos
+	//		· [Pendiente] Seguimiento en la realización de ejercicios
+	//		· [Realizado] Seguimiento de mediciones de jugadores
+	//		· [Corregido] Desplazamiento scroll a día del mes anterior
+	//	· [Realizado] Adaptado a distintas pantallas
+
+	· [Añadido] Eliminado acceso a Pizarra Táctica e Informes
+	· Diario de entrenamientos:
+		· [Añadido] Resumen de entrenamientos mensuales con datos reales
+		· [Añadido] Mejoras en creación y actualización de calendario de entrenamientos
+		· [Añadido] Actualización automática de datos de los partidos en el calendario de entrenamientos
+		· [Modificado] Recuento de asistencias
+	· [Pendiente] Análisis táctico
+	· [Pendiente] Informes
+	· [Pendiente] Configuración
+
+
+· Mis Clasificaciones:
+	· [Añadido] Mejorado sistema interno para mostrar clasificaciones en tiempo real
+	· [Mejora visual] Marcados el primer y último de la clasificación (posteriormente se marcarán los que pueden ascender y descender, los que se clasifican para otra competición,...)
+
+
+· Mis Partidos:
+	· [En proceso] LISTADO DE TODOS LOS PARTIDOS JUGADOS POR TU EQUIPO PARA TENER ACCESO A SUS ESTADÍSTICAS, A METER/EDITAR MÁS DATOS DESPUÉS DEL PARTIDO...
+
+· Mi Plantilla:
+	//· [Arreglado] Mejoras en muestra de datos
+	//· [Mejora] Optimización del código para mostrar datos de los jugadores
+
+· BestDT:
+	//· [Añadido] Enlaces a ficha de jugadores
+
+
+· Previa Partido:
+	· [Añadido] Límite a uso de funciones según la suscripción del usuario
+	· [Añadido] Adaptación a los distintos deportes
+
+· Captura de Partido:
+	· [Añadido] Opciones de visualización para captura de datos
+	· [Modificado] Nueva animación para cambios de botones normales a Pro
+	· [Añadido] Edición en vivo de: resultado y marcador
+		· [Añadido] Botón para vaciar todos los datos del partido
+	· [Pendiente] Límite a uso de funciones según la suscripción del usuario
+	· [Mejora visual] Rediseño de botones
+	· [Añadido] Visualizar por defecto historial de acciones al cerrar cuadro de opciones
+	· [Pendiente] BOtón de deshacer acción en historial de acciones
+	· [Bug][Corregido] Eliminación errónea de storage
+
+
+· Fichas clubes:
+
+
+· Fichas jugadores:
+	//· [Añadido] Enlace a datos del jugador al hacer clic en la ficha
+	//· [Mejora] Corrección en la muestra de fotografías de los jugadores
+	· [Pendiente] Diseño exclusivo de fichas para los jugadores de los clubes suscritos
+	· [Pendiente] Diseño especial para fichas de jugadores especiales
+
+
+· Menú Edición:
+	· [Añadido] Menú para búsqueda de Técnicos
+	· [Añadido] Ficha Técnicos
+	· [Añadido] Adaptación de búsqueda por nombre a iOS
+	· [Añadido] Creación de Equipos Personalizados
+	· [Añadido] Indicador en buscadores indicativo de Clubes y Equipos personalizados
+	· [Mejora visual] Diferenciación entre jugadores normales y especiales
+	· [------pendiente] Botón en buscadores para discriminar por elementos Oficiales y Personalizados
+	· [------pendiente] Eliminar el uso de cookies
+
+· Idiomas:
+	· Mejoras continuas en Español, Inglés, Francés y Alemán
+
+[Añadido] Gestión unificada de publicidad
+
+------------------------------------------------------------
+BUG [Detectado]: Al darle al botón de ir al club (desde el equipo) o de ir al equipo (desde el club), hay que darle 2 veces para que cambie de pantalla
+------------------------------------------------------------
+
+
+· Captura de datos de partido:
+	//· [Mejora] Adaptación a nueva base de datos
+	· [En desarrollo] Inclusión de eventos del partido en BD:
+			· [En proceso] Registro de sinergias entre jugadores
+· [En proceso] Sanción al banquillo FALTA EL CUERPO TÉCNICO
+PENDIENTE: AL SANCIONAR TARJETA ROJA O AZUL, SE PRODUCEN 2 MINUTOS, POR LO QUE HAY QUE ELIMINAR A ESE JUGADOR Y DECIR QUIÉN SE VA AL BANQUILLO
+	· [En desarrollo] Mostrar estadísticas en tiempo real del partido
+		· [En desarrollo] Gráficas no muestran todos los datos
+PENDIENTE: la foto de los jugadores genéricos están cambiadas, pone la del local en los visitantes, y viceversa
+	· [En desarrollo] Edición de datos introducidos
+		· [Realizado] Edición del reloj
+	· [En desarrollo] Introducción de datos por voz
+· [PENDIENTE] Hay que ver el tema de reconocer los contraataques
+· PENDIENTE Mejorar el tema de contar el tiempo de juego de cada jugador (el tiempo actual no tiene final, por lo que no lo suma)
+· PENDIENTE ¿Meter un contador de tiempo de juego total de cada equipo (sumando el tiempo de cada posesión)?
+· [PENDIENTE][Bug] Al darle al botón de pérdida en el pase por Error no forzado (tanto en error de pase como en error de recepción), duplica el evento en la BD
+
+
+· Sistema de control de preferencias de uso
+	· [En proceso de implantación]
+
+Base de datos: ACTUALIZAR
+· [Añadido] Clasificaciones de Asobal (1951-2022)
+· [Añadido] División de Honor: Sección masculina (16 equipos) y Sección femenina (14 equipos)
+· [Añadido] División de Honor: Partidos temporadas 2020/2021, 2021/2022 y 2022/2023
+· [Añadido] División de Honor Plata: Sección masculina (20 equipos) y Sección femenina (56 equipos)
+· [Añadido] División de Honor Plata: Partidos temporadas 2021/2022 y 2022/2023
+· [Añadido] Nuevas divisiones femeninas de la temporada 2022/2023
+· [Añadido] Primera División Nacional: Sección masculina (95 equipos)
+· [Añadido] Primera División Nacional: Partidos temporadas 2021/2022 y 2022/2023
+· [En proceso] Resultados finales y clasificación de todas las temporadas de Asobal (1951-2022)
+· [Añadido] Jugadores: Sección masculina (4258 jugadores) y Sección femenina (1691 jugadoras)
+· [Añadido] Técnicos: 519 técnicos
+· Totales: 357 Clubes, 444 equipos, 5949 jugadores y 519 técnicos
+· [Añadido] 43 Países
+
+· [Pendiente] Segunda División Nacional (masculina)
+
+Bugs:
+//· [Solucionado] Error en la visualización de listados de provincias con "Cataluña"
+//· [Añadido] Incluidos caracteres especiales
+· Arreglos menores
+
+Mejoras:
+· Optimización de código
+· Creación y mejora de iconos por defecto
+//· [Añadido] Nueva capa de seguridad con tecnología JWT
+//· [Añadido] Vuelta a cargar petición a servidor en caso de bloqueo o no recibir respuesta

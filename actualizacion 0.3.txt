@@ -1,0 +1,109 @@
+Funciones nuevas:
+· Menú principal:
+	· [Mejora visual] Nuevos iconos
+	· [Añadido] Mejorado el sistema de Proximo rival
+	· [Añadido] Datos reales en la Racha de los últimos partidos y Puntos y Puesto de la competición con el siguiente rival
+
+· Jugar Amistoso:
+	· [Añadido] Nuevo acceso para poder realizar captura de datos de un partido amistoso rápido
+
+· Competiciones:
+	· [Mejora visual] Añadido logo de la competición o, en su defecto, logo de la organizadora
+	· [Mejora visual] Color diferencial de banner de competición según la categoría
+
+	Primera pantalla:
+	· [Añadido] Botones funcionales para navegar entre las distitnas competiciones
+
+	Segunda pantalla:
+	· [Añadido] Seleccionar cualquier jornada de la temporada
+	· [Añadido] Seleccionar entre cualquiera de las temporadas almacenadas en la base de datos
+	· [Añadido] Enlace operativo a previa de cualquier partido
+	· [Añadido] Información por si no encuentra datos
+
+· Clasificaciones:
+	· [Añadido] Mostrar todas las jornadas de las distinas categorías
+	· [Añadido] Enlace a previa del partido
+
+· Mis Clasificaciones:
+	· Muestra datos reales del equipo y el club favorito
+	· [No operativo] Añadida botonera para seleccionar clasificaciones de las distintas competiciones en las que se participan en esa temporada
+	· [Añadido] Botón de acceso a ficha del club matriz
+
+· Mi Plantilla:
+	· Muestra la plantilla del equipo favorito (introduce datos estándar si no están todavía en la BD)
+	· Muestra el staff técnico del equipo favorito (introduce datos estándar si no están todavía en la BD)
+	· [Añadido] Icono adaptado para mostrar doble nacionalidad
+	· [Añadido] Botón para ver ficha personal de cada jugador
+
+· Previa Partido:
+	· [Mejora visual] Escudo de fondo mejorado
+	· [Realizado] Mostrar datos reales de los equipos
+	· [Realizado] Añadidos nuevos datos en las fichas individuales de los jugadores
+	· [Añadido] Información por si no encuentra datos
+	· [Añadido] Botón para ver ficha completa del jugador
+	· [Añadido] Información para partido rápido amistoso
+
+· Fichas clubes:
+	· [Añadido] Ficha individual de club
+
+· Fichas jugadores:
+	· [Mejora visual] Rediseño de vista minimizada de ficha
+	· [Añadido] Ficha personal de jugadores
+	· [Añadido] Elaboración de gráficas de evolución
+
+· Menú Edición:
+	· [--------bug-------] Error al darle al botón de crear Equipo
+	· [------pendiente] Eliminar el uso de cookies
+
+· Captura de datos de partido:
+	· [Realizado] Sistema para seleccionar convocatoria de jugadores y técnicos al inicio del partido
+	· [Realizado] Sistema de cambios entre jugadores en juego y en banquillo
+	· [Añadido] Compatibilización total de manejo para pantallas táctiles
+	· [Añadido] Compatibilidad total con sistemas Android e IOS
+	· [Realizado] Nuevo sistema de selección de jugadores y opciones
+	· [Añadido] Botón de sanción al banquillo
+	· [Añadido] Botón de aviso de pasivo y sanción de pasivo
+	· [Añadido] Botón para jugar con la portería vacía o con portero
+	· [Añadido] Botón para seleccionar táctica defensiva y ofensiva
+	· [Realizado] Visualización automática de la táctica ofensiva o defensiva, según esté el equipo atacando o defendiendo
+	· [Mejora visual] Rediseño visual de todo el sistema de captura de datos
+	· [Añadido] Añadida información de competición, logo y jornada en lugar de pabellón, fecha y hora del partido
+	· [Realizado] Rediseño del sistema de contadores de sanciones
+	· [Añadido] Menú con opciones: información general del partido, modificar convocatoria, editar entradas, ayuda
+	· [Añadido] Funcionamiento para partido rápido amistoso
+	· [Añadido] Botón para acceder a estadísticas del partido (mientras el partido está en pausa)
+
+· Sistema de control de preferencias de uso
+	· [En proceso de implantación]
+
+Base de datos:
+· [Añadido] División de Honor: Sección masculina (16 equipos) y Sección femenina (14 equipos)
+· [Añadido] División de Honor: Partidos temporadas 2020/2021, 2021/2022 y 2022/2023
+· [Añadido] División de Honor Plata: Sección masculina (20 equipos) y Sección femenina (56 equipos)
+· [Añadido] División de Honor Plata: Partidos temporadas 2021/2022 y 2022/2023
+· [Añadido] Nuevas divisiones femeninas de la temporada 2022/2023
+· [Añadido] Primera División Nacional: Sección masculina (95 equipos)
+· [Añadido] Primera División Nacional: Partidos temporadas 2021/2022 y 2022/2023
+· [Añadido] Jugadores: Sección masculina (835 jugadores) y Sección femenina (318 jugadoras)
+· [Añadido] Técnicos: 519 técnicos
+· Totales: 166 Clubes, 201 equipos, 1153 jugadores y 519 técnicos
+
+· [Pendiente] Segunda División Nacional (masculina)
+
+Bugs:
+· [Corregido] Pantalla vacía en Previa Partido si no hay datos del partido
+· [Corregido] No se guardaba el equipo favorito seleccionado
+· [Corregido] Error al mostrar datos en Clasificaciones
+· [Corregido] Al darle a previa del partido, hay veces que deja la pantalla en blanco y no muestra los datos del partido
+· [Pendiente] Si se recarga la página después de haber seleccionado la convocatoria en la captura de partido, puede provocar que se detecte un error al llevar un jugador del equipo titular al banquillo
+· Arreglos menores
+
+Mejoras:
+· Mejor implementación de indicativo versión beta
+· Mejor implementación código banner publicidad
+· Nuevos logos de publicidad
+· Optimización de código
+· Creación y mejora de iconos por defecto
+
+PENDIENTES
+· favoritos.php: [En proceso] Mejorar los datos reales y, si no hay datos, que ponga algo

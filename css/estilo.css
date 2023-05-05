@@ -1,0 +1,6049 @@
+* {
+	/* Eliminar todas las opciones automáticas que vienen por defecto */
+	margin: 0px;
+ 	padding: 0px;
+ 	list-style: none;
+ 	text-decoration: none;
+ 	font-family: 'Futura','Future','Rubik', sans-serif;
+ 	box-sizing: border-box; /* Esto es para que el relleno y los bordes estén dentro de las medidas y no sumen*/
+
+ 	--color-texto: #f5f5f5; /*whitesmoke*/
+ 	--color-pro: #e14848;
+ 	--color-sombra: #222; /*#333*/
+ 	--color-corporativo-rosa: #c52bb4;
+ 	--color-corporativo-rosa2: #aa2bc5;
+ 	--color-corporativo-rosa3: #8d2bc5;
+ 	--color-corporativo-rosa4: #c43bb5;
+ 	--color-corporativo-rosa5: #c34eb6;
+ 	--color-corporativo-morado: #a557d8;
+ 	--color-corporativo-morado2: #9d57d8;
+ 	--color-corporativo-morado3: #8857d8;
+ 	--color-fondo-principal: #1d003d;/* #2c5282;*/
+ 	--color-fondoIndex: #0d002e;
+ 	--color-caja: #1e1e1e; /*#1d003d; */
+ 	--color-caja-brillo: linear-gradient(to bottom, var(--color-corporativo-rosa) 1%, var(--color-caja) 10%);
+ 	--color-pista: #334ce6;
+ 	--color-contraste: #4a4a4a;
+ 	--color-acierto: #136c00; /*#168000;*/
+ 	--color-error: #ff3c00;
+ 	--color-local: #cd7b3f;
+ 	--color-visitante: #4676b4;
+ 	--color-oro1: #c6980b;
+ 	--color-oro2: #eed02f; /*#ffd700;*/
+ 	--color-plata1: #78969b;
+ 	--color-plata2: #c0c0c0;
+ 	--color-bronce1: #945d41;
+ 	--color-bronce2: #cd7f32;
+ 	color: var(--color-texto);
+	overflow: hidden;
+ }
+
+@font-face {
+	font-family: 'Rubik';
+	src: url('fonts/Rubik-Medium.ttf') format('truetype');
+	font-display: swap;
+
+	font-family: 'Future';
+	src: url('fonts/Futura LT Condensed Light.otf') format('opentype');
+	font-style: normal;
+
+	font-family: 'Futura';
+	src: url('fonts/futura light bt.ttf') format('truetype');
+	font-style: normal;
+}
+
+body {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+img {
+ 	-o-object-fit: contain;
+ 	object-fit: contain;
+}
+
+button {
+	background: none;
+	border: none;
+}
+
+.alFrente {
+	z-index: 10000 !important;
+}
+
+.botonCancelar {
+	color: var(--color-error) !important;
+}
+
+
+select {
+	background: transparent;
+	border-color: var(--color-corporativo-morado);
+	border-radius: 50px;
+	padding-left: 1%;
+}
+	select option {
+		background: var(--color-caja);
+	}
+	optgroup {
+		background: var(--color-caja);
+		color: var(--color-corporativo-rosa);
+	}
+	#cajaMenuCentralEdicion #organizadora optgroup {
+		color: var(--color-corporativo-morado);
+	}
+p {
+	text-align: justify;
+}
+
+.potencia {
+	position: absolute;
+	font-size: .45em;
+	margin-top: 3%;
+}
+
+
+/* Tamaño de fuentes */
+#sancionesL,
+#sancionesV {
+	font-size: 1.5vh;
+}
+
+#zonaCentral .puntuacion label,
+.pantallaReloj {
+	font-size: 5em;
+}
+#cajaNumeros label,
+#labelnombreJugador,
+#labelnombreEntrenador,
+#labelnombreTorneo {
+	font-size: 3.5em;
+}
+.suscripcionLabel,
+#opcionesDefecto label,
+#labelnombreClub,
+#labelnombreEquipo {
+	font-size: 3em;
+}
+#menuPartido #menuPartidoCentral #menuEstGenerales .textolocal,
+#menuPartido #menuPartidoCentral #menuEstGenerales .textovisitante {
+	font-size: 2.6rem;
+}
+#marcadorCentral #pantallaEquipos .jugador,
+#marcadorCentral #pantallaEquipos .jugadorTitular {
+	font-size: 2.5rem;
+}
+#cajaLabelDatos,
+.labelConvocatoriaJugadores,
+.cartelConvocatoria {
+	font-size: 2.2em;
+}
+h1,
+.em2,
+.labelBeta,
+#menuPartido #menuPartidoCentral #menuVs .datoValoracion,
+#menuPartido #menuPartidoCentral #menuVs .datoPuesto,
+#menuPartido #menuPartidoCentral #menuEstGenerales .tituloLabel,
+#menuPartido #menuPartidoCentral #menuEstGenerales .expulsiones,
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #cuadroDatos #fichaDorsal .dorsal,
+#cajaAjustesUsuario #ajustesCompras .titulosLabel,
+#clubFicha {
+	font-size: 2em !important;
+}
+#tituloLogin,
+#menuPartido #menuPartidoCentral #menuEstGenerales p {
+	font-size: 1.9rem !important;
+}
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha .apellido,
+.labelResultado,
+#jugadorFicha,
+#entrenadorFicha,
+.fuenteGratis {
+	font-size: 1.8rem;
+}
+#menuPartidoInferior button {
+	font-size: 1.7rem;
+}
+#cuadroLogin button,
+#cuadroRegistro button,
+.datosEAP,
+.botonesFicha,
+#menuEdicionNuevoClub .pantallaEdicion label,
+#menuEdicionNuevoEquipo .pantallaEdicion label,
+.cartelNumConvocatoria {
+	font-size: 1.6em;
+}
+input[type=number],
+.boxLogin,
+.boxRegistro,
+#ajustesUsuario #nombreUsuario label,
+#menuIndex #cajaSecciones .cajaMenu label,
+.jugadorBanquillo,
+#botonClubDeporte1,
+#botonClubDeporte2,
+#botonClubDeporte3,
+.textoExclusiones {
+	font-size: 1.5em;
+}
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralBuscar > div:nth-of-type(1) div,
+#menuIndex .lineaCajaMenuCentral #cajaFavorito .labelRival,
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha .nombre,
+.textoAmistoso {
+	font-size: 1.4em;
+}
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosClubes,
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosEquipos,
+#menuEdicionNuevoTorneo .botonTorneo,
+.labelOpciones,
+#menuPartido #menuPartidoCentral #menuVs label,
+#menuPartido #menuPartidoCentral #menuEstGenerales .tiros div {
+	font-size: 1.3em;
+}
+input[type=time],
+.recuadroEdicionTorneo .inputNombre,
+#mandoEstadisticas {
+	font-size: 1.2em;
+}
+.cuadroTecnico,
+.cajaMenu .elementosPro,
+.cajaDiario .labelResultado,
+.numeroClasificacion,
+.nombreClasificacionGeneral {
+	font-size: 1.1em;
+}
+#cajaFavoritoDatos #cajaProximoRival div label,
+.cajaDatosNombre,
+#cajaMenuCentralEdicion #organizadora,
+#opcionesJugador label {
+	font-size: 1em;
+}
+#cajaAjustesUsuario #ajustesCompras #suscripciones label,
+#cajaAjustesUsuario #ajustesCompras #favoritos label {
+	font-size: .95em;
+}
+#cajaMenuCentralEdicion #organizadora optgroup,
+#formularioNuevoUsuario input,
+#textoCookies,
+#resumen #botonSancionBanquillo label,
+.filaAlineacion .pAlineacion,
+#menuPartido #menuPartidoCentral #menuVs .datoAnotacion,
+#cuadroMiClasificacionGeneral {
+	font-size: .9em;
+}
+#cajaFavorito #cajaFavoritoEquipo label,
+.cuadroDeCategorias label,
+.cuadroReglas,
+#zonaCentral .pabellon,
+.opciones label,
+#botonesTipoTiro .divisionIconos label,
+.graficaLabel,
+.botonMando label,
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #cuadroDatos #fichaDorsal .posicion,
+#opcionesMenu label,
+#cajaMenuCentralEdicion .inputTemporada,
+.textoFechaAutorizacion,
+#ayudaEntrenamientoPro {
+	font-size: .8em;
+}
+#menuIndex .lineaCajaMenuCentral #cajaFavorito .acierto,
+#menuIndex .lineaCajaMenuCentral #cajaFavorito .error {
+	font-size: .75em;
+}
+#menuIndex #cajaSecciones .cajaMenu .elementosPro,
+.cajones,
+.cajaRacha div,
+.botonMenuFavoritos,
+#tiroPorteria,
+.fuentePrecio {
+	font-size: .7em;
+}
+#ajustesUsuario #cerrarSesion label {
+	font-size: .65em !important;
+}
+nav select {
+	font-size: .6em;
+}
+#menuIndex .lineaCajaMenuCentral #cajaFavorito #cajaEnlacesFavoritos button,
+#datosEstGraficas .evolucionLabel {
+	font-size: .55em;
+}
+#marcadorCentral .contadorExclusion sup {
+	font-size: .5em;
+}
+#cajaSecciones .textoOculto {
+	font-size: 0;
+}
+.labelValoracionJugador {
+	font-size: 20px;
+}
+
+#cajaAjustesUsuario #ajustesLabel {
+	font-size: clamp(3vw,35px,8.5vw);
+}
+
+
+/* Centrados genéricos */
+.centradoXY {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+	.spaceAroundXY {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+	.spaceBetweenXY {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+.centradoInlineXY {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.flexWrap {
+	-ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.alineacionSuperior {
+	align-items: flex-start;
+}
+
+/* Elementos que tienen cursor: pointer */
+input,
+button,
+select,
+nav label,
+nav .logoBigDT,
+.pulsable,
+#idiomaActual,
+#ojo,
+.botonClasificaciones,
+#botonBuscarClubes,
+#botonBuscarEquipos,
+#botonBuscarTorneos,
+#botonBuscarJugadores,
+#botonBuscarTecnicos,
+.botonInfo,
+.inputFile,
+#anteriorNivel,
+#siguienteNivel,
+.numFase,
+.cuadroReglas,
+.botonTorneo,
+.botonAtras,
+.botonPartido,
+.jugador,
+#controlReloj #botonInicioReloj,
+#botonVolverMenu,
+#logoHD,
+#logoConfiguracion,
+#opcionInfo,
+#opcionConvocatoria,
+#opcionEditar,
+#opcionAyuda,
+#fichaSalir,
+#botonNAmistoso,
+#mandoEstGenerales,
+#mandoEstGraficas,
+#mandoEstJugadores,
+#mandoEstPro,
+#botonSelecTirador,
+#botonSelecPortero,
+.elementoX,
+#botonUsuario,
+#botonSalirSuscripcion,
+#botonEditarSuscripBalonmano,
+/*#botonEditarSuscripBaloncesto,
+#botonEditarSuscripBalonmano,*/
+.botonSuscripcion,
+#botonEditarFavBM,
+#botonEditarBL,
+#botonEditarFS,
+.botonSuscrip1,
+.botonSuscrip2,
+.botonEntrenamientoPro,
+.cajaElegirUsuarioSuscripcion,
+.botonGuardarConvocatoria,
+.botonMando {
+	cursor: pointer;
+}
+
+.noOperativo,
+.botonCompeticiones label,
+.jugador div,
+.jugador img,
+.jugadorTitular div,
+.jugadorTitular img,
+.jugadorBanquillo div,
+.jugadorBanquillo img,
+.botonSuscripcion div,
+#pantallaZonaTiroArea,
+#pantallaZonaTiroLinea9,
+#pantallaZonaTiroLineaPenalti,
+.cajaElegirUsuarioSuscripcion div {
+	pointer-events: none;
+}
+
+/* Elementos con overflow automatico */
+.overflowY,
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosClubes,
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosEquipos,
+#cajaMenuDatosJugadores,
+#cajaMenuDatosTecnicos,
+#cuadro3A,
+#cuadroFases,
+.cuerpoCentral,
+.cajaPuestos,
+#resumen #verSeleccion #imprimirSeleccion,
+.menuPrimeraJornada,
+.cuadroDatosClasificaciones,
+.datosJugadores,
+#cuadroResultados,
+#listadoMiPlantilla,
+#cuadroMiClasificacionGeneral,
+#cuadroMisClasificacionesHistoricas,
+#jugadorCarrera,
+#cuadroCompeticiones,
+.cuadroTecnico,
+#marcoEstGenerales,
+#recuadroDatosEquipos,
+.cuadroPlantillaConvocatoria,
+#banquilloSancionL,
+#banquilloSancionV,
+#cuadroSuscriptUsuarios,
+#listadoAutorizados,
+#agendaEntrenamiento,
+#datosListadoAsistencia,
+#cajaJugadoresPlantilla,
+#cajaTemporadasPlantilla,
+#cuadroListadoEquipos,
+#cuadroTurnos,
+#datosListadoPrueba,
+#datosListadoMedidas,
+#cuadroMesesResumenEntrenamientos,
+#recuadroTerminos,
+#textoAyudaConfiguracion,
+#cajaElegirTipoUsuario,
+.autocompletadores {
+	overflow-y: auto;
+}
+
+.overflowX,
+#cuadroCategorias,
+#filaTemporadasCompeticiones,
+#filaCategoriasCompeticiones {
+	overflow-x: auto;
+}
+
+.pRelativo,
+#botonSwitchEntrenamientoResumen,
+#botonSwitchEntrenamientoTablon,
+#botonSwitchEntrenamientoAgenda,
+#ayudaMenuSuperior,
+#ayudaMenuMedio,
+#ayudaMenuInferior,
+.evolucionGrafica,
+#cajaMenuCentralPro {
+	position: relative;
+}
+
+.pAbsoluto,
+.imagenPortada,
+.cuadroMenuPro,
+#menuProEntrenamiento,
+#menuProPizarra,
+#menuProInformes,
+#menuProConfiguracion,
+#menuProCentro,
+#fondoMenuProCentro,
+#menuProCentro img,
+#menuProEntrenamiento img,
+#menuProPizarra img,
+#menuProInformes img,
+#menuProConfiguracion img {
+	position: absolute;
+}
+
+#marcoEstadisticas {
+	z-index: 1;
+}
+
+#cuadroMostrarCompeticiones {
+	z-index: 2;
+}
+
+/* Globos Notificaciones */
+.notificaciones {
+	position: absolute;
+	border-radius: 50%;
+	background: var(--color-error);
+	width: 15px;
+	height: 15px;
+	font-size: 12px;
+	z-index: 99;
+}
+	.notificaciones::before {
+		content: "!";
+	}
+	.notificacionBotonSwitchEntrenamiento {
+		top: 20%;
+		left: 45%;
+	}
+	.notificacionDeporte {
+		position: relative;
+		left: -3%;
+	}
+	.notificacionEditar {
+		position: absolute;
+		right: 0;
+		top: 25%;
+	}
+
+
+
+/* Eliminar en iOS la flecha de los elementos details */
+details > summary {
+  display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+
+/* Alineacion de textos */
+.textoCentrado,
+.notificaciones,
+.suscripcionLabel,
+#cajaAjustesUsuario #ajustesLabel,
+#ajustesUsuario #cerrarSesion label,
+#cajaAjustesUsuario #ajustesCompras .titulosLabel,
+#cajaAjustesUsuario #ajustesCompras #suscripciones .labelEstado,
+.cuadroUsuarios,
+nav select,
+input[type=time],
+#cajaLabelDatos,
+#cajaMenuCentralEdicion .inputTemporada,
+#cajaMenuCentralEdicion input[type="number"],
+.cuadroDeCategorias label,
+#cuadroCambiarSuscripcion .botonSuscrip2,
+.botonAltaSeleccion,
+.botonGestionSeleccion,
+.cuadroReglas,
+.labelReglasPartido,
+#cuadroParticipantesB1 label,
+#menuEdicionNuevoTorneo .botonTorneo,
+#botonNAmistoso,
+.botonCompeticiones,
+.submenusCentrados,
+.scrollbar,
+.fichaJugadorBottom label,
+#menuProCentro span,
+.cajaDiario,
+#agendaEntrenamiento,
+.filaAlineacion .pAlineacion,
+#menuPartido #menuPartidoCentral #menuVs #cuadroVs .cuadro,
+#menuPartido #menuPartidoCentral #menuVs label,
+#menuPartido #menuPartidoCentral #menuEstGenerales #labelGenerales,
+#menuPartido #menuPartidoCentral #menuEstGenerales .tituloLabel,
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #cuadroDatos #fichaDorsal .posicion,
+#marcadorSuperior,
+.botonMando,
+.jugador,
+.jugadorBanquillo,
+.jugadorTitular,
+#tiroFuera label,
+#marcadorInferior,
+.recuadroIcono label,
+.pantallaReloj,
+#controlReloj label,
+#opcionesMenu label,
+#cuadroInformacion span {
+	text-align: center;
+}
+
+/* Inputs */
+input[type=date],
+input[type=time],
+input[type=number] {
+	background: var(--color-corporativo-morado);
+	border: none;
+	border-radius: 20px;
+}
+input[type=number] {
+	background: none !important;
+	height: 30px;
+	text-align: right;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom: 1px solid var(--color-corporativo-morado);
+}
+input[type=time] {
+	height: 30px;
+}
+input[type=radio] {
+	display: none;
+}
+	.radio {
+		border: 2px solid var(--color-corporativo-morado);
+		border-radius: 10px;
+	}
+		.radio label:hover {
+			background: var(--color-corporativo-morado);
+		}
+		input[type="radio"]:checked + label {
+			background: var(--color-corporativo-morado);
+		}
+		.radio label img {
+			height: 20px;
+			margin-right: 2px;
+		}
+input[type=text],
+input[type=email],
+input[type=search] {
+	background: none;
+	border: none;
+	border-radius: 20px;
+	border-bottom: 2px solid var(--color-corporativo-morado);
+	padding-left: 3%;
+}
+
+.autocompletadores {
+	position: absolute;
+	background: var(--color-fondo-principal);
+	border-top: 2px solid var(--color-corporativo-morado);
+	border-bottom: 2px solid var(--color-corporativo-morado);
+	border-radius: 8px;
+	padding: 1px 4px 3px 4px;
+	max-height: 50vh;
+	z-index: 9;
+	transform-origin: top center;
+  transform: scaleY(0);
+  transition: transform 0.3s ease-in-out;
+}
+	.show {
+	  transform: scaleY(1);
+	}
+	#inputListaJugadores_list {
+		left: 16%;
+		top: 27%;
+	}
+	#inputListaClubes_list {
+		left: 11%;
+		top: 27%;
+	}
+	#inputListaTecnicos_list {
+		left: 14.5%;
+		top: 27%;
+	}
+	#seleccionClubes_list {
+		left: 10%;
+		top: 50%;
+		max-height: 30vh;
+	}
+		#seleccionClubes {
+			margin-top: -16%;
+		}
+	#suscripcionPaso2 {
+		position: relative;
+	}
+
+/* Icono de espera */
+#loaderCajaFichas,
+#loaderCompeticiones2,
+#loaderAjustes,
+#loaderSuscripcion,
+#loaderCearAgendaEntrenamientoPro,
+#loaderCrearEjercicioEntrenamientoPro,
+#loaderCuadroTurnos {
+	display: none;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block !important;
+  position: absolute;
+  z-index: 100000;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.loader::before {
+  content: '';  
+  -webkit-box-sizing: border-box;  
+          box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 0;
+  top: -24px;
+  -webkit-animation: animloader 4s ease infinite;
+          animation: animloader 4s ease infinite;
+}
+.loader::after {
+  content: '';  
+  -webkit-box-sizing: border-box;  
+          box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-animation: animloader2 2s ease infinite;
+          animation: animloader2 2s ease infinite;
+}
+
+#loaderMenuGeneralDatos {
+	left: calc(50% - 48px);
+	top: 50%;
+}
+
+@-webkit-keyframes animloader {
+  0% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  12% {
+    -webkit-box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  25% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  37% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
+  }
+  50% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
+  }
+  62% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
+  }
+  75% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
+  }
+  87% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;
+  }
+  100% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  12% {
+    -webkit-box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  25% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+  37% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
+  }
+  50% {
+    -webkit-box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
+  }
+  62% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
+  }
+  75% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
+  }
+  87% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;
+  }
+  100% {
+    -webkit-box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
+  }
+}
+
+@-webkit-keyframes animloader2 {
+  0% {
+    -webkit-transform: translate(0, 0) rotateX(0) rotateY(0);
+            transform: translate(0, 0) rotateX(0) rotateY(0);
+  }
+  25% {
+    -webkit-transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+            transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+            transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+            transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotateX(0) rotateY(360deg);
+            transform: translate(0, 0) rotateX(0) rotateY(360deg);
+  }
+}
+
+@keyframes animloader2 {
+  0% {
+    -webkit-transform: translate(0, 0) rotateX(0) rotateY(0);
+            transform: translate(0, 0) rotateX(0) rotateY(0);
+  }
+  25% {
+    -webkit-transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+            transform: translate(100%, 0) rotateX(0) rotateY(180deg);
+  }
+  50% {
+    -webkit-transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+            transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
+  }
+  75% {
+    -webkit-transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+            transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+  }
+  100% {
+    -webkit-transform: translate(0, 0) rotateX(0) rotateY(360deg);
+            transform: translate(0, 0) rotateX(0) rotateY(360deg);
+  }
+}
+
+/* Loader de texto */
+.loaderTexto, .loaderTexto:before, .loaderTexto:after {
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation: bblFadInOut 1.8s infinite ease-in-out;
+          animation: bblFadInOut 1.8s infinite ease-in-out;
+}
+.loaderTexto {
+  color: #FFF;
+  font-size: 7px;
+  position: relative;
+  text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+          animation-delay: -0.16s;
+}
+.loaderTexto:before,
+.loaderTexto:after {
+  content: '';
+  position: absolute;
+  top: 0;
+}
+.loaderTexto:before {
+  left: -3.5em;
+  -webkit-animation-delay: -0.32s;
+          animation-delay: -0.32s;
+}
+.loaderTexto:after {
+  left: 3.5em;
+}
+
+@-webkit-keyframes bblFadInOut {
+  0%, 80%, 100% { -webkit-box-shadow: 0 2.5em 0 -1.3em; box-shadow: 0 2.5em 0 -1.3em }
+  40% { -webkit-box-shadow: 0 2.5em 0 0; box-shadow: 0 2.5em 0 0 }
+}
+
+@keyframes bblFadInOut {
+  0%, 80%, 100% { -webkit-box-shadow: 0 2.5em 0 -1.3em; box-shadow: 0 2.5em 0 -1.3em }
+  40% { -webkit-box-shadow: 0 2.5em 0 0; box-shadow: 0 2.5em 0 0 }
+}
+
+
+
+
+
+/* Animación para que un botón parpadee */
+.parpadeo {
+  position: relative;
+  -webkit-animation: parpadear 2s ease-in-out infinite;
+          animation: parpadear 2s ease-in-out infinite;
+}
+
+.parpadeo::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background-color: var(--color-corporativo-rosa);
+  z-index: -1;
+  -webkit-animation: brillar 4s ease-in-out infinite;
+          animation: brillar 4s ease-in-out infinite;
+}
+
+@-webkit-keyframes parpadear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes parpadear {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes brillar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes brillar {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    opacity: 0.1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+    
+
+
+
+/* Colores generales */
+a,
+#formularioNuevoUsuario strong {
+	color: var(--color-corporativo-morado);
+}
+.escudoImg {
+	background: rgba(255,255,255,.8);
+	padding: 3%;
+	border-radius: 10px;
+	aspect-ratio: 1 / 1;
+}
+.colorDorado {
+	background:-webkit-gradient(linear,left top, left bottom,from(var(--color-oro1)),to(var(--color-oro2)));
+	background:-o-linear-gradient(var(--color-oro1),var(--color-oro2));
+	background:linear-gradient(var(--color-oro1),var(--color-oro2));
+}
+.colorDiv1 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-oro2)),to(var(--color-oro1)));
+	background: -o-linear-gradient(var(--color-oro2),var(--color-oro1));
+	background: linear-gradient(var(--color-oro2),var(--color-oro1));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.colorDiv2 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-plata1)),to(var(--color-plata2)));
+	background: -o-linear-gradient(var(--color-plata1),var(--color-plata2));
+	background: linear-gradient(var(--color-plata1),var(--color-plata2));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.colorDiv3 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-bronce1)),to(var(--color-bronce2)));
+	background: -o-linear-gradient(var(--color-bronce1),var(--color-bronce2));
+	background: linear-gradient(var(--color-bronce1),var(--color-bronce2));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.colorDiv4 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-local)),to(var(--color-pro)));
+	background: -o-linear-gradient(var(--color-local),var(--color-pro));
+	background: linear-gradient(var(--color-local),var(--color-pro));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.colorDiv5 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-contraste)),to(var(--color-visitante)));
+	background: -o-linear-gradient(var(--color-contraste),var(--color-visitante));
+	background: linear-gradient(var(--color-contraste),var(--color-visitante));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.colorDiv6 {
+	color: transparent;
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-sombra)),to(var(--color-contraste)));
+	background: -o-linear-gradient(var(--color-sombra),var(--color-contraste));
+	background: linear-gradient(var(--color-sombra),var(--color-contraste));
+	-webkit-background-clip: text;
+	        background-clip: text;
+}
+.division0Fondo {
+	background: -webkit-gradient(linear,left top, left bottom,from(var(--color-caja)),to(var(--color-corporativo-rosa)));
+	background: -o-linear-gradient(var(--color-caja),var(--color-corporativo-rosa));
+	background: linear-gradient(var(--color-caja),var(--color-corporativo-rosa));
+}
+.division1Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-oro1)), to(var(--color-oro2)));
+	background: -o-linear-gradient(top left, var(--color-oro1), var(--color-oro2));
+	background: linear-gradient(to bottom right, var(--color-oro1), var(--color-oro2));
+}
+.division2Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-plata1)), to(var(--color-plata2)));
+	background: -o-linear-gradient(top left, var(--color-plata1), var(--color-plata2));
+	background: linear-gradient(to bottom right, var(--color-plata1), var(--color-plata2));
+}
+.division3Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-bronce1)), to(var(--color-bronce2)));
+	background: -o-linear-gradient(top left, var(--color-bronce1), var(--color-bronce2));
+	background: linear-gradient(to bottom right, var(--color-bronce1), var(--color-bronce2));
+}
+.division4Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-local)), to(var(--color-pro)));
+	background: -o-linear-gradient(top left, var(--color-local), var(--color-pro));
+	background: linear-gradient(to bottom right, var(--color-local), var(--color-pro));
+}
+.division5Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-contraste)), to(var(--color-visitante)));
+	background: -o-linear-gradient(top left, var(--color-contraste), var(--color-visitante));
+	background: linear-gradient(to bottom right, var(--color-contraste), var(--color-visitante));
+}
+.division6Fondo {
+	background: -webkit-gradient(linear, left top, right bottom, from(var(--color-sombra)), to(var(--color-contraste)));
+	background: -o-linear-gradient(top left, var(--color-sombra), var(--color-contraste));
+	background: linear-gradient(to bottom right, var(--color-sombra), var(--color-contraste));
+}
+.color1 {
+	color: var(--color-corporativo-morado);
+}
+.color2 {
+	color: var(--color-corporativo-rosa);
+}
+
+.acierto,
+.encima {
+	background-color: var(--color-acierto) !important;
+}
+.acierto2 {
+	border: 4px solid #abe889;
+	background: rgba(82, 123, 58, 0.6);
+}
+
+.error {
+	background-color: #aa2b2b !important; /* brown */
+}
+.error2 {
+	border: 2px solid var(--color-error); /* orangered */
+	background: rgba(170,43,43,.3);
+}
+.precaucion,
+.precaucion strong {
+	background: var(--color-oro2);
+	color: var(--color-caja);
+}
+
+.media {
+	background: var(--color-contraste) !important;
+}
+.debajo {
+	background: var(--color-error) !important;
+}
+.mvp {
+	background: var(--color-oro2) !important;
+}
+
+.empate {
+	background: var(--color-bronce1);
+}
+
+.opciones {
+	border: 4px solid #3483ff;
+	background-color: darkslateblue;
+}
+
+.marcadoFondo {
+	background: var(--color-fondo-principal);
+}
+
+.local {
+	background: var(--color-local);
+	color: var(--color-texto);
+}
+.visitante {
+	background: var(--color-visitante);
+	color: var(--color-texto);
+}
+.textoPro,
+#menuFichaPro .subtitulo label,
+#menuVsPro .subtitulo label,
+#menuEstGeneralesPro .subtitulo label {
+	color: var(--color-pro);
+}
+#menuFichaPro small,
+#menuVsPro small,
+#menuEstGeneralesPro small {
+	color: var(--color-caja);
+}
+.textoNegro {
+	color: var(--color-fondoIndex);
+}
+#menuFichaPro .cajaMenu small,
+#menuFichaPro .cajaMenuPlana small,
+#menuVsPro .cajaMenu small,
+#menuVsPro .cajaMenuPlana small,
+#menuEstGeneralesPro .cajaMenu small,
+#menuEstGeneralesPro .cajaMenuPlana small {
+	color: var(--color-texto);
+}
+#cajaAjustesUsuario #ajustesCompras #suscripciones .error,
+.cajaMenu .elementosPro button {
+	background-color: var(--color-pro);
+}
+#cajaAjustesUsuario #ajustesCompras #favoritos .recuadroFavorito {
+	background-color: var(--color-contraste);
+	border-radius: 40px;
+}
+#cajaAjustesUsuario #ajustesCompras #favoritos select,
+.noSeleccionado {
+	background: var(--color-contraste) !important;
+}
+
+
+/* ESCUDOS */
+.escudoSombra {
+	-webkit-filter: drop-shadow(0px 0px 1px var(--color-texto));
+  	      filter: drop-shadow(0px 0px 1px var(--color-texto));
+	padding: 1px;
+}
+
+/* TEXTOS */
+.textoSombra {
+	-webkit-filter: drop-shadow(0px 0px 2px var(--color-sombra));
+  	      filter: drop-shadow(0px 0px 2px var(--color-sombra));
+	padding: 1px;
+}
+
+
+/* CUADROS FICHAS JUGADORES */
+.fichaNombre {
+	text-align: left;
+	padding: 2%;
+}
+.fichaValoracion {
+	border-radius: 5px;
+	aspect-ratio: auto 1 / 1;
+}
+.fichaPosicion,
+.fichaDorsal {
+	background: var(--color-texto);
+	color: var(--color-corporativo-rosa);
+	aspect-ratio: auto 1 / 1;
+}
+	.fichaPosicion{
+		border-radius: 5px;
+	}
+	.fichaDorsal{
+		border-radius: 50px;
+	}
+.fichaNac {
+	border-radius: 5px;
+	aspect-ratio: auto 1 / 1;
+	position: relative;
+}
+.fichaBuscar {
+	background: var(--color-corporativo-rosa);
+	border-radius: 50px;
+	aspect-ratio: auto 1 / 1;
+}
+.circuloImagenFoto {
+	border-radius: 50%;
+	aspect-ratio: auto 1 / 1;
+}
+
+
+
+/* CONFIGURACIÓN DE BARRA DE SCROLL */
+/* Funciona en Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-corporativo-rosa) rgba(0,0,0,.2);
+}
+
+/* Funciona en Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: .5em;
+  height: .5em;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0,0,0,.2);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-corporativo-rosa);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+#bodyMenu {
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--color-fondo-principal)), color-stop(75%, var(--color-corporativo-rosa)));
+	background: -o-linear-gradient(var(--color-fondo-principal) 50%, var(--color-corporativo-rosa) 75%);
+	background: linear-gradient(var(--color-fondo-principal) 50%, var(--color-corporativo-rosa) 75%);
+}
+#bodyCaptura,
+#bodyIndex {
+	width: 100%;
+	height: 100%;
+	background: var(--color-fondo-principal);
+}
+	.recuadroBody {
+		height: 100%;
+		width: 80%;
+		max-width: 1080px;
+		max-height: 810px;
+	}
+#bodyDirecto {
+	width: 100%;
+	height: 100%;
+	/*background: rgba(13,0,46,.8);*/
+}
+
+.cajaMenu {
+	background: rgba(0, 43, 0,.4);
+	border-top: 3px solid var(--color-corporativo-morado);
+}
+
+.cajaListadoEdicion {
+	background: rgba(0, 43, 0,.4);
+	margin: .5% 0;
+	border-radius: 10px;
+}
+
+
+/* PUBLICIDAD */
+.PFooter {
+	z-index: 1;
+}
+.logoPubli {
+	height: 25px;
+	max-width: 80px;
+}
+
+#publicidadMandoEstIzq,
+#publicidadMandoEstDer {
+	position: absolute;
+	height: 25%;
+	bottom: 11%;
+	opacity: .6;
+	z-index: 0;
+}
+	#publicidadMandoEstIzq {
+		left: 0;
+	}
+	#publicidadMandoEstDer {
+		right: 0;
+	}
+
+
+/* EXCLUSIVOS BETA */
+.labelBeta {
+	color: var(--color-corporativo-rosa);
+	-webkit-transform: rotate(-10deg);
+	    -ms-transform: rotate(-10deg);
+	        transform: rotate(-10deg);
+	z-index: 50;
+}
+
+
+
+
+
+
+
+
+/*                  CONFIGURACIÓN BOTONES SELECCIÓN DE IDIOMAS              */
+#cuadroIdiomas {
+	position: absolute;
+	width: 30vh;
+	height: 6vh;
+	left: 3vw;
+	top: 2vh;
+	justify-content: left;
+}
+	#idiomaActual {
+		width: 6vh;
+		z-index: 5;
+	}
+	#cajaIdiomas {
+		height: 80%;
+		width: 26vh;
+		position: absolute;
+		border-radius: 100px;
+		padding-left: 6vh;
+		background: var(--color-sombra);
+	}
+		#cajaAjustesUsuario #cajaIdiomas {
+			background: var(--color-contraste);
+		}
+		.logoIdioma {
+			height: 86%;
+		}
+		.abrirCaja {
+			-webkit-animation: cajaAbierta 1s linear;
+			animation: cajaAbierta 1s linear;
+		}
+
+		@keyframes cajaAbierta {
+			0% {
+				width: 0;
+			}
+			100% {
+				width: 100%;
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA 404                         */
+@import url(https://fonts.googleapis.com/css?family=Gilda+Display);
+
+.error404 {
+  text-align: center;
+  font-family: 'Gilda Display', serif;
+  
+  text-align: center;
+  width: 100%;
+  height: 40vh;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60px;
+  right: 0;
+  -webkit-animation: noise-3 1s linear infinite;
+          animation: noise-3 1s linear infinite;
+  overflow: default;
+}
+#texto404:after {
+  content: 'error 404';
+  font-family: OCR-A;
+  font-size: 100px;
+  
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  -webkit-animation: noise-1 .4s linear infinite;
+          animation: noise-1 .4s linear infinite;
+}
+#texto404:before {
+  content: 'error 404';
+  font-family: OCR-A;
+  font-size: 100px;
+  
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 35%;
+  opacity: 0;
+  color: white;
+  -webkit-animation: noise-2 .4s linear infinite;
+          animation: noise-2 .4s linear infinite;
+}
+.info404 {
+  text-align: center;
+  width: 200px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 280px;
+  bottom: 0;
+  left: 20px;
+  right: 0;
+  -webkit-animation: noise-3 2s linear infinite;
+          animation: noise-3 2s linear infinite;
+}
+
+.info404:before {
+  content: 'file not found';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 800px; 
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 100px;
+  opacity: 0;
+  color: white;
+  -webkit-animation: noise-2 .4s linear infinite;
+          animation: noise-2 .4s linear infinite;
+}
+
+.info404:after {
+  content: 'file not found';
+  font-family: OCR-A;
+  font-size: 100px;
+  text-align: center;
+  width: 800px;
+  margin: auto;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 40px;
+  right: 0;
+  opacity: 0;
+  color: white;
+  -webkit-animation: noise-1 .4s linear infinite;
+          animation: noise-1 .4s linear infinite;
+}
+
+@-webkit-keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@keyframes noise-1 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: -6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: 2px;}
+}
+
+@-webkit-keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@keyframes noise-2 {
+  0%, 20%, 40%, 60%, 70%, 90% {opacity: 0;}
+  10% {opacity: .1;}
+  50% {opacity: .5; left: 6px;}
+  80% {opacity: .3;}
+  100% {opacity: .6; left: -2px;}
+}
+
+@-webkit-keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
+  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
+  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
+}
+
+@keyframes noise {
+  0%, 3%, 5%, 42%, 44%, 100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}  
+  4.3% {opacity: 1; -webkit-transform: scaleY(1.7); transform: scaleY(1.7);}
+  43% {opacity: 1; -webkit-transform: scaleX(1.5); transform: scaleX(1.5);}
+}
+
+@-webkit-keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
+  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
+  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
+}
+
+@keyframes noise-3 {
+  0%,3%,5%,42%,44%,100% {opacity: 1; -webkit-transform: scaleY(1); transform: scaleY(1);}
+  4.3% {opacity: 1; -webkit-transform: scaleY(4); transform: scaleY(4);}
+  43% {opacity: 1; -webkit-transform: scaleX(10) rotate(60deg); transform: scaleX(10) rotate(60deg);}
+}
+.wrap {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  height: 40vh;
+  margin-top: -100px;
+}
+code {
+  color: white;
+}
+span.blue {
+  color: #48beef;
+}
+span.comment {
+  color: #7f8c8d;
+}
+span.orange {
+  color: #f39c12;
+}
+span.green {
+  color: #33cc33;
+}
+
+.viewFull {
+  font-family:OCR-A;
+  color:orange;
+  text-decoration:;
+}
+@font-face {
+    font-family: OCR-A;
+    src: url('data:font/woff;base64,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') format('woff');	
+}
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA LOGIN                         */
+#bodyIndex .movimientoCuadroIdiomas {
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	}
+}
+@keyframes fadeInLeft {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	}
+}
+
+#pieIndex {
+	position: absolute;
+	bottom: 7vh;
+	height: 12%;
+}
+
+
+
+#imagenLogo {
+	position: absolute;
+	width: 13vw;
+	max-width: 115px;
+	right: 2vw;
+	top: 2vh;
+}
+.movimientoImagenLogo {
+	-webkit-animation-name: fadeInRight;
+	animation-name: fadeInRight;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		        transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+		    -ms-transform: none;
+		        transform: none;
+	}
+}
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: none;
+	    -ms-transform: none;
+	        transform: none;
+	}
+}
+
+#recuadroLogin {
+	position: absolute;
+	width: 325px;
+	height: 300px;
+	bottom: 2vh;
+	z-index: 3;
+}
+.animacionRecuadroLogin {
+	-webkit-animation-name: fadeInUp;
+	        animation-name: fadeInUp;
+	-webkit-animation-duration: 4.5s;
+	        animation-duration: 4.5s;
+	-webkit-animation-fill-mode: both;
+	        animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+	    -webkit-transform: none;
+	            transform: none;
+	}
+}
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		        transform: translate3d(0, 100%, 0);
+	}
+	100% {
+		opacity: 1;
+	    -webkit-transform: none;
+	            transform: none;
+	}
+}
+	#cuadroLogin,
+	#cuadroRegistro {
+		z-index: 2;
+	}
+
+		.shake {
+			-webkit-animation-name: shake;
+			animation-name: shake;
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+		}
+		@-webkit-keyframes shake {
+			0%, 100% {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			10%, 30%, 50%, 70%, 90% {
+				-webkit-transform: translate3d(-10px, 0, 0);
+				transform: translate3d(-10px, 0, 0);
+			}
+			20%, 40%, 60%, 80% {
+				-webkit-transform: translate3d(10px, 0, 0);
+				transform: translate3d(10px, 0, 0);
+			}
+		}
+		@keyframes shake {
+			0%, 100% {
+				-webkit-transform: translate3d(0, 0, 0);
+				transform: translate3d(0, 0, 0);
+			}
+			10%, 30%, 50%, 70%, 90% {
+				-webkit-transform: translate3d(-10px, 0, 0);
+				transform: translate3d(-10px, 0, 0);
+			}
+			20%, 40%, 60%, 80% {
+				-webkit-transform: translate3d(10px, 0, 0);
+				transform: translate3d(10px, 0, 0);
+			}
+		}
+
+	.boxLogin,
+	.boxRegistro {
+		-webkit-box-align: end;
+		-ms-flex-align: end;
+		 align-items: end;
+		border-bottom: 3px solid var(--color-corporativo-rosa);
+	}
+		.boxLogin input {
+			font-size: clamp(10px, 5vw, 20px);
+			background: none;
+			border: none;
+		}
+			.boxLogin input:focus {
+				outline: none;
+			}
+
+	#cuadroLogin button,
+	#cuadroRegistro button {
+		color: var(--color-texto);
+		border: none;
+		border-radius: 5px;
+	}
+		#cuadroLogin button {
+			background: var(--color-corporativo-rosa);
+		}
+		#cuadroLogin button:hover ,
+		#cuadroRegistro button:hover {
+			opacity: .6;
+		}
+	
+	#botonRegistro:hover,
+	#botonRecordar:hover {
+		color: var(--color-corporativo-rosa);
+	}
+	.boxRegistro label {
+		height: 35%;
+		width: 100%;
+		margin-left: -10%;
+	}
+	#formularioNuevoUsuario input {
+		border: none;
+	}
+
+#recuadroCookies {
+	position: absolute;
+	width: 100vw;
+	height: 340px;
+	bottom: 0;
+	background: var(--color-contraste);
+	opacity: .95;
+	z-index: 5;
+}
+	#recuadroCookies img {
+		width: 55px;
+		margin-top: 1%;
+		margin-left: calc(100vw - 55px - 1%);
+	}
+	#textoCookies {
+		width: 60%;
+		height: 55%;
+		margin-left: 20%;
+		text-align: justify;
+	}
+
+#pantallaTerminos {
+	background: rgba(30,30,30,.6);
+	z-index: 10;
+}
+	#recuadroTerminos {
+		background: var(--color-texto);
+		text-align: justify;
+		border: 3vw solid var(--color-fondoIndex);
+		border-radius: 3vw;
+		padding: 2% 5vw;
+	}
+		#recuadroTerminos p,
+		#recuadroTerminos h1,
+		#recuadroTerminos li {
+			color: var(--color-fondo-principal);
+		}
+		#recuadroTerminos strong {
+			color: var(--color-corporativo-morado);
+		}
+
+#imagenIzq {
+	height: 75vh;
+	width: 45vw;
+	bottom: 14vh;
+	right: calc(50%);
+}
+
+.movimientoImagenIzq {
+	bottom: 21vh;
+	right: calc(50% + 11vw);
+	-webkit-animation: movimientoDerecha 3s ease;
+	animation: movimientoDerecha 3s ease;
+
+}
+	@-webkit-keyframes movimientoDerecha {
+		0% { right: 100vw; }
+		100% { right: calc(50%); }
+	}
+	@keyframes movimientoDerecha {
+		0% { right: 100vw; }
+		100% { right: calc(50%); }
+	}
+
+#imagenDer {
+	height: 70vh;
+	width: 40vw;
+	bottom: 16vh;
+	left: calc(50% + 5vw);
+}
+
+.movimientoImagenDer {
+	bottom: 21vh;
+	left: calc(50% + 11vw);
+	-webkit-animation: movimientoIzquierda 3s ease;
+	animation: movimientoIzquierda 3s ease;
+
+}
+	@-webkit-keyframes movimientoIzquierda {
+		0% { left: 100vw; }
+		100% { left: calc(50% + 5vw); }
+	}
+	@keyframes movimientoIzquierda {
+		0% { left: 100vw; }
+		100% { left: calc(50% + 5vw); }
+	}
+
+#imagenCentro {
+	height: 65vh;
+	width: 35vw;
+	bottom: 32vh;
+	left: calc(50% - 16.5vw);
+	z-index: 2;
+}
+
+.movimientoImagenCentro {
+	-webkit-animation: movimientoArriba 3s ease;
+	animation: movimientoArriba 3s ease;
+	bottom: 35vh;
+	left: calc(50% - 15vw);
+}
+	@-webkit-keyframes movimientoArriba {
+		0% { bottom: 100vh; }
+		40% { bottom: 100vh; }
+		100% { bottom: 32vh; }
+	}
+	@keyframes movimientoArriba {
+		0% { bottom: 100vh; }
+		40% { bottom: 100vh; }
+		100% { bottom: 32vh; }
+	}
+
+
+
+
+.movimientoImagenPortada {
+	-webkit-transition-delay: 2.5s;
+	transition-delay: 2.5s;
+}
+
+
+
+
+
+/* CONFIGURACIÓN CAJA AJUSTES USUARIO */
+#cajaMenuUsuario {
+	position: absolute;
+	top: 0;
+	z-index: 10;
+}
+	#fondoMenuUsuario {
+		position: absolute;
+		background: var(--color-caja);
+		opacity: .5;
+	}
+	#cajaBotonCerrar {
+		position: relative;
+		height: 10%;
+		width: 100%;
+		max-width: 1080px;
+	}
+		#botonCerrarUsuario {
+			position: relative;
+			height: 5vh;
+			width: 5vw;
+			margin-left: 90%;
+			margin-top: 5vh;
+		}
+	#cajaAjustes {
+		position: relative;
+		height: 90%;
+		width: 100%;
+		max-width: 1080px;
+	}
+		#cajaAjustesUsuario,
+		#cajaSuscripcion {
+			position: absolute;
+			width: 85%;
+			height: 80%;
+			background: var(--color-sombra);
+		}
+			#ajustesUsuario #nombreUsuario label {
+				text-align: right;
+				padding-right: 3%;
+				margin-top: 2vh;
+			}
+			#botonEditarUsuario {
+				max-width: 50px;
+			}
+			.bordeCaja {
+				border-bottom: 2px solid var(--color-corporativo-morado);
+				border-radius: 11px;
+			}
+			#cajaAjustesUsuario #ajustesCompras .bordeSuperior {
+				border-top: 2px solid var(--color-corporativo-morado);
+				border-radius: 11px;
+			}
+			#cajaAjustesUsuario #tipoUsuario {
+				background: var(--color-corporativo-morado);
+				border-radius: 50%;
+				aspect-ratio: 1/1;
+			}
+
+			#cajaAjustesUsuario #ajustesCompras #suscripciones label,
+			#cajaAjustesUsuario #ajustesCompras #favoritos label {
+				border: none;
+			}
+				#cajaAjustesUsuario #ajustesCompras #suscripciones .labelEstado {
+					padding-top: 1%;
+					width: 95%;
+					min-height: 25px;
+					border-radius: 40px;
+				}
+			#cajaAjustesUsuario #ajustesCompras #suscripciones img,
+			#cajaAjustesUsuario #ajustesCompras #favoritos img {
+				max-width: 50px;
+			}
+				#cajaAjustesUsuario #ajustesCompras #favoritos select {
+					height: 80%;
+					border: none;
+				}
+			#cajaAjustesUsuario #ajustesCopy {
+				border: none;
+			}
+			#cajaAjustesUsuario #ajustesCopy button {
+				background: -webkit-gradient(linear, left top, right top, from(var(--color-corporativo-morado)), to(var(--color-corporativo-rosa)));
+				background: -o-linear-gradient(left, var(--color-corporativo-morado), var(--color-corporativo-rosa));
+				background: linear-gradient(to right, var(--color-corporativo-morado), var(--color-corporativo-rosa));
+			}
+#cerrarSesion label {
+	min-width: 45px;
+}
+
+#botonSalirSuscripcion {
+	position: absolute;
+	width: 5%;
+	left: 1%;
+}
+#cajonSuscripciones {
+	text-align:center;
+}
+	.botonSuscripcion {
+		border-radius:15px;
+	}
+		.botonSuscripcion img {
+			-o-object-fit:cover !important;
+			   object-fit:cover !important;
+		}
+		.botonSuscripcion button {
+			background:var(--color-pro);
+			padding:10%;
+			border-radius:10px;
+		}
+		#botonSuscripBecaPro,
+		.Pro5 {
+			background:var(--color-corporativo-morado);
+		}
+		#botonSuscripClubBasico,
+		.Pro0 {
+			background: var(--color-contraste);
+		}
+		#botonSuscripEquipo,
+		.Pro1 {
+			background:var(--color-bronce1);
+		}
+		#botonSuscripClub,
+		.Pro2 {
+			background:var(--color-plata1);
+		}
+			#botonSuscripClub img {
+				-webkit-filter: hue-rotate(400deg);
+				        filter: hue-rotate(400deg);
+			}
+		#botonSuscripGranClub,
+		.Pro3 {
+			background:var(--color-oro1);
+		}
+		#botonSuscripUnirseEntrenador,
+		#botonSuscripUnirseJugador {
+			background:var(--color-corporativo-morado);
+			background-image: url(img/Menu/Brumafondo.png);
+			background-size: contain;
+		}
+	.cuadroUsuarios {
+		border-radius: 20px;
+	}
+		#mensajeErrorClub p {
+			color:  var(--color-pro);
+		}
+		.inputClub,
+		#datosFacturacion input {
+			background: none;
+			border: 1px solid var(--color-corporativo-rosa);
+			margin: 1%;
+			border-radius: 5px;
+			padding: 0 1%;
+		}
+		#datosFacturacion label {
+			text-align: right;
+			padding-right: 1%;
+		}
+			#facturacionComunidad,
+			#facturacionProvincia {
+				width: 25%;
+			}
+		#mostradorClub {
+			border: 2px solid var(--color-corporativo-morado);
+			border-radius: 20px;
+		}
+		.noOperativo {
+			-webkit-filter: grayscale(100%) opacity(.6);
+			        filter: grayscale(100%) opacity(.6);
+		}
+	.indicadorPasos {
+		height: 15px;
+		width: 15px;
+		-webkit-animation: reducir .5s;
+		        animation: reducir .5s;
+		border-radius: 50%;
+		background: var(--color-texto);
+	}
+		.pasoActual {
+			height: 25px;
+			width: 25px;
+			-webkit-animation: ampliar .5s;
+			        animation: ampliar .5s;
+			background: var(--color-corporativo-rosa);;
+		}
+		@-webkit-keyframes ampliar {
+			0% {height: 15px; width: 15px}
+			100% {height: 25px; width: 25px}
+		}
+		@keyframes ampliar {
+			0% {height: 15px; width: 15px}
+			100% {height: 25px; width: 25px}
+		}
+		@-webkit-keyframes reducir {
+			0% {height: 25px; width: 25px;}
+			100% {height: 15px; width: 15px;}
+		}
+		@keyframes reducir {
+			0% {height: 25px; width: 25px;}
+			100% {height: 15px; width: 15px;}
+		}
+		.botonAdelante {
+			background: var(--color-corporativo-rosa);
+			border-top-right-radius: 30px;
+			border-bottom-right-radius: 30px;
+		}
+		.botonAtras {
+			background: var(--color-corporativo-morado);
+			border-top-left-radius: 30px;
+			border-bottom-left-radius: 30px;
+		}
+.cajaconBordes {
+	border-top: 2px solid var(--color-corporativo-morado);
+	border-bottom: 2px solid var(--color-corporativo-morado);
+	border-radius: 11px;
+}
+input[type='color'] {
+	border: none;
+}
+.progress { background-color: var(--color-texto); border-radius: 9px; border: none;}
+/* Safari Chrome */
+.progress::-webkit-progress-bar { background-color: var(--color-corporativo-rosa);}
+.progress::-webkit-progress-value { background: var(--color-corporativo-rosa);}
+/* firefox */
+.progress::-moz-progress-bar { background: var(--color-corporativo-rosa);}
+
+.botonSuscrip1,
+.botonSuscrip2 {
+	border-radius: 10px;
+}
+	.botonSuscrip1 {
+		background: var(--color-corporativo-morado);
+	}
+	.botonSuscrip2 {
+		background: var(--color-corporativo-rosa);
+	}
+
+#emailNuevoAutorizado {
+	background:none;
+	border: 1px solid;
+	border-radius:10px;
+	padding-left:2%
+}
+#suscripcionFacturacion input {
+	border: none;
+	border-bottom: 1px solid var(--color-texto);
+	background: none;
+	padding-left: 2%;
+}
+	#suscripcionFacturacion .label {
+		text-align: right;
+	}
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA MENU                         */
+
+/* Pantallas de transición */
+.cuadroTransicion {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+}
+	#transicion1 {
+		background-color: var(--color-fondo-principal);
+		left: -100vw;
+		z-index: 49;
+	}
+
+	#transicion2 {
+		background-color: var(--color-caja);
+		left: -100vw;
+		-webkit-clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+		        clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+		z-index: 50;
+		background-image: -o-radial-gradient(circle, #333 10%, transparent 10%), -o-radial-gradient(circle, #333 10%, transparent 10%);
+		background-image: radial-gradient(circle, #333 10%, transparent 10%), radial-gradient(circle, #333 10%, transparent 10%);
+		background-size: 5px 5px;
+		background-position: 0 0, 5px 5px;
+	}
+		#transicion2 img {
+			position: absolute;
+			width: 35%;
+			max-width: 500px;
+			bottom: 10vh;
+			left: 35vw;
+			-webkit-filter: drop-shadow(0 0.2rem 0.25rem var(--color-texto));
+			        filter: drop-shadow(0 0.2rem 0.25rem var(--color-texto));
+		}
+	.efecto-transicion1 {
+		-webkit-animation: transicionPanel1 2000ms;
+		animation: transicionPanel1 2000ms;
+	}
+	.efecto-transicion2 {
+		-webkit-animation: transicionPanel2 2000ms;
+		animation: transicionPanel2 2000ms;
+	}
+		@-webkit-keyframes transicionPanel1 {
+			0% {left: -100vw;}
+			30% {left: 0;}
+			75% {left: 0;}
+			100% {left: 200vw;}
+		}
+		@keyframes transicionPanel1 {
+			0% {left: -100vw;}
+			30% {left: 0;}
+			75% {left: 0;}
+			100% {left: 200vw;}
+		}
+		@-webkit-keyframes transicionPanel2 {
+			0% {
+				left: -200vw;
+				-webkit-filter: opacity(0);
+				        filter: opacity(0);
+				}
+			55% {
+				left: -30vw;
+				-webkit-filter: opacity(1);
+				        filter: opacity(1);
+				}
+			75% {
+				left: -30vw;
+				-webkit-filter: opacity(1);
+				        filter: opacity(1);
+				}
+			100% {
+				left: 200vw;
+				}
+		}
+		@keyframes transicionPanel2 {
+			0% {
+				left: -200vw;
+				-webkit-filter: opacity(0);
+				        filter: opacity(0);
+				}
+			55% {
+				left: -30vw;
+				-webkit-filter: opacity(1);
+				        filter: opacity(1);
+				}
+			75% {
+				left: -30vw;
+				-webkit-filter: opacity(1);
+				        filter: opacity(1);
+				}
+			100% {
+				left: 200vw;
+				}
+		}
+
+
+
+
+/* Pantalla de ayuda */
+#cajaAyuda {
+	z-index: 10;
+	position: absolute;
+}
+
+.fondoAyudaIzq,
+.fondoAyudaDer {
+	position: absolute;
+	background: rgba(103, 39, 168, 0.5);
+	width: 25vw;
+}
+	.fondoAyudaIzq {
+		right: calc(50vw + min(45vw,486px));
+	}
+	.fondoAyudaDer {
+		left: calc(50vw + min(45vw,486px));
+	}
+	#ayudaConfiguracion {
+		position: relative;
+		max-width: 1080px;
+	}
+		#mandosAyudaConfiguracion {
+			background: var(--color-fondoIndex);
+			border-radius: 20px;
+		}
+			#botonFinalizarAyuda {
+				background: var(--color-corporativo-rosa);
+				border-radius: 10px;
+			}
+			#botonAntAyuda,
+			#botonSigAyuda {
+				background: var(--color-corporativo-morado);
+				border-radius: 10px;
+			}
+			.pasoAyuda {
+				border-radius: 50%;
+				aspect-ratio: 1 / 1;
+				background: var(--color-texto);
+			}
+				.pasoAyudaActual {
+					background: var(--color-corporativo-rosa) !important;
+				}
+	#textoAyudaConfiguracion {
+		padding: 1%;
+		text-align: justify;
+	}
+
+.taparFondoAyuda {
+	background: rgba(103, 39, 168, 0.5);
+}
+.ayudaMenuSuperiorMov {
+	-webkit-animation: cambiarPantallasSup 5s infinite;
+	        animation: cambiarPantallasSup 5s infinite;
+}
+.ayudaMenuMedioMov {
+	-webkit-animation: cambiarPantallasMed 5s infinite;
+	        animation: cambiarPantallasMed 5s infinite;
+}
+.ayudaMenuInferiorMov {
+	-webkit-animation: cambiarPantallasInf 5s infinite;
+	        animation: cambiarPantallasInf 5s infinite;
+}
+
+@-webkit-keyframes cambiarPantallasSup {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes cambiarPantallasSup {
+	0% {
+		opacity: 0;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-webkit-keyframes cambiarPantallasMed {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes cambiarPantallasMed {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes cambiarPantallasInf {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes cambiarPantallasInf {
+	0% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 1;
+	}
+	66% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+.flechaAyuda {
+	position: absolute;
+	width: 5%;
+	animation: animFlechaAyuda 1s infinite;
+}
+	@media (min-width: 1080px) {
+		#flechaAyuda1 {
+			top: 47%;
+			left: 6%;
+		}
+		#flechaAyuda2 {
+			top: 70%;
+			left: 58%;
+		}
+		#flechaAyuda3 {
+			top: 64%;
+			left: 81%;
+		}
+		#flechaAyuda4 {
+			top: 5%;
+			left: 93%;
+		}
+		#flechaAyuda5 {
+			top: 21%;
+			left: 18%;
+		}
+		#flechaAyuda6 {
+			top: 21%;
+			left: 40%;
+		}
+		#flechaAyuda7 {
+			top: 21%;
+			left: 49%;
+		}
+		#flechaAyuda8 {
+			top: 22%;
+			left: 85%;
+		}
+		#flechaAyuda9 {
+			top: -5%;
+			left: 8%;
+		}
+		#flechaAyuda10 {
+			top: -5%;
+			left: 32%;
+		}
+		#flechaAyuda11 {
+			top: -5%;
+			left: 56%;
+		}
+	}
+	@media (min-width: 900px) and (max-width: 1080px) {
+		#flechaAyuda1 {
+			top: 46%;
+			left: 3%;
+		}
+		#flechaAyuda2 {
+			top: 68%;
+			left: 58%;
+		}
+		#flechaAyuda3 {
+			top: 62%;
+			left: 81%;
+		}
+		#flechaAyuda4 {
+			top: 1%;
+			left: 91.5%;
+		}
+	}
+	/*@-webkit-keyframes animFlechaAyuda {
+		0% {
+			-webkit-transform: scaleX(1.0) rotate(90deg);
+			        transform: scaleX(1.0) rotate(90deg);
+		}
+		50% {
+			-webkit-transform: scaleX(.7) rotate(90deg);
+			        transform: scaleX(.7) rotate(90deg);
+		}
+		100% {
+			-webkit-transform: scaleX(1.0) rotate(90deg);
+			        transform: scaleX(1.0) rotate(90deg);
+		}
+	}
+	@keyframes animFlechaAyuda {
+		0% {
+			-webkit-transform: scaleX(1.0) rotate(90deg);
+			        transform: scaleX(1.0) rotate(90deg);
+		}
+		50% {
+			-webkit-transform: scaleX(.7) rotate(90deg);
+			        transform: scaleX(.7) rotate(90deg);
+		}
+		100% {
+			-webkit-transform: scaleX(1.0) rotate(90deg);
+			        transform: scaleX(1.0) rotate(90deg);
+		}
+	}*/
+	@-webkit-keyframes animFlechaAyuda {
+		0% {
+			-webkit-transform: scale(1.0) rotate(-40deg);
+			        transform: scale(1.0) rotate(-40deg);
+		}
+		50% {
+			-webkit-transform: scale(.9) rotate(-45deg);
+			        transform: scale(.9) rotate(-45deg);
+		}
+		100% {
+			-webkit-transform: scale(1.0) rotate(-40deg);
+			        transform: scale(1.0) rotate(-40deg);
+		}
+	}
+	@keyframes animFlechaAyuda {
+		0% {
+			-webkit-transform: scale(1.0) rotate(-40deg);
+			        transform: scale(1.0) rotate(-40deg);
+		}
+		50% {
+			-webkit-transform: scale(.9) rotate(-45deg);
+			        transform: scale(.9) rotate(-45deg);
+		}
+		100% {
+			-webkit-transform: scale(1.0) rotate(-40deg);
+			        transform: scale(1.0) rotate(-40deg);
+		}
+	}
+
+
+
+
+
+/* Menú de navegación */
+nav,
+#cajaMenuCentral,
+#cajaMenuCentralCompeticiones,
+#cajaMenuCentralEdicion {
+	position: relative;
+	max-width: 1020px;
+	max-height: 720px;
+}
+
+nav {
+	margin-left: auto;
+	margin-right: 5%;
+	height: 20%;
+	padding-top: 5%;
+	font-size: clamp(1em,20px,1.2em);
+	-webkit-box-align: start !important;
+    -ms-flex-align: start !important;
+        align-items: flex-start !important;
+    z-index: 10;
+}
+nav #cuadroMenu {
+	margin-left: auto;
+	margin-right: 5%;
+	font-size: clamp(1em,20px,1.2em);
+	-webkit-box-align: start !important;
+    -ms-flex-align: start !important;
+        align-items: flex-start !important;
+    z-index: 10;
+}
+	#cajaMenuCentral {
+		-webkit-box-pack: end;
+    	-ms-flex-pack: end;
+        justify-content: flex-end;
+	}
+	#cajaMenuSuperiorCompeticiones {
+		margin-top: auto;
+	}
+	.botonVolverMenuSuperior {
+		margin-top: .7%;
+		padding-right: 1px;
+	}
+	.botonMenuSuperior,
+	.logoBigDT {
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	nav #botonUsuario {
+		width: 50px;
+		height: 22px;
+	}
+	.logoBigDT {
+		height: auto;
+		max-width: 120px;
+		max-height: 100%;
+	}
+
+	nav select {
+		width: 100%;
+		background: var(--color-caja);
+		border: none;
+	}
+
+/* Fondo Menús */
+.avatarDeporte {
+	position: fixed !important;
+	height: 120vh;
+	width: 80vh !important;
+	left: calc(50% - 70vh);
+	top: -15vh;
+	z-index: 0 !important;
+}
+
+
+/* Ventana Modal inicial */
+#cajaModalMenu {
+	position: absolute;
+	top: 0;
+	background: rgba(30, 30, 30, .4);
+	z-index: 10;
+}
+	#ventanaModalMenu {
+		max-width: 1080px;
+		background: var(--color-caja);
+		border-radius: 10px;
+		border: 10px solid var(--color-corporativo-morado);
+	}
+
+#imagenModalNuevoProPagina3 {
+	background: url(../img/Menu/Captura5.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	animation: gifPagina3 9s infinite;
+}
+
+@keyframes gifPagina3 {
+	0% {
+		background: url(../img/Menu/Captura5.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	10% {
+		background: url(../img/Menu/Captura6.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	25% {
+		background: url(../img/Menu/Captura7.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	40% {
+		background: url(../img/Menu/Captura8.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	55% {
+		background: url(../img/Menu/Captura9.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	70% {
+		background: url(../img/Menu/Captura10.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	85% {
+		background: url(../img/Menu/Captura11.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	100% {
+		background: url(../img/Menu/Captura5.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+
+/* Configuración Usuario */
+.cajaElegirUsuarioSuscripcion {
+	position: relative;
+	border-radius: 20px;
+	border: 2px solid var(--color-corporativo-morado);
+	padding: 1% 2%;
+	min-width: 140px;
+	overflow: hidden;
+}
+	.cajaElegirUsuarioSuscripcion p {
+		width: 100%;
+		font-size: .8em;
+		text-align: justify;
+		text-align-last: start;
+	}
+	#botonElegirTipoUsuarioBasico {
+		border: 2px solid var(--color-corporativo-rosa);
+	}
+.bandaGratis,
+.bandaPago {
+	position: absolute;
+	height: 4vh;
+	transform: rotate(32deg);
+	top: 2%;
+	right: -38%;
+	z-index: 0;
+}
+	.bandaGratis {
+		background: var(--color-acierto);
+	}
+	.bandaPago {
+		background: var(--color-pro);
+	}
+
+
+/* Contenido general */
+.cajaMenu .elementosPro {
+	position: absolute;
+	display: block;
+	width: 87%;
+	height: 35%;
+	top: auto;
+	bottom: 26%;
+	text-align: justify;
+	white-space: normal;
+}
+	.cajaMenu .elementosPro button {
+		z-index: 5;
+		position: relative;
+		padding: 0 5px;
+		border: 1px solid var(--color-pro);
+		border-radius: 10px;
+		color: var(--color-caja);
+	}
+.cajones {
+	margin: 0 5px;
+}
+#cajaSecciones {
+	padding-right: 2%;
+}
+	#cajaSecciones img {
+		position: relative;
+		width: 90%;
+	}
+	#cajaSecciones .textoOculto {
+		margin-top: -15%;
+	}
+	#botonPartidoRapidoBalonmano,
+	#botonCompeticionesBalonmano,
+	#botonCompeticionesBaloncesto,
+	#botonCompeticionesFutsal {
+		z-index: 2;
+	}
+
+
+.cajaDatos {
+	width: 16%;
+}
+	.cajaDatosNombre {
+		text-align: right;
+	}
+	.cajaDatosDatos {
+		padding-top: 5%;
+		padding-right: 1%;
+		height: max-content !important;
+		font-size: clamp(2.4rem,3rem,28px);
+		text-align: right;
+	}
+
+.lineaCajaMenuCentral img {
+	position: absolute;
+	z-index: 3;
+}
+
+#cajaFavorito {
+	position: relative;
+	margin-right: 3%;
+	padding-left: 6%;
+	padding-right: 1%;
+}
+	#cajaFavorito #cajaFavoritoEquipo,
+	#cajaFavorito #cajaFavoritoDatos {
+		z-index: 2;
+	}
+	.cajaRacha div {
+		border: none !important;
+	}
+	.botonPrevia {
+		height: 50px;
+		width: 50px;
+		border-radius: 30px;
+		border: none;
+	}
+	.botonMenuFavoritos {
+		border: none;
+		background: var(--color-corporativo-rosa);
+		border-radius: 20px;
+	}
+
+				
+
+/* Barra Inferior de datos */
+#barraInferior {
+	z-index: 3;
+}
+
+.cajaDorsal {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: var(--color-texto);
+	color: var(--color-corporativo-rosa);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*                   CONFIGURACIÓN PANTALLA MI CLASIFICACIÓN                     */
+#marcoMiClasificacionGeneral {
+	border-top: 4px solid var(--color-corporativo-rosa);
+	border-bottom: 4px solid var(--color-corporativo-morado);
+	border-radius: 20px;
+}
+	#marcoMiClasificacionGeneral strong {
+		color:var(--color-corporativo-morado);
+	}
+	.marcadoMiEquipo {
+		border: 1px solid var(--color-corporativo-rosa);
+		border-radius: 10px;
+		background: var(--color-corporativo-rosa);
+	}
+	.numeroClasificacion {
+		border-radius:5px;
+		background:var(--color-texto);
+		color:var(--color-corporativo-rosa)
+	}
+	.nombreClasificacionGeneral {
+		margin-left:1%;
+	}
+	.puntosClasificacion {
+		color: var(--color-oro2) !important;
+	}
+	.equipoAscenso {
+		background-image: radial-gradient(var(--color-corporativo-morado) 5%, transparent 50%);
+		background-size: 3px 3px;
+		border-radius: 10px;
+	}
+	.equipoDescenso {
+		background-image: radial-gradient(var(--color-contraste) 5%, transparent 50%);
+		background-size: 3px 3px;
+		border-radius: 10px;
+	}
+#cuadroMisClasificacionesHistoricas {
+	border-top: 4px solid var(--color-corporativo-rosa);
+	border-bottom: 4px solid var(--color-corporativo-morado);
+	border-radius: 20px
+}
+
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA EDICIÓN                         */
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralBuscar > div:nth-of-type(1) div{
+	border-radius: 10px 0 0 40px;
+	border-right: 2px solid var(--color-corporativo-rosa);
+}
+	.botonPulsado {
+		color: var(--color-texto);
+		border: 2px solid var(--color-corporativo-rosa);
+		border-right: none !important;
+	}
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralBuscar > div:nth-of-type(2) {
+	border: 2px solid var(--color-corporativo-rosa);
+	border-radius: 0 20px 20px 0;
+	border-left: none;
+}
+	#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralBuscar button {
+		border-radius: 10px;
+		background: var(--color-corporativo-rosa);
+	}
+	.textoSecundario {
+		color: var(--color-plata2);
+	}
+
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosClubes,
+#cajaMenuCentralEdicion #menuEdicionGeneral #menuGeneralDatos #menuDatosEquipos {
+		max-height: 100%;
+}
+	.iconoComunidad {
+		margin: 0 1px 0 5px !important;
+	}
+		#cajaMenuCentralEdicion .botonInfo img {
+			max-height: 28px;
+			max-width: 28px;
+			background: var(--color-corporativo-morado);
+			border-radius: 50%;
+		}
+		#cajaMenuCentralEdicion .botonInfo img:hover {
+			background: var(--color-corporativo-rosa);
+		}
+	.iconoGenero {
+		max-height: 20px;
+		margin: auto !important;
+	}
+	#cajaMenuCentralEdicion .cuadroResaltado {
+		background: linear-gradient(var(--color-corporativo-rosa), var(--color-caja));
+	}
+
+.botonLetra {
+	background: var(--color-fondo-principal);
+	border-radius: 50%;
+	margin: 1%;
+	aspect-ratio: auto 1/1;
+}
+.botonTemporada {
+	background: var(--color-fondoIndex);
+	border-radius: 50px;
+	margin: 1%;
+}
+	.botonLetraSeleccionado,
+	.botonTemporadaSeleccionado {
+		color: var(--color-fondoIndex);
+		background: var(--color-texto);
+	}
+	.botonLetraNoOperativo,
+	.botonTemporadaNoOperativo,
+	.botonGestionarNoOperativo {
+		background: var(--color-contraste) !important;
+	}
+.botonGestionarPlantilla {
+	background: var(--color-corporativo-rosa);
+	border-radius: 20px;
+	margin-bottom: 5%;
+}
+.botonAltaSeleccion,
+.botonGestionSeleccion {
+	border: 1px solid var(--color-corporativo-rosa);
+	border-radius: 50px;
+	margin: 1%;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Voy por aqui revisando el código duplicado (sobre todo display: flex...)
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+	#cajaMenuCentralEdicion .filaLista {
+		border-bottom: 1px solid var(--color-fondo-principal)
+		/*display: inline-flex; /*
+		align-items: center; /*
+		/*height: 16.67%;*/
+	}
+	/*#cajaMenuCentralEdicion .inputEscudo {
+		background: var(--color-corporativo-morado);
+		width: 90%;
+		height: 25%;
+		display: flex; /*
+		align-items: center; /*
+		justify-content: center; /*
+		border-radius: 20px;
+		margin: 0 3%;
+		color: var(--color-texto) !important;
+	}*/
+	#cajaMenuCentralEdicion .labelEscudo {
+		background: url(../img/Menu/imagen.png) no-repeat;
+		background-size: contain;
+		background-position: center;
+	}
+	#cajaMenuCentralEdicion .inputFile {
+		display: none;
+	}
+	#cajaMenuCentralEdicion .inputTemporada,
+	#cajaMenuCentralEdicion .inputNombre {
+		background: transparent;
+	}
+		#cajaMenuCentralEdicion .inputTemporada {
+			border: none;
+		}
+		#cajaMenuCentralEdicion .inputNombre {
+			/*height: 50%;*/
+			/*width: 92%;*/
+			padding: 0 1% 0 2%;
+			margin: 0 1%;
+			border-top: none;
+			border-right: none;
+			border-left: none;
+		}
+#cajaMenuCentralEdicion .marcoEdicion {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	position: absolute;
+}
+	#cajaMenuCentralEdicion .pantallaEdicion {
+		margin: 1% 0%;
+		/*background: var(--color-caja);*/
+		background: rgba(197, 43, 180,.2);
+		border-radius: 20px;
+	}
+		#cajaMenuCentralEdicion .pantallaEdicion .tituloClub {
+			display: inline-flex; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+			justify-content: space-around; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+			align-items: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		}
+	#cajaMenuCentralEdicion #anteriorNivel,
+	#cajaMenuCentralEdicion #siguienteNivel {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+			 -ms-flex-pack: center;
+  		  justify-content: center;
+	}
+		#cajaMenuCentralEdicion #anteriorNivel:hover,
+		#cajaMenuCentralEdicion #siguienteNivel:hover {
+			-webkit-transform: scale(1.2);
+		    -ms-transform: scale(1.2);
+    				transform: scale(1.2);
+		}
+	.pantallaIzquierda {
+		-webkit-animation: desplazamientoIzq .5s ease-out;
+      	animation: desplazamientoIzq .5s ease-out;
+      	-webkit-transform: translateX(-100%);
+      	transform: translateX(-100%)
+	}
+		@-webkit-keyframes desplazamientoIzq {
+			0% {-webkit-transform: translateX(0%);transform: translateX(0%)}
+			100% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+		}
+		@keyframes desplazamientoIzq {
+			0% {-webkit-transform: translateX(0%);transform: translateX(0%)}
+			100% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+		}
+	.pantallaCentroDer {
+		-webkit-animation: desplazamientoCnt .5s ease-out;
+      	animation: desplazamientoCnt .5s ease-out;
+      	-webkit-transform: translateX(0);
+      	transform: translateX(0);
+	}
+		@-webkit-keyframes desplazamientoCnt {
+			0% {-webkit-transform: translateX(100%);transform: translateX(100%);}
+			100% {-webkit-transform: translateX(0);transform: translateX(0);}
+		}
+		@keyframes desplazamientoCnt {
+			0% {-webkit-transform: translateX(100%);transform: translateX(100%);}
+			100% {-webkit-transform: translateX(0);transform: translateX(0);}
+		}
+	.pantallaCentroIzq {
+		-webkit-animation: desplazamientoCnt .5s ease-out;
+      	animation: desplazamientoCnt .5s ease-out;
+      	-webkit-transform: translateX(0);
+      	transform: translateX(0);
+	}
+		@-webkit-keyframes desplazamientoCnt {
+			0% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+			100% {-webkit-transform: translateX(0);transform: translateX(0);}
+		}
+		@keyframes desplazamientoCnt {
+			0% {-webkit-transform: translateX(-100%);transform: translateX(-100%)}
+			100% {-webkit-transform: translateX(0);transform: translateX(0);}
+		}
+	.pantallaDerecha {
+		-webkit-animation: desplazamientoDer .5s ease-out;
+      	animation: desplazamientoDer .5s ease-out;
+      	-webkit-transform: translateX(100%);
+      	transform: translateX(100%);
+	}
+		@-webkit-keyframes desplazamientoDer {
+			0% {-webkit-transform: translateX(0%);transform: translateX(0%);}
+			100% {-webkit-transform: translateX(100%);transform: translateX(100%);}
+		}
+		@keyframes desplazamientoDer {
+			0% {-webkit-transform: translateX(0%);transform: translateX(0%);}
+			100% {-webkit-transform: translateX(100%);transform: translateX(100%);}
+		}
+
+	#cajaMenuCentralEdicion .cuadroInfo {
+		background: linear-gradient(var(--color-caja),var(--color-corporativo-rosa));
+	}
+		#cajaMenuCentralEdicion .cuadroInfo img {
+			height: 16px;
+		}
+#cajaMenuCentralEdicion .botonEditar {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: 20px solid transparent;
+}
+	#cajaMenuCentralEdicion #botonClub {
+		background-image: url('../img/Menu/guardar.png');
+	}
+	#cajaMenuCentralEdicion #botonEquipo {
+		background-image: url('../img/Menu/edicionClub.png');
+		background-size: contain;
+		background-color: transparent;
+		border: none;
+		background-repeat: no-repeat;
+		background-position-y: center;
+	}
+	#cajaMenuCentralEdicion #botonTorneo {
+		background-image: url('../img/Menu/edicionLiga.png');
+	}
+	#cajaMenuCentralEdicion #botonJugador {
+		background-image: url('../img/Menu/edicionJugadores.png');
+	}
+#cajaMenuCentralEdicion .logoEdicion {
+	position: absolute;
+	width: 75px;
+	right: 12%;
+	top: 7%;
+}
+
+#botonMas {
+	height: 90%;
+	margin-top: auto;
+	margin-left: 94%;
+}
+#logoClub {
+	display: flex; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	justify-content: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	align-items: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+}
+#cajaMenuCentralEdicion .recuadroEdicionTorneo {
+	height: 100%;
+	padding-top: 12%;
+}
+	#cajaMenuCentralEdicion .recuadroEdicionTorneo label {
+		margin-left: 5%;
+		color: var(--color-corporativo-morado);
+	}
+
+
+#cajaMenuCentralEdicion .radio {
+	width: 90%;
+	height: 60%;
+	max-height: 50px;
+	margin-left: 5%;
+}
+#cajaMenuCentralEdicion .radio label {
+	color: var(--color-texto);
+	margin-left: 0;
+}
+	#cajaMenuCentralEdicion .cuadroElegir {
+		height: 6%;
+		width: 55%;
+		border: 2px solid var(--color-corporativo-rosa);
+		margin-left: 0;
+	}
+		#cajaMenuCentralEdicion .cuadroElegir label:hover {
+			background: var(--color-corporativo-rosa);
+		}
+		#cajaMenuCentralEdicion .cuadroElegir input[type="radio"]:checked + label {
+			background: var(--color-corporativo-rosa);
+		}
+	#cajaMenuCentralEdicion .cuadros {
+		display: inline-flex; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		justify-content: space-evenly; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		align-items: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	}
+	.cuadroLogo {
+		display: flex; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		justify-content: space-around; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		align-items: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+		flex-wrap: wrap; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	}
+		#cajaMenuCentralEdicion .imgEscudo {
+			padding: 3%;
+			border: 2px solid var(--color-corporativo-rosa);
+			border-radius: 10px;
+			max-height: 100%;
+		}
+		.recuadroEdicionTorneo .inputEscudo {
+			height: 20% !important;
+			width: 40% !important;
+		}
+	.recuadroEdicionTorneo .inputNombre {
+		height: auto !important;
+	}
+	#cajaMenuCentralEdicion input[type="number"] {
+		width: 70px;
+		height: 24px;
+		background: transparent;
+		border: 2px solid var(--color-corporativo-rosa);
+		border-radius: 10px 0 0 10px;
+		font-size: clamp(.5em,1.5em,23px);
+	}
+	#cajaMenuCentralEdicion #inputNumeroFases {
+		height: 100%;
+	}
+	#cajaMenuCentralEdicion #organizadora {
+		width: 300px;
+		height: 40px;
+	}
+	#cajaMenuCentralEdicion .recuadroEdicionTorneo #indicadorCategorias {
+		position: absolute;
+		top: 12%;
+		left: 25%;
+	}
+
+	.cuadroDeCategorias {
+		min-width: clamp(30px,17%,150px);
+		border: 2px solid var(--color-corporativo-morado);
+		border-radius: 10px;
+		margin: 0 1%;
+	}
+		.cuadroDeCategorias div {
+			max-width: 100px;
+		}
+		.cuadroDeCategorias label {
+			margin-left: 0 !important;
+		}
+
+.fase {
+	border: 2px solid var(--color-corporativo-rosa);
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+	.numFase {
+		background: var(--color-corporativo-rosa);
+	}
+	.cuadroReglas {
+		border: 1px solid var(--color-corporativo-rosa);
+		color: var(--color-corporativo-morado);
+		margin-right: 1%;
+	}
+.fondoReglas {
+	position: absolute;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center; /*/////////////////////////////////////////////////////////////////////////////////////////////*/
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-radius: 10px;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	background: rgba(197, 43, 180, .8); /*var(--color-corporativo-rosa);*/
+	opacity: 0;
+	pointer-events:none;
+}
+	.ventanaReglas {
+		background: var(--color-caja-brillo);
+		border-radius: 10px;
+	}
+		.botonElegirEquipo {
+			color: var(--color-corporativo-morado);
+		}
+			.botonElegirEquipo:hover {
+				color: var(--color-corporativo-rosa);
+			}
+	.labelReglasPartido {
+		border-bottom: 2px solid var(--color-corporativo-rosa);
+		padding-top: 1%;
+	}
+.cajaPuestos {
+	border-radius: 10px;
+	text-align: right;
+	row-gap: 1rem;
+	background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='6' height='6' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(135)'%3E%3Crect width='100%25' height='100%25' fill='rgba(26, 32, 44,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,0)'/%3E%3Ccircle cx='0' cy='20' r='1.5' fill='rgba(245, 245, 245,1)'/%3E%3Ccircle cx='40' cy='20' r='1.5' fill='rgba(245, 245, 245,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+}
+
+#cuadroParticipantesB1 label {
+	font-size: clamp(.3em,14px,1em);
+}
+	.escudoParticipante {
+		background: rgba(255,255,255,.9);
+		border-radius:25%;
+		margin:2% 20%;
+		padding:1%;
+		width: 85px;
+		height: 85px;
+	}
+#cuadroParticipantesB2 {
+	background: rgba(0,0,0,.8);
+	position: absolute;
+	top: 30%;
+	height: 65%;
+}
+#inputElegirEquipo {
+	background: var(--color-corporativo-morado);
+	border: none;
+	border-radius: 10px;
+	padding-left: 1%;
+}
+
+/* Barras de progreso */
+.barraProgreso {
+	position: absolute;
+	width: 20%;
+	background: var(--color-fondo-principal);
+	left: 40%;
+	top: 7%;
+	border-radius: 10px;
+}
+	.progresoBarra {
+		height: 20px;
+		background: var(--color-corporativo-rosa);
+	}
+
+/* Nuevo Torneo */
+#menuEdicionNuevoTorneo .botonTorneo {
+	max-width: 200px;
+	max-height: 200px;
+	border-radius: 5px;
+}
+	#botonNTemporada {
+		background: var(--color-corporativo-morado);
+	}
+	#botonNCampeonato {
+		background: var(--color-caja);
+	}
+	#botonNAmistoso {
+		border-radius: 5px;
+		background: var(--color-visitante);
+	}
+
+
+/* Nuevo Evento */
+.cajaPreguntaEvento {
+	border-radius: 10px;
+	border: 2px solid var(--color-corporativo-morado);
+	padding: 2%;
+}
+
+.cajaEventoSeleccionada {
+	background: var(--color-fondo-principal);
+}
+
+
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN MENÚ MI EVENTO                               */
+#cajaMenuCentralMiEvento {
+	background: var(--color-fondoIndex);
+}
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN MENÚ COMPETICIONES                               */
+.botonCompeticiones {
+	height: 35px;
+	border-radius: 50px;
+	margin: 3px 2px;
+}
+	.botonCompeticiones img {
+		border-radius: 20px;
+		margin: 2px 0;
+	}
+
+.scrollbar {
+	font-size: clamp(.5em,14px,1.2em);
+}
+.scrollbar input[type="radio"]:checked + label {
+	border: 2px solid var(--color-corporativo-morado);
+	border-radius: 10px;
+	color: var(--color-corporativo-morado);
+	background: var(--color-fondo-principal);
+	padding: 6px;
+}
+#imagenFondoCompeticiones {
+	position: absolute;
+	height: 70vh;
+	bottom: -18vh;
+	right: 0vw;
+	z-index: 0;
+}
+
+.filaCategoria {
+	margin: 3% 0;
+}
+
+#cajaSeleccionarCompeticiones {
+	border-bottom: 2px solid var(--color-corporativo-rosa);
+	z-index: 2;
+}
+	#filaTemporadasCompeticiones {
+		display:ruby;
+		display: -webkit-inline-box;
+	}
+		.cuadroTemporadaCompeticiones {
+			max-width: 100px;
+		}
+
+#botonCompeticionesPersonalizadas,
+#botonCompeticionesBigDT {
+	border: 2px solid var(--color-corporativo-rosa);
+	border-radius: 15px;
+}
+	#botonCompeticionesPersonalizadas img {
+		-webkit-filter: none;
+      		  filter: none;
+	}
+	#botonCompeticionesPersonalizadas:hover {
+		background: var(--color-corporativo-rosa);
+		-webkit-transition: .3s;
+		-o-transition: .3s;
+		transition: .3s;
+		-webkit-transform: scale(.95);
+    		-ms-transform: scale(.95);
+     			  transform: scale(.95);
+	}
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA LIGAS 2                         */
+.lineaCajaMenuCompeticiones {
+	border-radius: 50px;
+	margin: 1%;
+	background: var(--color-sombra);
+}
+.labelResultado {
+	position: relative;
+	height: 130%;
+	border-radius: 50px;
+	border-left: 10px solid var(--color-corporativo-morado);
+	border-right: 10px solid var(--color-corporativo-morado);
+	clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+	margin: 0 10px;
+}
+	.logoDirectoTV {
+		position: absolute;
+		top: 22%;
+	}
+.lineaCajaMenuCompeticiones button:hover {
+	color: var(--color-corporativo-rosa);
+}
+
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA CLASIFICACIONES                         */
+.cuadroDatosClasificaciones {
+	border-top: 4px solid var(--color-corporativo-rosa);
+	border-bottom: 4px solid var(--color-corporativo-morado);
+	border-radius: 20px;
+	padding: 4%;
+}
+	.cuadroDatosClasificaciones img {
+		max-width: 30px;
+		max-height: 20px;
+	}
+	.casillaDatosClasificaciones {
+		border: 1px solid var(--color-corporativo-rosa);
+		border-radius: 10px;
+		/*padding: 0 5% 0 0;*/
+		margin-bottom: 2%;
+	}
+		.cajaNumero {
+			background: var(--color-corporativo-rosa);
+			min-width: 20px;
+		}
+#cuadroOpcionesSuperior {
+	margin-left: 10%;
+}
+#cuadroOpcionesTipoEquipos,
+#cuadroOpcionesTipoJugadores {
+	position: relative;
+	top: -15%;
+	width: 360px;
+	background: var(--color-fondo-principal);
+}
+	#cuadroOpcionesTipoEquipos {
+		left: calc(50% - 180px);
+	}
+	#cuadroOpcionesTipoJugadores {
+		left: calc(75% - 180px);
+	}
+#selectClasificaciones {
+	position: absolute;
+	top: 17vh;
+	right: calc(50vw - 70px);
+	width: 140px;
+	z-index: 15;
+}
+
+/* Fichas Torneos, Jugadores y Tecnicos */
+.fichaJugador,
+.fichaJugadorEspecial,
+.fichaJugadorUnico,
+.fichaTecnico,
+.fichaTecnicoEspecial,
+.fichaTecnicoUnico,
+.fichaTorneo {
+	position: relative;
+	aspect-ratio: auto 100/120;
+}
+	.fichaJugador,
+	.fichaTecnico {
+		background: url("../img/fondoFicha.png");
+		background-size: cover;
+	}
+	.fichaJugadorEspecial,
+	.fichaTecnicoEspecial {
+		background: url("../img/fondoFichaEspecial.png");
+		background-size: cover;
+	}
+	.fichaJugadorUnico,
+	.fichaTecnicoUnico {
+		background: url("../img/fondoFichaEspecialBigDT.png");
+		background-size: cover;
+	}
+
+.fondoFichaJugadorEspecial,
+.fondoFichaTecnicoEspecial {
+	background: url("../img/fondoFichaEspecial.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	-webkit-transform: rotate(-6deg);
+	    -ms-transform: rotate(-6deg);
+	        transform: rotate(-6deg);
+	border-radius:0;
+	object-fit:contain;
+}
+.fondoFichaJugadorEspecialBigDT,
+.fondoFichaTecnicoEspecialBigDT {
+	background: url("../img/fondoFichaEspecialBigDT.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+	position: absolute;
+	-webkit-transform: rotate(-6deg);
+	    -ms-transform: rotate(-6deg);
+	        transform: rotate(-6deg);
+}
+
+.fotoFichaJugador,
+.fotoFichaEntrenador {
+	position: relative;
+	z-index: 2;
+	aspect-ratio: auto 1 / 1;
+	border-radius: 50%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+.fotoFichaJugadorEspecial,
+.fotoFichaEntrenadorEspecial {
+	background: url("../img/fondoFichaEspecial.png") no-repeat;
+	background-size: contain;
+	background-position: center;
+	border-radius: 0;
+}
+.fotoFichaJugadorEspecialBigDT {
+	border-radius: 0;
+	-o-object-fit: contain;
+	   object-fit: contain;
+	-webkit-filter: drop-shadow(3px 2px 5px var(--color-caja));
+	        filter: drop-shadow(3px 2px 5px var(--color-caja));
+}
+
+.fichaJugadorTop img,
+.labelPosicionJugador,
+.labelValoracionJugador,
+.fichaJugadorBottom,
+.fichaJugadorBottom label,
+.fichaTecnicoTop img,
+.labelPuestoTecnico,
+.labelValoracionTecnico,
+.fichaTecnicoBottom,
+.fichaTecnicoBottom label {
+	position:absolute;
+}
+	.fichaJugadorTop img,
+	.fichaTecnicoTop img {
+		max-height: 65%;
+		aspect-ratio: auto 1/1;
+	}
+	.fichaJugadorTop .fotoJugador,
+	.fichaTecnicoTop .fotoTecnico {
+		left: 13%;
+		top: 9%;
+		border-radius: 50%;
+		border: .3em solid var(--color-texto);
+		-o-object-fit: cover;
+		   object-fit: cover;
+		-o-object-position: top;
+		   object-position: top;
+	}
+	.fichaJugadorTop .escudo,
+	.fichaTecnicoTop .escudo {
+		height:15%;
+		top:2%;
+		left:80%;
+	}
+
+	.labelPosicionJugador,
+	.labelValoracionJugador,
+	.labelValoracionTecnico {
+		left: 3%;
+	}
+		.labelPosicionJugador {
+			top: 2%;
+			font-size: 1.2em;
+		}
+		.labelPuestoTecnico {
+			top: 30%;
+		}
+			.minFontPosicion {
+				font-size: 1.1em;
+			}
+			.maxFontPosicion {
+				font-size: 1.4em;
+			}
+		.labelValoracionJugador,
+		.labelValoracionTecnico {
+			top: 15%;
+			font-size: 1em;
+		}
+			.minFontValoracion {
+				font-size: .75em;
+			}
+			.maxFontValoracion {
+				font-size: 1.1em;
+			}
+.fichaJugadorBottom,
+.fichaTecnicoBottom {
+	bottom: 0;
+}
+		.fichaNombre {
+			top: 1%;
+		}
+		.fichaApellido {
+			top: 33%;
+		}
+		.estrellas {
+			top: 60%;
+			color: var(--color-oro2);
+		}
+			.fichaJugadorEspecial .estrellas,
+			.fichaJugadorUnico .estrellas,
+			.fichaTecnicoEspecial .estrellas,
+			.fichaTecnicoUnico .estrellas {
+				text-shadow: 1px 1px var(--color-contraste),0px -1px var(--color-contraste),-1px 0px var(--color-contraste);
+			}
+		.minFontNombre {
+			font-size: .7em;
+		}
+		.maxFontNombre {
+			font-size: 1em;
+		}
+
+.fichaJugadorEspecial .fichaNombre,
+.fichaJugadorEspecial .fichaApellido,
+.fichaJugadorEspecial .labelPosicionJugador,
+.fichaJugadorEspecial .labelValoracionJugador,
+.fichaJugadorUnico .fichaNombre,
+.fichaJugadorUnico .fichaApellido,
+.fichaJugadorUnico .labelPosicionJugador,
+.fichaJugadorUnico .labelValoracionJugador,
+.fichaTecnicoEspecial .fichaNombre,
+.fichaTecnicoEspecial .labelPuestoTecnico,
+.fichaTecnicoEspecial .labelValoracionTecnico,
+.fichaTecnicoUnico .fichaNombre,
+.fichaTecnicoUnico .labelPuestoTecnico,
+.fichaTecnicoUnico .labelValoracionTecnico {
+	text-shadow: 1px 1px var(--color-contraste),0px -1px var(--color-contraste),-1px 0px var(--color-contraste);
+	font-weight: 600;
+}
+	.fichaJugadorEspecial .labelValoracionJugador,
+	.fichaJugadorUnico .labelValoracionJugador,
+	.fichaTecnicoEspecial .labelValoracionTecnico,
+	.fichaTecnicoUnico .labelValoracionTecnico {
+		top: 18%;
+	}
+.fondoFotoJugador,
+.fondoFotoTecnico {
+	filter: blur(2px);
+	opacity: .9;
+	padding-bottom: 0%;
+	border-bottom-left-radius: 20% !important;
+	border-bottom-right-radius: 20% !important;
+	border: none !important;
+	left: 6% !important;
+	top: 3% !important;
+	max-height: 70% !important;
+}
+
+.principalFotoJugador,
+.principalFotoTecnico {
+	padding-bottom: 6%;
+	border-radius: 0 !important;
+	border: none !important;
+	left: 6% !important;
+	top: 3% !important;
+}
+
+
+
+/* EFECTO FLASH AL CAMBIAR DE DEPORTE */
+.flashed {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+	@-webkit-keyframes fadeIn {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+	@keyframes fadeIn {
+		0% {opacity: 0;}
+		100% {opacity: 1;}
+	}
+
+/* EFECTO ROTAR */
+.rotacionX {
+	-webkit-animation: flip-scale-down-ver .5s ease-in alternate ;
+	        animation: flip-scale-down-ver .5s ease-in alternate ;
+}
+
+@-webkit-keyframes flip-scale-down-ver {
+	0% {
+		-webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+		-webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+	50% {
+		-webkit-transform: translateX(-50%) rotateY(90deg) scale(1.5);
+            transform: translateX(-50%) rotateY(90deg) scale(1.5);
+		-webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+	100% {
+		-webkit-transform: translateX(-100%) rotateY(180deg) scale(1);
+            transform: translateX(-100%) rotateY(180deg) scale(1);
+		-webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+}
+@keyframes flip-scale-down-ver {
+	0% {
+		-webkit-transform: translateX(0) rotateY(0) scale(1);
+            transform: translateX(0) rotateY(0) scale(1);
+		-webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+	50% {
+		-webkit-transform: translateX(-50%) rotateY(90deg) scale(2);
+            transform: translateX(-50%) rotateY(90deg) scale(2);
+		-webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+	100% {
+		-webkit-transform: translateX(-100%) rotateY(180deg) scale(1);
+            transform: translateX(-100%) rotateY(180deg) scale(1);
+		-webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+  }
+}
+
+/* EFECTO APERTURA */
+.apertura {
+	-webkit-animation: efecto-apertura .5s ease;
+	animation: efecto-apertura .5s ease;
+}
+
+@keyframes efecto-apertura {
+	0% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	100% {
+		-webkit-transform: scale(1.0);
+		transform: scale(1.0);
+	}
+}
+
+
+/* EFECTO ROTACION (CREO QUE NO SE VA A USAR */
+.rotacionY {
+	-webkit-animation-name: rotarY;
+	animation-name: rotarY;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-timing-function: cubic-bezier(.0, .0, 1.0, -.600);
+	animation-timing-function: cubic-bezier(.0, .0, 1.0, -.600);
+}
+
+@keyframes rotarY {
+	0% {
+		transform: scaleY(1);
+		-webkit-transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(0);
+		-webkit-transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+		-webkit-transform: scaleY(1);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+/*                          CONFIGURACIÓN PANTALLA FICHAS                             */
+#cajaClub,
+#cajaEquipo,
+#cajaJugador,
+#cajaEntrenador,
+#cajaTorneo {
+	position: absolute;
+	max-width: 1100px;
+	max-height: 720px;
+	background: var(--color-fondo-principal);
+	z-index: 50;
+	border-radius: 60px;
+	border: 25px solid var(--color-caja);
+}
+
+/*                       CONFIGURACIÓN PANTALLA FICHA CLUBES                          */
+#botonClubDeporte1,
+#botonClubDeporte2,
+#botonClubDeporte3 {
+	margin: auto 1%;
+}
+
+
+/*                       CONFIGURACIÓN PANTALLA FICHA JUGADOR                         */
+#imagenPosicion {
+	position: absolute;
+	bottom: -5%;
+	left: 4%;
+}
+.cajaPosicion {
+	background: var(--color-texto);
+	color: var(--color-corporativo-rosa);
+	border-radius: 5px;
+	aspect-ratio: auto 1 / 1;
+}
+.cajaNumeroDorsal {
+	background: var(--color-texto);
+	border-radius: 50px;
+	color: var(--color-corporativo-rosa);
+	aspect-ratio: auto 1 / 1;
+}
+
+.evolucionLabel {
+	border-top: 2px solid var(--color-texto);
+}
+
+	.lineaGrafica {
+		position: absolute;
+		bottom: 0;
+		border-top: 1px dotted var(--color-texto);
+		z-index: 1;
+	}
+	.evolucionGrafica canvas {
+		position: absolute;
+		z-index: 2;
+	}
+
+
+
+
+
+
+
+
+
+
+/*                          CONFIGURACIÓN PANTALLA MENÚ PRO                    */
+	#menuProEntrenamiento,
+	#menuProPizarra,
+	#menuProInformes,
+	#menuProConfiguracion {
+		border-radius: 35px;
+	}
+	#menuProEntrenamiento img,
+	#menuProPizarra img,
+	#menuProInformes img,
+	#menuProConfiguracion img,
+	#menuProCentro {
+		aspect-ratio: auto 1/1;
+		-webkit-filter: drop-shadow(1px 1px var(--color-contraste));
+                filter: drop-shadow(1px 1px var(--color-contraste));
+	}
+	.cuadroMenuPro {
+		opacity: 0.1;
+		background-image: -o-radial-gradient( 4px 4px , ellipse farthest-corner , #333, #333 50%, #e5e5f7 50%);
+		background-image: radial-gradient( ellipse farthest-corner at 4px 4px , #333, #333 50%, #e5e5f7 50%);
+		background-size: 4px 4px;
+	}
+	#menuProEntrenamiento {
+		top: 10%;
+		left: 2.5%;
+	}
+		#menuProEntrenamiento img {
+			top: 15%;
+			right: 10%;
+		}
+	#menuProPizarra {
+		top: 10%;
+		right: 2.5%;
+	}
+		#menuProPizarra img {
+			top: 15%;
+			left: 10%;
+		}
+	#menuProInformes {
+		bottom: 10%;
+		left: 2.5%;
+	}
+		#menuProInformes img {
+			bottom: 15%;
+			right: 10%;
+		}
+	#menuProConfiguracion {
+		bottom: 10%;
+		right: 2.5%;
+	}
+		#menuProConfiguracion img {
+			bottom: 15%;
+			left: 10%;
+		}
+	#menuProPizarra h2,
+	#menuProConfiguracion h2 {
+		text-align: right;
+	}
+#menuProCentro {
+	border-radius: 50%;
+}
+	#textoMenuProCentro {
+		background: var(--color-pro);
+	}
+	#menuProCentro span {
+		height: 50%;
+		font-size: 12px;
+		width: 20px;
+		transform-origin: bottom center;
+		position: absolute;
+		bottom: 50%;
+	}
+
+	#fondoMenuProCentro {
+		background-color: var(--color-fondo-principal);
+		border-radius: 50%;
+	}
+	#menuProCentro img {
+		z-index: 2;
+	}
+#cajaMenuProEntrenamiento,
+#cajaMenuProConfiguracion {
+	background: var(--color-sombra);
+	border-radius: 2%;
+}
+.bordesCaja {
+	border-top: 2px solid var(--color-corporativo-morado);
+	border-bottom: 2px solid var(--color-corporativo-morado);
+	border-radius: 11px;
+}
+	.cajaMes {
+		background: var(--color-pro);
+		border-radius: 20px 20px 0 0;
+		margin: 1% 0 -1% 0;
+	}
+	.cajaDiario {
+		border-radius: 15px;
+		margin: 1% 0;
+		border-top: 1px solid var(--color-corporativo-morado);
+		border-bottom: 1px solid var(--color-corporativo-rosa);
+	}
+		.cajaDiario:hover {
+			width: 95%;
+		}
+		.cajaDiarioSeleccionada {
+			background: var(--color-corporativo-morado);
+			border-radius: 14px;
+		}
+		.cajaHoy {
+			background: var(--color-fondo-principal);
+		}
+#agendaEntrenamiento {
+	padding: 1% 0;
+}
+#ayudaEntrenamientoPro img {
+	height: 15px;
+}
+.marcado {
+	-webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+}
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA PREVIA PARTIDO                  */
+/* Ficha Ficha*/
+.cuadroTecnico {
+	padding: 0 2%;
+	background-color: rgba(255, 255, 255, .05);
+}
+
+.filaAlineacion .numeroAlineacion {
+	width: 30px;
+	height: 30px;
+	color: var(--color-texto);
+	border-radius: 50%;
+}
+	.filaLocal .numeroAlineacion,
+	.filaLocal .pAlineacion {
+		background: var(--color-local);
+	}
+	.filaVisitante .numeroAlineacion,
+	.filaVisitante .pAlineacion {
+		background: var(--color-visitante);
+	}
+	.filaAlineacion .pAlineacion {
+		border-radius: 6px;
+		min-width: 30px;
+		min-height: 30px;
+	}
+
+
+/* Cuadro Datos partido */
+.cajaPartido {
+	position: relative;
+}
+	.botonIrPartido {
+		position: absolute;
+		bottom: 0;
+	}
+
+/* Ficha VS*/
+#menuPartido #menuPartidoCentral #menuVs .cuadroEquipos img {
+	position: absolute;
+	max-width: 285px;
+	top: 34%;
+}
+	#menuPartido #menuPartidoCentral #menuVs .cuadroEquipos .der {
+		left: calc(50vw + 230px);
+	}
+	#menuPartido #menuPartidoCentral #menuVs .cuadroEquipos .izq {
+		left: calc(50vw - 230px - 278px);
+	}
+	#menuPartido #menuPartidoCentral #menuVs .cuadroEquipos .siluetaJugador {
+		-webkit-filter: drop-shadow(1px 1px 1px var(--color-corporativo-rosa));
+		filter: drop-shadow(1px 1px 1px var(--color-corporativo-rosa));
+	}
+#menuPartido #menuPartidoCentral #menuVs .cuadroEquipos label {
+	margin-top: 240%;
+}
+	#menuPartido #menuPartidoCentral #menuVs .miniEscudoIzq,
+	#menuPartido #menuPartidoCentral #menuVs .miniEscudoDer{
+		-webkit-filter: blur(2px) opacity(.6);
+        filter: blur(2px) opacity(.6);
+	}
+
+	#menuPartido #menuPartidoCentral #menuVs .miniEscudoIzq {
+		-webkit-transform: rotate(-5deg);
+		-ms-transform: rotate(-5deg);
+		    transform: rotate(-5deg);
+	}
+	#menuPartido #menuPartidoCentral #menuVs .miniEscudoDer {
+		-webkit-transform: rotate(5deg);
+		-ms-transform: rotate(5deg);
+		 transform: rotate(5deg);
+	}
+		#menuPartido #menuPartidoCentral #menuVs #cuadroVs .cuadro .cajaMenu {
+			padding-top: 1%;
+		}
+	#menuPartido #menuPartidoCentral #menuVs #cuadroVs .logoBigDT {
+		width: 80px;
+		background: var(--color-caja);
+		padding: 1.8%;
+		border-radius: 13px;
+		margin: 0 10%;
+	}
+#menuPartido #menuPartidoCentral #menuVs label {
+	display: block;
+}
+#menuPartido #menuPartidoCentral #menuVs .datoValor {
+	width: 25%;
+	height: 50px;
+	border-radius: 20px;
+	background: var(--color-corporativo-morado);
+	z-index: 2;
+}
+	#menuPartido #menuPartidoCentral #menuVs .datoAnotacion {
+		white-space: normal;
+	}
+		#menuPartido #menuPartidoCentral #menuVs .datoRacha div {
+			width: 24%;
+			height: 100%;
+			border: none;
+		}
+
+/* Ficha Est Generales */
+#menuPartido #menuPartidoCentral #menuEstGenerales label {
+	display: block;
+}
+
+	#menuPartido #menuPartidoCentral #menuEstGenerales .bordeLocal {
+		border-right: 3px solid var(--color-corporativo-morado);
+	}
+	#menuPartido #menuPartidoCentral #menuEstGenerales #labelGenerales {
+		font-size: calc(30% + 1rem);
+	}
+	#menuPartido #menuPartidoCentral #menuEstGenerales .tituloLabel {
+		padding-top: 4%;
+		color: var(--color-corporativo-rosa);
+	}
+
+
+/* Ficha Est Individuales */
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha {
+	background-color: rgba(255, 255, 255, .05);
+}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #fichaNombre {
+		position: relative;
+	}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha .botonJugador {
+		position: absolute;
+		right: 5px;
+		background: var(--color-corporativo-morado);
+		border-radius: 50%;
+	}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha .nombre,
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha .apellido {
+		margin-left: 2%;
+	}
+		#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #cuadroDatos #fichaDorsal .dorsal {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: var(--color-corporativo-morado);
+		}
+		#menuPartido #menuPartidoCentral #menuEstIndividuales #cuadroFicha #cuadroDatos #fichaDorsal .posicion {
+			height: 30px;
+		}
+#menuPartido #menuPartidoCentral #menuEstIndividuales #cajaEstadisticas img {
+	position: relative;
+}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cajaEstadisticas #siluetaJugador {
+		margin: 5%;
+		-webkit-filter: drop-shadow(1px 1px 1px var(--color-corporativo-rosa));
+		filter: drop-shadow(1px 1px 1px var(--color-corporativo-rosa));
+		z-index: 3;
+	}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cajaEstadisticas #escudoLocal,
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cajaEstadisticas #escudoVisitante {
+		width: 245px;
+		left: 20%;
+		top: -90%;
+		-webkit-filter: blur(2px) opacity(.4);
+        filter: blur(2px) opacity(.4);
+		z-index: 2;
+	}
+	#menuPartido #menuPartidoCentral #menuEstIndividuales #cajaDorsales .filas div {
+		border-radius: 50%;
+		height: 40px;
+		width: 40px;
+		color: var(--color-texto) !important;
+	}
+
+
+	/* Crear gráfica de estrella */
+	.graficaLabel {
+		position: relative;
+	}
+		#graficaLabel div:nth-child(1) {
+			text-align: right;
+		}
+		#graficaLabel div:nth-child(5) {
+			text-align: center;
+		}
+
+	.graficaFicha {
+		position:absolute;
+		max-width: 200px;
+		max-height: 200px;
+		aspect-ratio: auto 1 / 1;
+		border-radius: 50%;
+		background-color: var(--color-sombra);
+	}
+	.alineacionDer {
+		text-align: right;
+	}
+		.graficaFicha #graficaEstrella {
+	   	background: var(--color-corporativo-morado);
+	   	margin-top: -100%;
+	   	opacity: .7;
+		}
+
+	#graficaFondo {
+		width: 100%;
+		height: 100%;
+		opacity: .9;
+	}
+		#graficaFondo div {
+			border: 2px solid var(--color-contraste);
+		}
+			/* círculos  */
+			#graficaFondo div:nth-child(1) {
+				margin: 12.5%;
+				border-radius: 50%;
+			}
+			#graficaFondo div:nth-child(2) {
+				margin-left: 25%;
+				margin-top: -75%;
+				border-radius: 50%;
+			}
+			#graficaFondo div:nth-child(3) {
+				margin-left: 37.5%;
+				margin-top: -37.5%;
+				border-radius: 50%;
+			}
+			/* líneas */
+			#graficaFondo div:nth-child(4) {
+				margin-top: -14%;
+			}
+			#graficaFondo div:nth-child(5) {
+				margin-top: -2%;
+				-webkit-transform: rotate(90deg);
+		    -ms-transform: rotate(90deg);
+		        transform: rotate(90deg);
+			}
+			#graficaFondo div:nth-child(6) {
+				margin-top: -2%;
+				-webkit-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		        transform: rotate(45deg);
+			}
+			#graficaFondo div:nth-child(7) {
+				margin-top: -2%;
+				-webkit-transform: rotate(135deg);
+		    -ms-transform: rotate(135deg);
+		        transform: rotate(135deg);
+			}
+
+	/* Crear gráfica circular */
+	.graficaCircular {
+		aspect-ratio: 1 / 1;
+		border-radius: 50%;
+	}
+
+
+	/* Menu inferior */
+	#cuadroMenuInferiorPrevia {
+		position: relative;
+	}
+		#cuadroEstNormales,
+		#cuadroEstPro {
+			position: absolute;
+			-webkit-transition: linear .75s;
+			-o-transition: linear .75s;
+			transition: linear .75s;
+		}
+		.aparecerSubMenu {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			    -ms-transform: scale(1);
+			        transform: scale(1);
+		}
+		.desaparecerSubMenu {
+			-webkit-transform: scale(0);
+			    -ms-transform: scale(0);
+			        transform: scale(0);
+			opacity: 0;
+		}
+	#menuPartidoInferior button {
+		background: var(--color-fondo-principal);
+		border-left: 1px solid var(--color-corporativo-rosa);
+		border-right: 1px solid var(--color-corporativo-rosa);
+	}
+		.botonSeleccionado {
+			color: var(--color-corporativo-rosa) !important;
+			background: var(--color-fondoIndex) !important;
+		}
+
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+	#menuFichaPro > div:nth-child(1),
+	#menuFichaPro > div:nth-child(1) div,
+	#menuFichaPro > div:nth-child(2) div,
+	#menuVsPro > div:nth-child(1),
+	#menuVsPro > div:nth-child(1) div,
+	#menuVsPro > div:nth-child(2) div,
+	#menuEstGeneralesPro > div:nth-child(1),
+	#menuEstGeneralesPro > div:nth-child(1) div,
+	#menuEstGeneralesPro > div:nth-child(2) div {
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-ms-flex-pack: distribute;
+				justify-content: space-around;
+		-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	}
+	#menuFichaPro > div:nth-child(2),
+	#menuVsPro > div:nth-child(2),
+	#menuEstGeneralesPro > div:nth-child(2) {
+		display: -webkit-box;
+	   display: -ms-flexbox;
+	   display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	}
+/* /////////////////////////////////////////////////////////////////////////////////////// */
+
+		.borderIzq {
+			border-radius: 5px 0 0 5px;
+		}
+		.borderDer {
+			border-radius: 0 5px 5px 0;
+		}
+
+
+
+
+
+
+
+
+
+
+
+/*                       CONFIGURACIÓN PANTALLA CAPTURA                         */
+/* Lateral izquierdo */
+#lateralIzquierdo {
+	border-bottom: 2px solid var(--color-corporativo-morado);
+	border-left: 10px solid var(--color-fondo-principal);
+}
+		/* Laterales */
+.botonMando {
+	position: relative;
+	padding: 3px 5px;
+	border-radius: 15px;
+
+  /*background-image: url('../img/Captura/dosMinutos4.png');
+  background-size: cover;
+  background-position: center;*/
+}
+	.botonMando strong {
+		z-index: 1;
+
+		/*font-size: 36px;
+	  font-weight: bold;
+	  color: transparent;
+	  background-clip: text;
+	  -webkit-background-clip: text;
+	  mask-image: url('../img/Captura/dosMinutos4.png');
+	  -webkit-mask-image: url('../img/Captura/dosMinutos4.png');*/
+	}
+	.botonMando img {
+		position: absolute;
+		opacity: .3;
+		height: 150% !important;
+	}
+	.noFondo {
+		border: 2px solid var(--color-corporativo-rosa);
+		font-size: .9em;
+	}
+	.botonActivo {
+		background: var(--color-corporativo-rosa);
+		border:  none;
+	}
+.escudoCampeonato {
+	margin: 0 10px;
+	border-radius: 30%;
+}
+
+		/* Zona central */
+	/* Marcador Central */
+#cuadroLocal,
+#cuadroVisitante {
+	position: relative;
+}
+	.cuadroCaptura {
+		position: relative;
+		border-radius: 50px;
+		border-right: 4px solid var(--color-corporativo-morado);
+		border-left: 4px solid var(--color-corporativo-morado);
+		border-top: 4px solid var(--color-corporativo-morado);;
+	}
+
+#sancionesL,
+#sancionesV {
+	min-height: 14.65px;
+}
+#pantallacapturaL,
+#pantallacapturaV,
+#mandoCapturaL,
+#mandoCapturaV,
+#banquilloL,
+#banquilloV,
+#banquilloSancionL,
+#banquilloSancionV {
+	-webkit-transition: height .5s;
+       -o-transition: height .5s;
+          transition: height .5s;
+}
+
+.cartelConvocatoria {
+	margin-left: 5%;
+}
+.cuadroPlantillaConvocatoria {
+	border-radius: 20px;
+	border-right: 4px solid var(--color-corporativo-rosa);
+	border-left: 4px solid var(--color-corporativo-rosa);
+}
+.botonGuardarConvocatoria {
+	background: var(--color-corporativo-rosa);
+	border-radius: 10px;
+}
+.imgCambiarFormacion {
+	-webkit-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+        transform:rotate(90deg);
+}
+
+.jugadorConvocado,
+.jugadorNoConvocado {
+	margin: 1% 0;
+	border-radius: 10px;
+}
+	.jugadorConvocado {
+		background: var(--color-corporativo-rosa);
+	}
+	.jugadorNoConvocado {
+		border: 2px solid var(--color-corporativo-morado);
+	}
+
+.cuadroCambios {
+	position: absolute;
+	top: 0;
+	background: var(--color-fondoIndex);
+	max-height: 55px;
+	z-index: 3;
+}
+	.cuadroCambios img {
+		-webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+	}
+.cuadroTitular {
+	position: absolute;
+	bottom: 0;
+	max-height: 225px;
+}
+
+#banquilloL,
+#banquilloV {
+	position: absolute;
+	bottom: 51%;
+	background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%25' width='100%25'%3E%3Cdefs%3E%3Cpattern id='doodad' width='10' height='10' viewBox='0 0 40 40' patternUnits='userSpaceOnUse' patternTransform='rotate(226)'%3E%3Crect width='100%25' height='100%25' fill='rgba(42, 67, 101,0)'/%3E%3Ccircle cx='40' cy='20' r='0.25' fill='rgba(26, 32, 44,0)'/%3E%3Ccircle cx='0' cy='20' r='2.5' fill='rgba(165, 87, 216,1)'/%3E%3Ccircle cx='40' cy='20' r='2.5' fill='rgba(165, 87, 216,1)'/%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23doodad)' height='200%25' width='200%25'/%3E%3C/svg%3E ");
+}
+
+.dorsalConvocatoria,
+.posicionConvocatoria {
+	color: var(--color-texto);
+	aspect-ratio: auto 1 / 1;
+	margin: 1%;
+}
+	.dorsalConvocatoria {
+		border-radius: 46px;
+		}
+	.posicionConvocatoria {
+		background: var(--color-texto);
+		color: var(--color-corporativo-rosa);
+		border-radius: 5px;
+	}
+.nombreConvocatoria {
+	white-space: nowrap;
+	-o-text-overflow: ellipsis;
+   text-overflow: ellipsis;
+}
+
+.jugador,
+.jugadorBanquillo,
+.jugadorTitular {
+	border-radius: 150px;
+	margin: 1%;
+}
+	.jugador,
+	.jugadorTitular {
+		width: 80px;
+		height: 94px;
+		border: 6px solid var(--color-corporativo-morado);
+	}
+	.jugadorBanquillo {
+		position: relative;
+		width: 42.5px;
+		height: 50px;
+		border: 3px solid var(--color-corporativo-morado);
+	}
+
+.jugador .imgCamiseta,
+.jugadorTitular .imgCamiseta,
+.jugadorBanquillo img {
+	position: absolute;
+	width: 8vw;
+	z-index: 0;
+}
+	.jugador .imgCamiseta,
+	.jugadorTitular .imgCamiseta {
+		max-width: 82px;
+	}
+	.jugadorBanquillo img {
+		max-width: 43px;
+	}
+.numeroDorsal {
+	position: absolute;
+	z-index: 2;
+}
+	.sumaExclusiones {
+		height: 20%;
+		width: 60%;
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		-webkit-box-pack: center;
+  		-ms-flex-pack: center;
+      	justify-content: center;
+		z-index: 2;
+		position: relative;
+		left: -2vw;
+		top: 2vh;
+		transform: rotate(-60deg);
+		-webkit-transform: rotate(-60deg);
+	}
+
+	.contadorExclusion {
+		position: relative;
+		width: 50px;
+		height: 30px;
+		z-index: 2;
+		margin-right: -10%;
+		margin-top: 57%;
+	}
+	.contadorPlayerExclusion {
+		width: 19px;
+		height: 13px;
+	}
+		.contador1,
+		.contador2,
+		.contador3 {
+			position: absolute;
+		}
+			.contador1 {
+				width: 18px;
+				top: 16%;
+				right: 17%;
+			}
+				.contadorPlayerExclusion .contador1 {
+					width: 10px;
+				}
+			.contador2 {
+				height: 15px;
+				bottom: 10%;
+				right: 15%;
+			}
+			.contador3 {
+				height: 15px;
+				bottom: 10%;
+				left: 42%;
+			}
+		.contadorTarjeta {
+			position: absolute;
+			top: 11%;
+			right: 12%;
+		}
+
+
+
+
+
+
+
+		/* MODO EDICIÓN  */
+#guardarEditar {
+	background: var(--color-acierto) !important;
+}
+.editarReloj {
+	height: 90% !important;
+	width: 100% !important;
+	background: var(--color-error) !important;
+	border: none !important;
+	font-size: .8em !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+	/* Pantalla de tiro */
+#pantallaTiro {
+	position: relative;
+	border-radius: 190px 190px 0 0;
+	width: 97%;
+	height: 60%;
+}
+	.fueraBanda {
+		height: 80%;
+		width: 10.5%;
+		background: var(--color-corporativo-morado2);
+		margin-top: 7%;
+	}
+		.fueraFondo #fondoSuperior {
+			width: 100%;
+			height: 20%;
+			background: var(--color-corporativo-morado2);
+			border-top-right-radius: 50%;
+			border-top-left-radius: 50%;
+		}
+		.fueraFondo #fondoLateral {
+			width: 100%;
+			height: 80%;
+			background: var(--color-corporativo-rosa4);
+			border-bottom: 1px solid var(--color-texto);
+		}
+
+	#tiroDentro {
+		position: absolute;
+		left: 28%;
+		top: 20%;
+		right: 28%;
+		bottom: 0;
+	}
+	#pantallaTiro #tiroPoste {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: var(--color-texto);
+		border: 16px dashed red;
+	}
+	#pantallaTiro #tiroPorteria {
+		position: absolute;
+		left: 16px;
+		top: 16px;
+		right: 16px;
+		bottom: 0;
+		background: var(--color-fondo-principal);
+	}
+		#pantallaTiro #tiroPorteria div {
+			border: 1px solid var(--color-texto);
+		}
+			#pantallaTiro #tiroPorteria .acierto {
+				border-radius: 20% 0;
+			}
+			#pantallaTiro #tiroPorteria .error {
+				border-radius: 0 20%;
+			}
+#pantallaZonaTiro {
+	position: relative;
+	-webkit-perspective: 250px;
+        perspective: 250px;
+}
+	#pantallaZonaTiro3D {
+		height: 130%;
+		position: absolute;
+		-webkit-transform-style: preserve-3d;
+		        transform-style: preserve-3d;
+		-webkit-transform: rotateX(25deg) translateY(-43px);
+		        transform: rotateX(25deg) translateY(-43px);
+	}
+	#pantallaZonaTiroArea,
+	#pantallaZonaTiroLinea9,
+	#pantallaZonaTiroLineaPenalti {
+		position: absolute;
+		z-index: 4;
+	}
+		#pantallaZonaTiroArea {
+			background: var(--color-pista);
+			margin-left: 15%;
+			border-radius: 0 0 190px 190px;
+			border-bottom: 5px solid var(--color-texto);
+			border-left: 5px solid var(--color-texto);
+			border-right: 5px solid var(--color-texto);
+		}
+		#pantallaZonaTiroLineaPenalti {
+			background: var(--color-texto);
+			top: 42%;
+			left: 45%;
+		}
+		#pantallaZonaTiroLinea9 {
+			left: 5%;
+			border-radius: 0 0 115px 115px;
+			border-bottom: 3px dashed var(--color-texto);
+			border-left: 3px dashed var(--color-texto);
+			border-right: 3px dashed var(--color-texto);
+		}
+	#pantallaZonaTiroZona1,
+	#pantallaZonaTiroZona2,
+	#pantallaZonaTiroZona3,
+	#pantallaZonaTiroZona4,
+	#pantallaZonaTiroZona5,
+	#pantallaZonaTiroZona6,
+	#pantallaZonaTiroZona8,
+	#pantallaZonaTiroZona9,
+	#pantallaZonaTiroZona10 {
+		position: absolute;
+	}
+		#pantallaZonaTiroZona1,
+		#pantallaZonaTiroZona3,
+		#pantallaZonaTiroZona5 {
+			background: var(--color-corporativo-rosa2);
+			z-index: 3;
+		}
+		#pantallaZonaTiroZona2,
+		#pantallaZonaTiroZona4 {
+			background: var(--color-corporativo-rosa3);
+			z-index: 2;
+		}
+			#pantallaZonaTiroZona1 {
+				left: 1%;
+				-webkit-clip-path: polygon(0 0, 0% 100%, 100% 0);
+				        clip-path: polygon(0 0, 0% 100%, 100% 0);
+				border-left: 3px solid var(--color-texto);
+			}
+			#pantallaZonaTiroZona2 {
+				left: 5%;
+				border-radius: 0 0 0 115px;
+			}
+			#pantallaZonaTiroZona3 {
+				left: 35%;
+				z-index: 2;
+			}
+			#pantallaZonaTiroZona4 {
+				right: 5%;
+				border-radius: 0 0 115px 0;
+			}
+			#pantallaZonaTiroZona5 {
+				right: 1%;
+				-webkit-clip-path: polygon(100% 100%, 0 0, 100% 0);
+			        clip-path: polygon(100% 100%, 0 0, 100% 0);
+				border-right: 3px solid var(--color-texto);
+			}
+		#pantallaZonaTiroZona6 {
+			left: 1%;
+			background: var(--color-corporativo-rosa4);
+			border-left: 3px solid var(--color-texto);
+		}
+		#pantallaZonaTiroZona8 {
+			left: 30%;
+			background: var(--color-corporativo-rosa5);
+			top: 55%;
+		}
+		#pantallaZonaTiroZona9 {
+			right: 1%;
+			background: var(--color-corporativo-rosa4);
+			border-right: 3px solid var(--color-texto);
+		}
+		#pantallaZonaTiroZona10 {
+			right: 1%;
+			bottom: 1px;
+			background: var(--color-corporativo-rosa5);
+			border-top: 6px solid var(--color-texto);
+		}
+
+	/* Marcador Inferior */
+.recuadroIcono {
+	margin: auto 1%;
+	border-radius: 1.5em;
+}
+	.recuadroIcono label {
+		width: 100%;
+	}
+	.recuadroIcono img {
+		height: 50%;
+	}
+
+.circuloPenalti {
+	background: var(--color-texto);
+	color: var(--color-fondo-principal);
+	border-radius: 50px;
+	aspect-ratio: auto 1 / 1;
+}
+	#tiradorPenalti,
+	#porteroPenalti {
+		font-size: 2rem;
+	}
+	.seleccionadorCirculo {
+		font-size: 1.5rem;
+	}
+#opcionesPenalti #botonesTipoTiro div {
+	position: relative;
+}
+#botonPorteroPenalti,
+#botonTiradorPenalti {
+	width: 45%;
+	position: absolute !important;
+	top: 2%;
+	z-index: 1;
+}
+#botonSelecTirador,
+#botonSelecPortero,
+#botonSelecCancelar {
+	position: absolute !important;
+	bottom: 0;
+}
+	#botonPorteroPenalti,
+	#botonSelecPortero {
+		right: 0;
+	}
+	#botonTiradorPenalti,
+	#botonSelecTirador {
+		left: 3%;
+	}
+	.abrirCajaPenalti {
+		z-index: 2 !important;
+		-webkit-animation: extender .5s 1;
+        	animation: extender .5s 1;
+    width: 95% !important;
+	}
+@-webkit-keyframes extender {
+	0% {width: 45% !important;}
+	10% {width: 40% !important;}
+	100% {width: 95% !important;}
+}
+@keyframes extender {
+	0% {width: 45% !important;}
+	10% {width: 40% !important;}
+	100% {width: 95% !important;}
+}
+
+		/* Configuración pantallas inferiores */
+.botonVolver {
+	width: 12%;
+}
+
+		/* Pantalla opciones de ataque */
+.cartelesBotones {
+	margin-left: 5%;
+	border-bottom: 1px solid grey;
+}
+
+
+/* Pantalla Estadísticas */
+#cuadroEstadisticas,
+#marcoEstGraficas,
+#marcoEstJugadores {
+	position: relative;
+}
+#mandoEstadisticas {
+	bottom: -10%;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+}
+	#cuadroEstadisticas .open,
+	#marcoEstGraficas .open {
+		bottom: 0;
+		transition: .5s;
+	}
+	/* Datos Generales */
+.bordeIzq {
+	border-left: 2px solid var(--color-corporativo-morado);
+	border-radius: 50px;
+}
+.bordeDer {
+	border-right: 2px solid var(--color-corporativo-morado);
+	border-radius: 50px;
+}
+.filaEstGeneral {
+	background: var(--color-fondoIndex);
+	border-radius: 50px;
+}
+.estaCategoria,
+.estDatoA,
+.estDatoB {
+	background: var(--color-fondo-principal);
+}
+	/* Gráficas */
+#datosEstGraficas {
+	position: absolute;
+	top: 0;
+}
+#submandoEstGraficas,
+#submandoEstJugadores {
+	bottom: -30%;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+}
+	#submandoEstGraficas h3 {
+		width: 100%;
+		margin-left: 5%;
+		color: var(--color-contraste);
+	}
+.verticalGrafica {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-right: 1px dotted var(--color-texto);
+	z-index: 1;
+}
+	/* Estadísticas Jugadores */
+#datosEstJugadores {
+	position: absolute;
+	top: 0;
+}
+.fichaJugadores {
+	width: 40px;
+	height: 50px;
+	border-radius: 25px;
+	margin: 0 1px;
+}
+
+
+
+/* Lateral derecho */
+	/* Reloj */
+#reloj {
+	height: 16%;
+}
+.pantallaReloj {
+	max-height: 100px;
+	background: var(--color-fondoIndex);
+	border-radius: 60px;
+	border: 4px solid var(--color-corporativo-morado);
+}
+#periodoReloj {
+	position: relative;
+	color: orange;
+	top: 5%;
+	right: 5%;
+	text-align: right;
+}
+
+	/* Control Reloj */
+#controlReloj {
+	height: 14%;
+}
+#controlReloj #botonInicioReloj {
+	border: 2px solid var(--color-corporativo-rosa);
+	border-radius: 45px;
+}
+#controlReloj #botonInicioReloj:hover {
+	background-color: var(--color-fondoIndex);
+}
+	#controlReloj label {
+		width: 100%;
+		color: var(--color-corporativo-rosa);
+	}
+	#botonTiempoMuerto .botonTM {
+		border: 3px solid var(--color-corporativo-morado);
+		border-radius: 60px;
+	}
+		.botonTM label::first-letter {
+			font-size: 3.5em;
+		}
+
+	/* Resumen */
+#resumen {
+	position: relative;
+}
+#recuadroOpciones {
+	border-top: 2px solid var(--color-corporativo-morado);
+	border-radius: 30px 0 0 0;
+	border-left: 2px solid var(--color-corporativo-morado);
+	background: var(--color-fondoIndex);
+	z-index: 4;
+}
+#imprimirSeleccion {
+	border-right: 2px solid var(--color-corporativo-morado);
+	border-top: 25px solid var(--color-fondo-principal);
+	padding-left: 1%;
+}
+	.tarjeta {
+		display: block;
+		height: 13px;
+		width: 10px;
+		margin: 3px 5px;
+		border: 1px solid gray;
+	}
+		#amarilla {
+			background-color: yellow;
+		}
+		#roja {
+			background-color: red;
+		}
+		#azul {
+			background-color: blue;
+		}
+
+.cajaAbatible {
+	position: absolute;	
+	background: var(--color-fondoIndex);
+	border-top: 2px solid var(--color-corporativo-morado);
+	border-right: 2px solid var(--color-corporativo-morado);
+	border-left: 2px solid var(--color-corporativo-morado);
+	-webkit-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+	z-index: 3;
+}
+
+#opcionesMenu {
+	bottom: -10%;
+	right: 0;
+	border-top-left-radius: 30px;
+}
+	#resumen .open {
+		bottom: 8%;
+		transition: .5s;
+	}
+	#opcionesMenu div div {
+		aspect-ratio: auto 1 / 1;
+		padding: 1%;
+		border-radius: 50%;
+		background: var(--color-corporativo-morado);
+		-webkit-transition: .3s;
+		-o-transition: .3s;
+		transition: .3s;
+		-webkit-transition-delay: calc(.1s * var(--i));
+		     -o-transition-delay: calc(.1s * var(--i));
+		        transition-delay: calc(.1s * var(--i));
+	}
+.botonOpcionesPartido:hover {
+	width: 70%;
+	background: var(--color-corporativo-rosa);
+	-webkit-transition: .3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+
+#cuadroInformacion,
+#cuadroOpcionesPartido {
+	width: 98%;
+	height: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	background: var(--color-fondo-principal);
+}
+	.opcionPartidoPulsada,
+	.opcionPartidoNoPulsada {
+		border-radius:10px;
+	}
+		.opcionPartidoPulsada {
+			background: var(--color-corporativo-rosa);
+		}
+		.opcionPartidoNoPulsada {
+			border: 2px solid var(--color-corporativo-morado);
+		}
+
+
+
+
+
+
+
+
+/* Para medios táctiles */
+@media (hover: none) {
+	#cajaSecciones .textoOculto {
+		font-size: .9em;
+	}
+}
+
+/* Incrustar espacio en tablets */
+@media (min-width: 900px) and (max-width: 1080px) {
+	#barraSuperior {
+		width: 100%;
+		height: 1vh;
+		background: var(--color-fondo-principal);
+	}
+}
+
+@media (max-width: 1150px) {
+	#bannerPubliIzq,
+	#bannerPubliDer {
+		display: none;
+	}
+	.recuadroBody {
+		width: 100%;
+		align-content: space-around;
+	}
+}
+
+
+
+/* Configurar Móviles */
+@media (max-width: 430px) {
+	.recuadroBody {
+		max-height: 100%;
+		padding-top: 20px;
+	}
+	/* Nav */
+	nav {
+		width: 90%;
+		height: 10%;
+		font-size: .9em;
+		padding-top: 0;
+	}
+		#cajaMenuSuperiorPro img {
+			margin-top: .5vh;
+		}
+		#cajaMenuSuperiorPro #botonMenuSuperior {
+			max-height: 65%;
+		}
+		.botonMenuSuperior {
+			padding: 0;
+			order: 2;
+		}
+		.botonVolverMenuSuperior {
+			order: 2;
+			margin-top: 1.3%;
+		}
+		nav label {
+			order: 2;
+		}
+		nav #botonUsuario {
+			width: 35px;
+		}
+		.logoBigDT {
+			max-height: 70%;
+			margin-top: 0 !important;
+			order: 1;
+		}
+		.notificaciones {
+			order: 100;
+		}
+	/* Index */
+	#recuadroCookies {
+		height: 70vh;
+	}
+	#textoCookies {
+		height: 80% !important;
+		width: 80%;
+		margin-left: 10%;
+		overflow-y: auto;
+	}
+		#textoCookies h1 {
+			width: 80%;
+		}
+
+	/* Menu Principal */
+	#menuIndex #cuadroIdiomas {
+		top: 2vh;
+		left: 3vw;
+	}
+	#menuIndex #cajaMenuSuperior {
+		width: 100%;
+		height: 10%;
+		margin-right: 0;
+	}
+	
+	#menuIndex #cajaMenuCentral {
+		height: 80%;
+	}
+		#menuIndex #cajaSecciones {
+			width: 100%;
+			height: 25%;
+			-ms-flex-wrap: wrap;
+			    flex-wrap: wrap;
+			order: 2;
+		}
+			#menuIndex #cajaSecciones div {
+				text-align: center;
+				height: 50%;
+				z-index: 1;
+			}
+				#menuIndex #cajaSecciones div img {
+					height: 80%;
+				}
+		#menuIndex #cajaFavorito {
+			width: 100%;
+			z-index: 2;
+		}
+			#menuIndex #cajaSecciones #imgClasificaciones {
+				max-height: 100%;
+					left: 0;
+				top: 2%;
+			}
+			#menuIndex #cajaSecciones .fichaLocal {
+				margin-left: 50%;
+			}
+		#menuIndex #cajaSecciones .cajaMenu label {
+		text-align: right;
+		width: 100%;
+		margin-left: -2%;
+		margin-top: 3%;
+		}
+		#menuIndex #cajaSecciones .cajaMenu .elementosPro {
+			margin-left: 0;
+			padding: 0 2%;
+			text-align: left;
+			bottom: 5%;
+		}
+
+		#menuIndex .lineaCajaMenuCentral #cajaFavorito .labelRival {
+			top: 30%;
+		}
+		#cajaFavoritoDatos #cajaProximoRival div label {
+			top: 0%;
+		}
+			#proximoRival {
+				border-radius: 50%;
+			}
+
+		#cajaFavorito #cajaFavoritoEquipo #cartelPuntuacion {
+			margin-left: -25%;
+		}
+		.textoOculto {
+			text-shadow: 1px 2px var(--color-contraste);
+		}
+		#cajaLabelDatos {
+			font-size: 1em;
+		}
+	#barraInferior {
+		display: none;
+	}
+	#pieIndex {
+		bottom: 0;
+	}
+	#recuadroLogin {
+		bottom: 10vh;
+	}
+
+	/* Menú Ajustes Usuario */
+	#cajaBotonCerrar {
+		height: 7vh;
+	}
+		#botonCerrarUsuario {
+			width: 10vw;
+			margin-left: 86vw;
+			margin-top: 2vh;
+		}
+	#cajaAjustes {
+		height: 93%;
+	}
+	#cajaAjustesUsuario,
+	#cajaSuscripcion {
+		height: 96%;
+		width: 95%;
+	}
+	#cajaAjustesUsuario #ajustesLabel {
+		height: 7%;
+	}
+	#cajaAjustesUsuario #cuadroIdiomas {
+		top: 10vh;
+	}
+	#cajaAjustesUsuario #ajustesUsuario {
+		flex-wrap: wrap;
+	}
+		#vacioUsuario {
+			width: 10%;
+			order: 1;
+		}
+		#nombreUsuario {
+			width: 70%;
+			height: 50%;
+			order: 2;
+		}
+			#nombreUsuario label {
+				margin-top: .3vh;
+			}
+			#botonEditarUsuario {
+				width: 15%;
+			}
+		#tipoUsuario {
+			height: 40%;
+			order: 3;
+		}
+		#cerrarSesion {
+			width: 30%;
+			height: 45%;
+			flex-wrap: nowrap;
+			margin-left: 70%;
+		}
+			#cerrarSesion img {
+				order: 2;
+			}
+			#cerrarSesion label {
+				order: 1;
+			}
+
+	#ajustesCompras {
+		height: 55%;
+		overflow-y: auto;
+		margin: 3% 0;
+	}
+		#suscripciones,
+		#favoritos {
+			width: 90%;
+			height: 80%;
+		}
+		#cajaAjustesUsuario #ajustesCopy button {
+			height: 40%;
+			width: 35%;
+		}
+	#ajustesCopy {
+		width: 100%;
+		border-radius: 0;
+		background: var(--color-fondoIndex);
+	}
+
+	#elegirUsuarioSuscripcion h1 {
+		text-align: center;
+	}
+	#cajaElegirTipoUsuario {
+		height: 73%;
+		width: 95%;
+		overflow-y: auto;
+	}
+	#elegirUsuarioSuscripcion p {
+		font-size: .8em;
+	}
+	#elegirUsuarioSuscripcion #textoAyuda {
+		font-size: .7em;
+	}
+	.cajaElegirUsuarioSuscripcion {
+		top: 0;
+		margin: 2%;
+		min-height: 25% !important;
+		width: 90% !important;
+	}
+
+	/* Submenú Suscripciones */
+	#noSuscripcion h1 {
+		text-align: center;
+		max-height: 20%;
+		font-size: 1.6em;
+	}
+		#botonSalirSuscripcion {
+			width: 10%;
+		}
+		#cajonSuscripciones {
+			height: 75%;
+			width: 85%;
+			margin-left: 5%;
+			overflow-x: auto;
+			display: -webkit-inline-box;
+		}
+			.botonSuscripcion {
+				height: 90% !important;
+				width: 55% !important;
+				font-size: .9em;
+				margin: 7% 2%;
+			}
+				#botonSuscripBasico,
+				#botonSuscripUnirseEntrenador,
+				#botonSuscripUnirseJugador {
+					margin: 7% 20%;
+				}
+				#botonSuscripBasico button {
+					width: 70%;
+				}
+			#suscripcionPaso1 p {
+				width: 95%;
+			}
+			#suscripcionPaso1 .overflowY {
+				height: 60%;
+			}
+			#suscripcionPaso1 button,
+			#suscripcionPaso2 button {
+				height: 7%;
+				width: 25%;
+			}
+	#cajaAjustes h1 {
+		font-size: calc(100% + 3vw) !important;
+		max-height: 10vh;
+	}
+		#inputListaClubes {
+			width: 95%;
+		}
+		#cuadroDatosClub {
+			width: 95%;
+			height: 70%;
+		}
+		#cuadroResultadoMasculino,
+		#cuadroResultadoFemenino {
+			font-size: .9em;
+		}
+		#mensajeResultadoClub {
+			overflow-y: auto;
+		}
+
+
+	/* Menú Competiciones */
+	#cajaMenuCentralCompeticiones2 {
+		width: 95%;
+		height: 80%;
+	}
+	.cuadroTemporadaCompeticiones {
+		width: 25% !important;
+	}
+	#filaCategoriasCompeticiones {
+		width: 65%;
+		display: -webkit-inline-box;
+	}
+	#botonCompeticionesPersonalizadas,
+	#botonCompeticionesNoFederadas,
+	.cuadroCategoriasCompeticiones {
+		width: 30% !important;
+		height: 90%;
+	}
+	#botonCompeticionesPersonalizadas {
+		font-size: .8em;
+	}
+	#cuadroMostrarCompeticiones,
+	#cuadroCompeticiones,
+	.filaCategoria {
+		width: 100%;
+	}
+	.botonCompeticiones {
+		font-size: .7em;
+		height: 80px;
+		padding: 6% 0;
+	}
+		.botonCompeticiones div {
+			height: 64%;
+			width: 90%;
+		}
+		.botonCompeticiones img {
+			width: 35%;
+			margin: auto;
+		}
+	.datosCompeticion div{
+		text-overflow: ellipsis;
+	}
+
+	/* Menú Competiciones2 */
+	.lineaCajaMenuCompeticiones {
+		border-radius: 5px;
+	}
+	.labelResultado {
+		height: 100%;
+		border-radius: 0;
+		border: none;
+		clip-path: none;
+		margin: auto;
+		position: relative;
+	}
+		#labelResultadoLocal,
+		#labelResultadoVisitante {
+			position: absolute;
+			width: 100%;
+		}
+			#labelResultadoLocal {
+				top: 9%;
+				left: 0;
+				justify-content: left;
+			}
+			#labelResultadoVisitante {
+				bottom: 0;
+				right: 0;
+				justify-content: right;
+			}
+		#versus {
+			width: auto;
+			height: auto;
+			margin-top: -9%;
+		}
+	.nombreEquipo {
+		width: 100% !important;
+		height: 50%;
+		font-size: 85%;
+		order: 2;
+	}
+	.escudos {
+		height: 40% !important;
+		width: auto !important;
+		order: 1;
+	}
+	.lineaCajaMenuCompeticiones .botonPartido {
+		width: 90%;
+		height: 45%;
+	}
+
+
+	/* Menú Pro */
+	#cajaMenuCentralPro {
+		height: 80%;
+		width: 90%;
+	}
+		#menuProCentro {
+			height: 30%;
+		}
+			#menuProCentro span {
+				font-size: 7px;
+			}
+		#menuProEntrenamiento h2,
+		#menuProPizarra h2,
+		#menuProInformes h2,
+		#menuProConfiguracion h2 {
+			font-size: 1em;
+		}
+		#menuProEntrenamiento p,
+		#menuProPizarra p,
+		#menuProInformes p,
+		#menuProConfiguracion p {
+			font-size: .8em;
+		}
+		#menuProEntrenamiento .centradoXY,
+		#menuProPizarra .centradoXY,
+		#menuProInformes .centradoXY,
+		#menuProConfiguracion .centradoXY {
+			position: absolute;
+			width: 90%;
+		}
+		#menuProEntrenamiento .centradoXY,
+		#menuProPizarra .centradoXY {
+			height: 90%;
+		}
+		#menuProInformes .centradoXY,
+		#menuProConfiguracion .centradoXY {
+			height: 60%;
+		}
+			#menuProEntrenamiento img {
+				bottom: 6%;
+				left: 10%;
+				top: auto;
+				right: auto;
+			}
+			#menuProPizarra img {
+				bottom: 6%;
+				right: 10%;
+				top: auto;
+				left: auto;
+			}
+			#menuProInformes img {
+				top: 6%;
+				left: 10%;
+				bottom: auto;
+				right: auto;
+			}
+			#menuProConfiguracion img {
+				top: 6%;
+				right: 10%;
+				bottom: auto;
+				left: auto;
+			}
+	#cajaMenuProEntrenamiento {
+		height: 80%;
+		width: 95%;
+	}
+		/* Menú Tablón */
+		#cajaSuperiorEntrenamientoPro div {
+			position: relative;
+		}
+		#cajaSuperiorEntrenamientoPro h1 {
+			font-size: 1.7em;
+			height: 50%;
+			margin-top: -15%;
+		}
+		#cajaSuperiorEntrenamientoPro select {
+			bottom: 0;
+			position: absolute;
+			width: 45%;
+			font-size: .6em;
+		}
+			#selectJugadoresEntrenamiento {
+				left: 0;
+			}
+			#selectEquiposEntrenamiento {
+				left: 50%;
+			}
+		#volverEntPro {
+			width: 10%;
+			margin-top: -5vh;
+		}
+			#selectEquiposEntrenamiento {
+				bottom: 0;
+				position: absolute;
+				width: 45%;
+				font-size: .6em;
+			}
+			#ayudaEntrenamientoPro {
+				opacity: 0;
+			}
+			#cajaSubmenuPro {
+				height: 90%;
+			}
+		#botonSwitchEntrenamientoResumen,
+		#botonSwitchEntrenamientoTablon,
+		#botonSwitchEntrenamientoAgenda {
+			width: 20%;
+		}
+
+		#cajaMensajeDestacado {
+			width: 100%;
+		}
+			#cajaMensajeDestacado div {
+				width: 95%;
+				font-size: .6em;
+			}
+			#mensajeChatDestacado {
+				padding-right: 5%;
+				width: 95%;
+			}
+			#botonGuardarDestacadoChat {
+				width: 20% !important;
+			}
+		#cuadroMensajesChat {
+			width: 95%;
+		}
+		#cajaEnviarMensaje {
+			width: 95%;
+		}
+			#inputMensajeChat {
+				width: 95%;
+			}
+			#botonEnviarMensajeChat {
+				width: 20%;
+			}
+		/* Menú Agenda */
+		#cajaTituloEntrenamientoPro {
+			width: 100%;
+			height: 45%;
+			font-size: clamp(2vw,16px,3.8vw) !important;
+		}
+		#cajaNombreEntrenamientoPro,
+		#cajaIconoEntrenamientoPro {
+			width: 50%;
+			height: 55%;
+			text-align: center;
+		}
+		#cajaSubmenuAgendaPro {
+			width: 95%;
+			height: 20%;
+		}
+			#cuadroBotonesTurno {
+				width: 95%;
+				height: 50%;
+				text-align: center;
+			}
+			#cuadroHora {
+				order:2;
+			}
+			#cuadroImgGuardar {
+				order: 3;
+				height: 50%;
+			}
+		#cuadroTurnos {
+			height: 80%;
+			width: 100%;
+		}
+			.cajaEjercicios {
+				height: 25%;
+				margin: 2% 0;
+				border-bottom: 1px solid var(--color-contraste);
+			}
+				.labelEjercicio {
+					order: 1;
+					width: 75% !important;
+				}
+				.botonPrueba {
+					order: 2;
+					width: 25% !important;
+					height: 30%;
+				}
+				.cajaOpcionesEjercicios {
+					order: 3;
+					height: 60%;
+				}
+					.selectOpcionesEntrenamiento {
+						width: 95% !important;
+					}
+				.cajaEntrenamientoCantidad {
+					order: 4;
+					width: 25% !important;
+				}
+				.cajaEntrenamientoUnidad {
+					order: 5;
+					width: 27% !important;
+				}
+		.datosEntrenamiento,
+		#datosListadoAsistencia,
+		#cajaTitulosAsistenciaPro,
+		#cajaTitulosMedidasPro
+		#datosListadoMedidas {
+			width: 95%;
+		}
+			#cajaTitulosPruebaPro,
+			#cajaTitulosAsistenciaPro,
+			#cajaTitulosMedidasPro {
+				height: 15%;
+				font-size: .8em;
+			}
+				#cajaTitulosPruebaPro > div:nth-child(2),
+				#cajaTitulosAsistenciaPro > div:nth-child(2),
+				#cajaTitulosMedidasPro > div:nth-child(2) {
+					display: none;
+				}
+			#datosListadoPrueba {
+				width: 100%;
+				height: 85% !important;
+			}
+			.fotoPruebaPro {
+				width: 15% !important;
+			}
+			.dorsalPruebaPro,
+			.dorsalAsistenciaPro,
+			.dorsalMedidasPro {
+				position: absolute;
+				top: 20%;
+				left: 0;
+				height: auto !important;
+				width: auto !important;
+				background: var(--color-corporativo-morado);
+				aspect-ratio: 1 / 1;
+				border-radius: 50%;
+				padding: 1.5%;
+				font-size: .9em;
+				z-index: 10;
+			}
+			.cajaDatosPruebaPro,
+			.cajaDatosAsistenciaPro,
+			.cajaDatosMedidasPro {
+				position: relative;
+				height: 25% !important;
+				font-size: .9em;
+				border-bottom: 2px solid var(--color-contraste);
+			}
+			.cajaMeterDatosPrueba {
+				width: 45% !important;
+			}
+				.cajaMeterDatosPrueba input[type="number"] {
+					order: 1;
+					width: 45% !important;
+				}
+				.cajaMeterDatosPrueba select {
+					order: 2;
+					width: 45% !important;
+				}
+				.cajaMeterDatosPrueba div {
+					order: 3;
+					height: 50%;
+					width: 20%;
+				}
+			.fotoFichaJugador {
+				height: auto !important;
+			}
+			.fotoFichaJugadorEspecial {
+				height: 95% !important;
+			}
+		.cajaInputsMedidasPro div,
+		.cajaInputsMedidasPro input {
+			width: 90% !important;
+			max-height: 30%;
+		}
+		.cajaInputsMedidasPro br {
+			display: none;
+		}
+		.cajaDiario {
+			width: 95% !important;
+			height: 8.5vh !important;
+			min-height: 75px;
+		}
+			.cajaDiario div {
+				height: 50%;
+				width: 50%;
+			}
+			.botonEntrenamientoPro {
+				width: 8% !important;
+			}
+			.divHueco {
+				width: 50%;
+			}
+
+	/* Menú Edición */
+	#cajaMenuCentralEdicion {
+		height: 80%;
+		width: 95%;
+	}
+	#anteriorNivel {
+		width: 50%;
+		height: 7%;
+		order: 1;
+	}
+	#cajaMenuCentralEdicion .pantallaEdicion {
+		order: 3;
+		width: 100%;
+	}
+		.logoEdicion {
+			top: 10% !important;
+			right: 4% !important;
+		}
+		#filaVaciaEdicion {
+			height: 0;
+		}
+		#formularioEscudoEdicion {
+			height: 15%;
+			width: 90%;
+			justify-content: left;
+		}
+			#imgEscudoEdicion {
+				height: 100%;
+				width: 25%;
+			}
+			#formularioEscudoEdicion label {
+				height: 70%;
+				width: 25%;
+			}
+			#nombreEq {
+				height: 60%;
+			}
+		#cajaDatosEdicionEqP {
+			width: 90%;
+			height: 75%;
+		}
+			#cajaDatosEdicionEqP div {
+				width: 100%;
+			}
+				#cajaDatosEdicionEqP div label {
+					width: 40%;
+				}
+	#guardarNuevoEqPersonalizado {
+		width: 50%;
+		height: 7%;
+		order: 2;
+	}
+		#imgGuardarEqPersonalizado {
+			height: 80%;
+		}
+}
+
+/*  Preferencias de movilidad reducida  */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Estableces anchos */
+.w100 {width: 100%;}
+.w95 {width: 95%;}
+.w90 {width: 90%;}
+.w85 {width: 85%;}
+.w80 {width: 80%;}
+.w75 {width: 75%;}
+.w70 {width: 70%;}
+.w67 {width: 66.3%;}
+.w66 {width: 66%;}
+.w65 {width: 65%;}
+.w60 {width: 60%;}
+.w55 {width: 55%;}
+.w51 {width: 51%;}
+.w50 {width: 50%;}
+.w49 {width: 49.5%;}
+.w45 {width: 45%;}
+.w40 {width: 40%;}
+.w35 {width: 35%;}
+.w34 {width: 34%;}
+.w33 {width: 33%;}
+.w30 {width: 30%;}
+.w28 {width: 28%;}
+.w25 {width: 25%;}
+.w24 {width: 24%;}
+.w22 {width: 22%;}
+.w20 {width: 20%;}
+.w19 {width: 19.5%;}
+.w16 {width: 16%;}
+.w15 {width: 15%;}
+.w12 {width: 12.5%;}
+.w10 {width: 10%;}
+.w7 {width: 7%;}
+.w5 {width: 5%;}
+.w4 {width: 4%;}
+.w2 {width: 2%;}
+.w0 {width: 0%;}
+
+/* Establecer alturas */
+.h100 {height: 100%;}
+.h99 {height: 99%;}
+.h95 {height: 95%;}
+.h90 {height: 90%;}
+.h85 {height: 85%;}
+.h80 {height: 80%;}
+.h75 {height: 75%;}
+.h70 {height: 70%;}
+.h65 {height: 65%;}
+.h60 {height: 60%;}
+.h55 {height: 55%;}
+.h50 {height: 50%;}
+.h49 {height: 49.5%;}
+.h48 {height: 48%;}
+.h45 {height: 45%;}
+.h43 {height: 43%;}
+.h40 {height: 40%;}
+.h37 {height: 37%;}
+.h35 {height: 35%;}
+.h33 {height: 33%;}
+.h30 {height: 30%;}
+.h25 {height: 25%;}
+.h24 {height: 24%;}
+.h20 {height: 20%;}
+.h15 {height: 15%;}
+.h10 {height: 10%;}
+.h9 {height: 9%;}
+.h7 {height: 7%;}
+.h5 {height: 5%;}
+.h3 {height: 3%;}
+.h0 {height: 0%;}
+
+/* Modificadores de objetos */
+.seleccionado {
+	filter: invert(40%);
+	-webkit-filter: invert(40%);
+}
+.seleccionadoAntiguo {
+	filter: sepia(100%) opacity(40%);
+	-webkit-filter: sepia(100%) opacity(40%);
+}
+
+.jugadorFuera {
+	-webkit-filter: sepia(100%) blur(2.5px);
+        filter: sepia(100%) blur(2.5px);
+}
+
+.invisible {
+	display: none !important;
+}
+
+.textoGol {
+	padding: 0 2px 0 1px;
+	background-color: var(--color-acierto);
+	border-radius: 30%;
+}
+
+.textolocal,
+.local sup,
+.local big {
+	color: var(--color-local) !important;
+}
+
+.textovisitante,
+.visitante sup,
+.visitante big {
+	color: var(--color-visitante) !important;
+}
+
+.seleccionable {
+	transform: scale(.95);
+	-ms-transform: scale(.95);
+	-webkit-transform: scale(.95);
+	overflow: hidden;
+	z-index: 99;
+}

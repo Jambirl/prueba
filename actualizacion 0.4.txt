@@ -1,0 +1,153 @@
+Funciones nuevas:
+· Menú principal:
+	· [Añadido][No operativo] Botón Mis Partidos
+
+· Configuración:
+	· [Añadido] Sistema de suscripción Pro
+		· [Detectado][Error] Al volver atrás, en la pantalla de facturación no muestra en pantalla la provincia y la localidad señalada anteriormente
+		· [Pendiente] Envío de emails a los autorizados que no están de alta en el sistema
+		· [Añadido] Panel de configuración de Suscripción Pro
+			· [Pendiente] Panel de control del estado de la suscripción
+			· [Realizado] Panel de control usuarios autorizados
+			· [Realizado] Personalización de colores del club
+			· [Pendiente] Envío de consulta a servicio técnico
+
+
+· Jugar Amistoso:
+	· [Añadido] Nueva información e instrucciones sobre partido amistoso en pantalla de previa
+	· [Mejora visual] Nuevo diseño de escudos para equipo local y equipo visitante
+	· [Añadido] Datos por defecto en base de datos
+	· [Añadido] Introducción de plantilla local y visitante por defecto para partidos amistosos
+
+
+· Competiciones:
+
+
+	Primera pantalla:
+
+
+	Segunda pantalla:
+
+
+· Clasificaciones:
+
+· Entrenador Pro:
+	· [Pendiente] Análisis táctico
+	· [Pendiente] Diario de entrenamientos
+		· [Pendiente] Seguimiento de asistencia a entrenamientos
+		· [Pendiente] Seguimiento en la realización de ejercicios
+	· [Pendiente] Informes
+
+
+· Mis Clasificaciones:
+	· [No operativo] Añadida botonera para seleccionar clasificaciones de las distintas competiciones en las que se participan en esa temporada
+
+
+· Mis Partidos:
+	· [En proceso] LISTADO DE TODOS LOS PARTIDOS JUGADOS POR TU EQUIPO PARA TENER ACCESO A SUS ESTADÍSTICAS, A METER/EDITAR MÁS DATOS DESPUÉS DEL PARTIDO...
+
+· Mi Plantilla:
+
+
+· Previa Partido:
+	· [Añadido] Transición de espera del servidor
+	· [Añadido] Diferenciación e intrucciones para los partidos rápidos amistosos
+	· [Añadido] Al volver al menú principal se eliminan los datos del partido guardados en localStorage
+	· [Añadido] Media de Goles a favor y Goles en contra acumulados hasta esa jornada
+
+
+· Fichas clubes:
+
+
+· Fichas jugadores:
+	· [Pendiente] Diseño exclusivo de fichas para los jugadores de los clubes suscritos
+	· [Pendiente] Diseño especial para fichas de jugadores especiales
+
+
+· Menú Edición:
+	· [Realizado] Nueva codificación y diseño de creación de Equipo
+	· [Añadido] Nuevas opciones para creación de equipo: copiar datos del año anterior, borrar datos, nombre de la persona responsable del equipo y pabellón dónde 
+se juega como local.
+	· [Corregido][Bug] Error al darle al botón de crear Equipo
+	· [Mejora Visual] Rediseño creación de Club
+	· [Añadido] Personalización de las fichas de los Clubes
+	· [------pendiente] Eliminar el uso de cookies
+
+
+· Captura de datos de partido:
+	· [Realizado] Inicio automático del reloj al inicio del partido tras hacer el primer pase de centro
+	· [Realizado] Actualización de datos del partido en BD:
+		· [Realizado] Reloj en tiempo real
+		· [Realizado] Estado del partido en tiempo real
+		· [Realizado] Goles en tiempo real
+	· [En desarrollo] Inclusión de eventos del partido en BD:
+		· [Realizado] Tiempo muerto
+		· [Realizado] Alineación inicial y cambios
+		· [Realizado] Asignación de portero en el campo
+			· [En proceso] Registro de sinergias entre jugadores
+		· [Realizado] Eventos en superioridad o inferioridad numérica
+· [En proceso] Sanción al banquillo FALTA EL CUERPO TÉCNICO
+		· [Realizado] Aviso y Sanción de Pasivo
+		· [Realizado] Pérdidas en ataque (golpe, balón fuera, pasos, dobles, invasión, tarjeta, robo, intento de robo)
+		· [Realizado] Sanciones en defensa (golpe, exclusión, tarjeta)
+		· [Realizado] Evento para Portería vacía
+		· [Realizado] Formación táctica
+		· [Realizado] Tiro y parada
+		· [Realizado] Asistencia
+		· [Realizado] Pase acertado, pase robado, pase fallado (por error propio o por disuasión), pase no recepcionado (por error propio o por disuasión)
+		· [Realizado] Acción de robo
+		· [Añadido] Registro automático de cambio de posesión
+	· [Realizado] Botón para sancionar un penalti
+		· [Realizado] Evento para lanzamiento del penalti
+PENDIENTE: AL SANCIONAR TARJETA ROJA O AZUL, SE PRODUCEN 2 MINUTOS, POR LO QUE HAY QUE ELIMINAR A ESE JUGADOR Y DECIR QUIÉN SE VA AL BANQUILLO
+	· [Realizado] Botones operativos para tiros fuera
+	· [Realizado] Interfaz modificada para seleccionar zona del campo desde donde se ha realizado el tiro a puerta
+	· [Realizado] Automatismo de zona del campo al tirar (según posición natural del tirador)
+	· [En desarrollo] Mostrar estadísticas en tiempo real del partido
+		· [Realizado] Estadísticas Generales muestra mejor datos reales
+		· [En desarrollo] Gráficas no muestran todos los datos
+		· [Realizado] Estadísticas personales de cada jugador
+PENDIENTE: la foto de los jugadores genéricos están cambiadas, pone la del local en los visitantes, y viceversa
+	· [En desarrollo] Edición de datos introducidos
+		· [Realizado] Edición del reloj
+	· [En desarrollo] Introducción de datos por voz
+· [PENDIENTE] Hay que ver el tema de reconocer los contraataques
+· PENDIENTE Mejorar el tema de contar el tiempo de juego de cada jugador (el tiempo actual no tiene final, por lo que no lo suma)
+· PENDIENTE ¿Meter un contador de tiempo de juego total de cada equipo (sumando el tiempo de cada posesión)?
+	· [Corregido] Error en asistencias
+	· [Corregido] Problema al enviar un jugador al banquillo
+	· [Corregido] Al poner más jugadores del máximo al hacer la convocatoria no te avisa del fallo y te deja guardar más de los permitidos
+	· [Corregido] Si se recarga la página después de haber seleccionado la convocatoria en la captura de partido, puede provocar que se detecte un error al llevar un jugador del equipo titular al banquillo
+	· [Corregido] Error al buscar datos para gráficas para partidos amistosos rápidos
+	· [Corregido] Bug en evento touch: al tocar el fondo de la pantalla de banquillo, lleva toda la caja del banquillo al equipo titular
+	· [Corregido] Bug al seleccionar tipos y zonas de parada en los tiros normales y de penalti
+· [PENDIENTE][Bug] Al darle al botón de pérdida en el pase por Error no forzado (tanto en error de pase como en error de recepción), duplica el evento en la BD
+	· [Realizado] Optimización general del código
+
+
+· Sistema de control de preferencias de uso
+	· [En proceso de implantación]
+
+Base de datos: ACTUALIZAR
+· [Añadido] División de Honor: Sección masculina (16 equipos) y Sección femenina (14 equipos)
+· [Añadido] División de Honor: Partidos temporadas 2020/2021, 2021/2022 y 2022/2023
+· [Añadido] División de Honor Plata: Sección masculina (20 equipos) y Sección femenina (56 equipos)
+· [Añadido] División de Honor Plata: Partidos temporadas 2021/2022 y 2022/2023
+· [Añadido] Nuevas divisiones femeninas de la temporada 2022/2023
+· [Añadido] Primera División Nacional: Sección masculina (95 equipos)
+· [Añadido] Primera División Nacional: Partidos temporadas 2021/2022 y 2022/2023
+· [Añadido] Jugadores: Sección masculina (835 jugadores) y Sección femenina (318 jugadoras)
+· [Añadido] Técnicos: 519 técnicos
+· Totales: 166 Clubes, 201 equipos, 1153 jugadores y 519 técnicos
+
+· [Pendiente] Segunda División Nacional (masculina)
+
+Bugs:
+· Arreglos menores
+
+Mejoras:
+· Optimización de código
+· Creación y mejora de iconos por defecto
+
+PENDIENTES
+· favoritos.php: [En proceso] Mejorar los datos reales y, si no hay datos, que ponga algo

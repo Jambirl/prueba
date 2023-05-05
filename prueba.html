@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de snap scroll con HTML y CSS</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: hidden; /* ocultamos la barra de desplazamiento vertical */
+        }
+
+        .container {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            height: 100vh;
+        }
+
+        .step {
+            scroll-snap-align: start;
+            flex-shrink: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 5em;
+            background-color: #f44336;
+        }
+
+        /*.step:nth-child(1) {
+            background-color: #f44336;
+        }
+
+        .step:nth-child(2) {
+            background-color: #9c27b0;
+        }
+
+        .step:nth-child(3) {
+            background-color: #03a9f4;
+        }
+
+        .step:nth-child(4) {
+            background-color: #8bc34a;
+        }
+
+        .step:nth-child(5) {
+            background-color: #ff9800;
+        }*/
+
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .button {
+            font-size: 1.5em;
+            background-color: #2196f3;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .button:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="step">Step 1</div>
+        <div class="step">Step 2</div>
+        <div class="step">Step 3</div>
+        <div class="step">Step 4</div>
+        <div class="step">Step 5</div>
+    </div>
+
+    <div class="button-container">
+        <button class="button prev">Anterior</button>
+        <button class="button next">Siguiente</button>
+    </div>
+
+    <script>
+        const container = document.querySelector('.container');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+
+        prevButton.addEventListener('click', () => {
+            container.scrollBy({ left: -window.innerWidth, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            container.scrollBy({ left: window.innerWidth, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

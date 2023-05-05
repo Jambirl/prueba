@@ -1,0 +1,161 @@
+function abrirMiEvento() {
+	document.getElementById("menuCompeticiones").classList.add("invisible");
+	document.getElementById("cajaTorneo").classList.add("invisible");
+	document.getElementById("menuMiEvento").classList.remove("invisible");
+
+	const hoy = new Date();
+	let dia = hoy.getDate();
+	let mes = hoy.getMonth();
+
+	let balance = 1240;
+	let balancePrev = 1300;
+
+	// Menu Superior
+	let codigoSuperior = "";
+	codigoSuperior += "	<div class='w10 h90 centradoXY' style='position:relative'>";
+	codigoSuperior += "		<img class='h80 pulsable' src='img/Menu/hoy.png' alt='Agenda' style='position:absolute'>";
+	codigoSuperior += " 	<label style='position: absolute; font-size: .9em; color: var(--color-corporativo-rosa); font-weight: 900; bottom: 60%;'>"+textoMeses(mes)+"</label>";
+	codigoSuperior += " 	<label style='position: absolute; font-size: 2.3em; color: var(--color-corporativo-rosa); font-weight: 900; bottom: 18%;'>"+dia+"</label>";
+	codigoSuperior += "	</div>";
+	codigoSuperior += "	<div class='w12 h70 centradoXY flexWrap' style='border: 2px solid var(--color-texto); border-radius: 20px;'>";
+	codigoSuperior += "		<strong>Balance €</strong><br>";
+
+	let colorLetra = "",
+	    signo = "";
+	if (balance > 0) {
+		colorLetra =  "acierto";
+		signo = "+";
+	}else{
+		colorLetra =  "error";
+		signo = "-";
+	}
+	let signoPrev = balancePrev > 0 ? "+" : "-";
+
+	codigoSuperior += "		<strong class='"+colorLetra+"' style='border-radius: 10px; padding: 0 5px;'>"+signo+balance+"€ real</strong><br>";
+	codigoSuperior += "		<small class='w100 color1 centradoXY'>"+signoPrev+balancePrev+"€ previsión</small>";
+	codigoSuperior += "	</div>";
+	codigoSuperior += "	<div class='w50 h90 centradoXY'>";
+	codigoSuperior += "		<img class='h80' src='img/Menu/x.jpg' alt='Logo Evento'>";
+	codigoSuperior += "	</div>";
+	codigoSuperior += "	<div class='w5 h90 centradoXY'>";
+	codigoSuperior += "		<img class='h30 pulsable' src='img/Menu/configuracion.png' alt='Config'>";
+	codigoSuperior += "	</div>";
+	codigoSuperior += "	<div class='w10 h90 centradoXY'>";
+	codigoSuperior += "		<img class='h80 w90 pulsable' src='img/Menu/Logo_BigDT.png' alt='Salir'>";
+	codigoSuperior += "	</div>";
+	document.getElementById("cajaMenuSuperiorMiEvento").innerHTML = codigoSuperior;
+	document.getElementById("cajaMenuSuperiorMiEvento").style.backgroundColor = "var(--color-sombra)";
+
+	// Menu Central
+	let codigoCentral = "";
+	codigoCentral += "	<div class='w90 h5'></div>";
+	codigoCentral += "	<div class='w95 h25'>";
+	//codigoCentral += "		<div class='h10 spaceBetweenXY overflowX'>";
+	//codigoCentral += "			<strong class='w40' style='color: var(--color-pro)'>Marketing</strong>";
+	//codigoCentral += "			<strong class='w50' style='color: var(--color-bronce2)'>Participantes</strong>";
+	//codigoCentral += "		</div>";
+	codigoCentral += "		<div class='h90 spaceBetweenXY overflowX'>";
+	codigoCentral += "			<div id='miEventoPublicidad' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-pro);' ontouchstart=\"inicioPulsacion('miEventoPublicidad')\" ontouchend=\"finPulsacion('miEventoPublicidad')\">";
+	codigoCentral += "				<img src='img/Menu/marketing.png' alt='img' style='position:absolute; opacity:.25; width:112px; top:18px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-pro);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Marketing</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-pro); border-top-left-radius: 50%; border-top-right-radius: 50%; font-size:.8em'>Publicidad-Patrocinios</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "			<div id='miEventoActividades' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-pro);' ontouchstart=\"inicioPulsacion('miEventoActividades')\" ontouchend=\"finPulsacion('miEventoActividades')\">";
+	codigoCentral += "				<img src='img/Menu/concierto.png' alt='img' style='position:absolute; opacity:.25; width:109px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-pro);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Marketing</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-pro); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Actividades Extra</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "			<div id='miEventoFederativa' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-bronce2);' ontouchstart=\"inicioPulsacion('miEventoFederativa')\" ontouchend=\"finPulsacion('miEventoFederativa')\">";
+	codigoCentral += "				<img src='img/Menu/gFederacion.png' alt='img' style='position:absolute; opacity:.25; width:100px; bottom:12px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Participantes</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Gestión Federativa</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "			<div id='miEventoClasificaciones' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-bronce2);' ontouchstart=\"inicioPulsacion('miEventoClasificaciones')\" ontouchend=\"finPulsacion('miEventoClasificaciones')\">";
+	codigoCentral += "				<img src='img/Menu/esquema.png' alt='img' style='position:absolute; opacity:.25; width:126px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Participantes</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Clasificaciones</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "			<div id='miEventoPremios' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-bronce2);' ontouchstart=\"inicioPulsacion('miEventoPremios')\" ontouchend=\"finPulsacion('miEventoPremios')\">";
+	codigoCentral += "				<img src='img/Menu/trofeos.png' alt='img' style='position:absolute; opacity:.25; width:105px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Participantes</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-bronce2); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Premios y Trofeos</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "		</div>";
+	codigoCentral += "	</div>";
+	codigoCentral += "	<div class='w90 h5'></div>";
+	//codigoCentral += "	<strong class='w90' style='color:var(--color-corporativo-morado)'>Instalaciones</strong>";
+	codigoCentral += "	<div class='w95 h20 spaceBetweenXY'>";
+	codigoCentral += "		<div id='miEventoPersonal' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' ontouchstart=\"inicioPulsacion('miEventoPersonal')\" ontouchend=\"finPulsacion('miEventoPersonal')\">";
+	codigoCentral += "			<img src='img/Menu/trabajadores.png' alt='img' style='position:absolute; opacity:.25; width:177px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-morado);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color:var(--color-corporativo-morado); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Personal</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoInstalaciones' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' ontouchstart=\"inicioPulsacion('miEventoInstalaciones')\" ontouchend=\"finPulsacion('miEventoInstalaciones')\">";
+	codigoCentral += "			<img src='img/Menu/instalaciones.png' alt='img' style='position:absolute; opacity:.25; width:118px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-morado);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color:var(--color-corporativo-morado); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoTicketing' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' ontouchstart=\"inicioPulsacion('miEventoTicketing')\" ontouchend=\"finPulsacion('miEventoTicketing')\">";
+	codigoCentral += "			<img src='img/Menu/ticketing.png' alt='img' style='position:absolute; opacity:.25; width:130px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-morado);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color:var(--color-corporativo-morado); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Ticketing</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoComida' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' ontouchstart=\"inicioPulsacion('miEventoComida')\" ontouchend=\"finPulsacion('miEventoComida')\">";
+	codigoCentral += "			<img src='img/Menu/comidas.png' alt='img' style='position:absolute; opacity:.25; width:185px; top:-27px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-morado);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color:var(--color-corporativo-morado); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Comida y Bebida</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoPuestos' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' ontouchstart=\"inicioPulsacion('miEventoPuestos')\" ontouchend=\"finPulsacion('miEventoPuestos')\">";
+	codigoCentral += "			<img src='img/Menu/merchandising.png' alt='img' style='position:absolute; opacity:.25; width:185px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-morado);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Instalaciones</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color:var(--color-corporativo-morado); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Otros Puestos</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "	</div>";
+	codigoCentral += "	<div class='w90 h5'></div>";
+	//codigoCentral += "	<strong class='w60' style='color: var(--color-corporativo-rosa)'>Gestión Económica</strong>";
+	//codigoCentral += "	<strong class='w25' style='color: var(--color-visitante)'>Mensajería</strong>";
+	codigoCentral += "	<strong class='w5'></strong>";
+	codigoCentral += "	<div class='w95 h20 spaceBetweenXY'>";
+	codigoCentral += "		<div id='miEventoPresupuesto' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-corporativo-rosa);' ontouchstart=\"inicioPulsacion('miEventoPresupuesto')\" ontouchend=\"finPulsacion('miEventoPresupuesto')\">";
+	codigoCentral += "			<img src='img/Menu/finanzas.png' alt='img' style='position:absolute; opacity:.25; width:98px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Finanzas</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Presupuesto</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoIngresos' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-corporativo-rosa);' ontouchstart=\"inicioPulsacion('miEventoIngresos')\" ontouchend=\"finPulsacion('miEventoIngresos')\">";
+	codigoCentral += "			<img src='img/Menu/otrosIngresos.png' alt='img' style='position:absolute; opacity:.25; width:106px; top:17px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Finanzas</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Otros Ingresos</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div id='miEventoGastos' class='w15 h95 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-corporativo-rosa);' ontouchstart=\"inicioPulsacion('miEventoGastos')\" ontouchend=\"finPulsacion('miEventoGastos')\">";
+	codigoCentral += "			<img src='img/Menu/otrosGastos.png' alt='img' style='position:absolute; opacity:.25; width:106px; top:17px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Finanzas</strong>";
+	codigoCentral += "			<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-corporativo-rosa); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Otros Gastos</strong>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div class='w15 h95' style='position:relative'>";
+	codigoCentral += "			<div id='notificacionMiEventoUsuarios' class='notificaciones' style='right:0'></div>";
+	codigoCentral += "			<div id='miEventoUsuarios' class='w100 h100 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-visitante);' ontouchstart=\"inicioPulsacion('miEventoUsuarios')\" ontouchend=\"finPulsacion('miEventoUsuarios')\">";
+	codigoCentral += "				<img src='img/Menu/edicionJugadores.png' alt='img' style='position:absolute; opacity:.25; width:125px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-visitante);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Mensajería</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-visitante); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Usuarios</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "		</div>";
+	codigoCentral += "		<div class='w15 h95' style='position:relative'>";
+	codigoCentral += "			<div id='notificacionMiEventoParticipantes' class='notificaciones' style='right:0'></div>";
+	codigoCentral += "			<div id='miEventoParticipantes' class='w100 h100 cajaElegirUsuarioSuscripcion centradoXY flexWrap' style='border-color: var(--color-visitante);' ontouchstart=\"inicioPulsacion('miEventoParticipantes')\" ontouchend=\"finPulsacion('miEventoParticipantes')\">";
+	codigoCentral += "				<img src='img/Menu/edicionClub.png' alt='img' style='position:absolute; opacity:.25; width:160px'>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; top:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-visitante);  border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;'>Mensajería</strong>";
+	codigoCentral += "				<strong class='w100' style='position:absolute; bottom:0; text-align:center; background:var(--color-fondoIndex); color: var(--color-visitante); border-top-left-radius: 50%; border-top-right-radius: 50%;'>Participantes</strong>";
+	codigoCentral += "			</div>";
+	codigoCentral += "		</div>";
+	codigoCentral += "	</div>";
+	codigoCentral += "	<div class='w90 h5'></div>";
+	document.getElementById("cajaMenuCentralMiEvento").innerHTML = codigoCentral;
+
+	// Baner Publi
+	let footer = document.querySelector("#publiMiEvento");
+	footer.style.backgroundColor = "var(--color-sombra)";
+	footer.style.display = "block";
+	footer.classList.add("w100");
+	footer.querySelector("img").classList.remove("w90");
+	footer.querySelector("img").classList.add("w100");
+};
